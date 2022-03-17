@@ -31,7 +31,7 @@ Through this tool is possible to explore the following information:
 
 ## Requirements and Setup
 
-It is possible to access the tool online at the following \[LINK\] using your favorite browser and enabling JavaScript features. We suggest to use a desktop environment for a better experience.
+It is possible to access the tool online at the following [link](https://sap.github.io/risk-explorer-for-sofware-supply-chains/) using your favorite browser and enabling JavaScript features. We suggest to use a desktop environment for a better experience.
 
 If you want to run a local version of the code you need to install [Node.js](https://nodejs.dev/learn/how-to-install-nodejs), then from inside the project directory (where `package.json` is located):
 1. Install the required dependencies via `npm install`
@@ -39,7 +39,7 @@ If you want to run a local version of the code you need to install [Node.js](htt
    
 ## Support, Feedback, Contributing
 
-This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/<your-project>/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
+This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/risk-explorer-for-sofware-supply-chains/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
 
 ## Code of Conduct
 
@@ -47,4 +47,4 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Licensing
 
-Copyright (20xx-)20xx SAP SE or an SAP affiliate company and <your-project> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
+Copyright (20xx-)20xx SAP SE or an SAP affiliate company and Risk Explorer for Software Supply Chains contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/risk-explorer-for-sofware-supply-chains/).
