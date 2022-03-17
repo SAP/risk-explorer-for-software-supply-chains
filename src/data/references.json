@@ -313,7 +313,7 @@
             },
             {
                 "sgId": "SG-034",
-                "sgName": "Use Minimal Set of Trusted Build Dependencies in the Release Job"
+                "sgName": "Minimal Set of Trusted Build Dependencies in Release Jobs"
             }
         ]
     },
