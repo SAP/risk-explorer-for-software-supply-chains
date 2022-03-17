@@ -222,9 +222,9 @@
     },
     {
         "sgId": "SG-016",
-        "sgName": "Protect Production Branch",
+        "sgName": "Protect Sensitive Branches",
         "info": [{
-            "Description": "Open Source Project Maintainers, (i.e. with admin permissions to a repository) can establish and manage protection rules for one or more branches. Some examples of such protection rules are: requiring and approving reviews, passing status checks for a pull requests for protected branches, accept only signed commits and so on. Enstablishing such rules may prevent injection of malicious code in source code bases or can enforce security best practices to guarantee integrity.",
+            "Description": "Code review tools like Gerrit or GitHub allow project maintainers to protect particularly sensitive branches in versioning control systems like Git. Examples rules comprise the requirement to sign commits, or a minimum number of positive review approvals or successul status checks before code changes can be merged into a protected target branch. Protection rules can be used to enforce review best-practices that increase the chances of detecting malicious code contributions.",
             
             "Directive": false,
             "Preventive": true,

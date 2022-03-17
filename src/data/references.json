@@ -4242,7 +4242,7 @@
             "sgName": "Pull/Merge Request Review"
         }, {
             "sgId": "SG-016",
-            "sgName": "Protect Production Branch"
+            "sgName": "Protect Sensitive Branches"
         }],
         "tags": {
             "ecosystems": ["GitHub"],
@@ -4556,7 +4556,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-016",
-            "sgName": "Protect Production Branch"
+            "sgName": "Protect Sensitive Branches"
         }],
         "tags": {
             "contents": ["peer-reviewed"],
