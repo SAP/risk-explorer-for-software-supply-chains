@@ -491,14 +491,14 @@
     },
     {
         "sgId": "SG-034",
-        "sgName": "Use Minimal Set of Trusted Build Dependencies in the Release Job",
+        "sgName": "Minimal Set of Trusted Build Dependencies in Release Jobs",
         "info": [{
-            "Description": "The release job should use a minimal set of trusted build dependencies, while any tests and quality checks can be done in a dedicated job preceding the release build.",
+            "Description": "Those build jobs or pipeline stages, which produce the artifact that will eventually be distributed to downstream users, can be configured to only rely on a minimal set of trusted build dependencies. Tools and plugins related to functional tests, quality assurance, vulnerability detection, documentation etc. can be run separately in order to avoid malicious tampering with the build artifact.",
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "Open Source Project Maintainer may enforce policies with which, during the release build job, a minimal set of trusted dependencies will be used. Hence, all the unnecessary (and possibly infected) components would not tamper the release version of an open source component.",
+            "Project Maintainer": "Open-Source Project Maintainer may configure their build jobs and pipelines such that a minimal set of trusted dependencies is used for the creation of the final artifact.",
             "Administrator": "",
             "Downstream User": ""
         }]
