@@ -579,7 +579,7 @@
     },
     {
         "sgId": "SG-040",
-        "sgName": "Use encrypted communication protocols with the Administrator",
+        "sgName": "Use encrypted communication protocols",
         "info": [{
             "Description": "When a communication protocol is unencrypted may allow an eavesdropper to intercept and analyse a private communication between two parties. Furthermore, a malicious actor could leverage such weakness in order to  interpose between the two communicating parts, then modify the content of the communication itself and perform the so called Man-In-The-Middle attacks. In the specific case of supply chain attacks, an attacker may interfere during the downloading of packets from the repository in order to modify the packets and provide to downstream users an infected version of them. Thus, by using encrypted communication protocols, such attacks may be prevented.",
 
