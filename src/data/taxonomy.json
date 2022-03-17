@@ -1,0 +1,507 @@
+{
+    "avName": "Conduct Open-Source Supply Chain Attack",
+    "avId": "AV-000",
+    "children": [{
+            "avName": "Develop and Advertise Distinct Malicious Package from Scratch",  
+            "avId": "AV-100"  
+        },
+        {
+            "avName": "Create Name Confusion with Legitimate Package",
+            "avId": "AV-200",
+            "children": [{
+                    "avName": "Combosquatting",
+                    "avId": "AV-201"
+                },
+                {
+                    "avName": "Altering Word Order",  
+                    "avId": "AV-202"
+                },
+                {
+                    "avName": "Manipulating Word Separators",               
+                    "avId": "AV-203"
+                },
+                {
+                    "avName": "Typosquatting",
+                    "avId": "AV-204"
+                },
+                {
+                    "avName": "Built-In Package",
+                    "avId": "AV-205"
+                },
+                {
+                    "avName": "Brandjacking",
+                    "avId": "AV-206"
+                },
+                {
+                    "avName": "Similarity Attack",               
+                    "avId": "AV-207"
+                }
+
+            ]
+        },
+        {
+            "avName": "Subvert Legitimate Package",
+            "avId": "AV-001",
+            "children": [{
+                    "avName": "Inject into Sources of Legitimate Package",
+                    "avId": "AV-300",
+                    "children": [{
+                            "avName": "Introduce Malicious Code through Hypocrite Merge Request",
+                            "avId": "AV-301",
+                            "children": [{
+                                    "avName": "Make Immature Vulnerability Exploitable",
+                                    "avId": "AV-304"
+                                },
+                                {
+                                    "avName": "Exploit Rendering Weakness",
+                                    "avId": "AV-305",
+                                    "children": [{
+                                            "avName": "Exploit Unicode Bidirectional Algorithm",                                          
+                                            "avId": "AV-306"
+                                        },
+                                        {
+                                            "avName": "Use Homoglyphs",
+                                            "avId": "AV-307"
+                                        },
+                                        {
+                                            "avName": "Prevent Display of File Differences",
+                                            "avId": "AV-308"
+                                        },
+                                        {
+                                            "avName": "Hide in Generated/Compiled/Minified Code",
+                                            "avId": "AV-309"
+                                        }
+                                    ]
+                                }
+
+                            ]
+                        },
+                        {
+                            "avName": "Contribute as Maintainer",
+                            "avId": "AV-302",
+                            "children": [{
+                                    "avName": "Bribe or Blackmail Legitimate User",   
+                                    "avId": "AV-601"
+                                },
+                                {
+                                    "avName": "Take-over Legitimate Account",
+                                    "avId": "AV-602",
+                                    "children": [{
+                                            "avName": "Reuse of Compromised Credentials",                                            
+                                            "avId": "AV-603"
+                                        },
+                                        {
+                                            "avName": "Bruteforce",                                       
+                                            "avId": "AV-604"
+                                        },
+                                        {
+                                            "avName": "Reuse of Leaked API Tokens",                                           
+                                            "avId": "AV-605"
+                                        },
+                                        {
+                                            "avName": "Social Engineering to Obtain Credentials",                                           
+                                            "avId": "AV-606"
+                                        },
+                                        {
+                                            "avName": "Reuse of Existing Session",                                         
+                                            "avId": "AV-607"
+                                        },
+                                        {
+                                            "avName" : "Resurrect Expired Domain Associated With Legitimate Account",
+                                            "avId" : "AV-608"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "avName": "Become a Maintainer",                                    
+                                    "avId": "AV-800"
+                                },
+                                {
+                                    "avName": "Compromise Maintainer System",                      
+                                    "avId": "AV-700",
+                                    "children": [{
+                                            "avName": "Exploit Weak Configuration",                              
+                                            "avId": "AV-701"
+                                        },
+                                        {
+                                            "avName": "Exploit Vulnerabilities",
+                                            "avId": "AV-702"
+                                        },
+                                        {
+                                            "avName": "Infect through Malicious Component",
+                                            "avId": "AV-703"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "avName": "Tamper with Version Control System",
+                            "avId": "AV-303",
+                            "children": [{
+                                    "avName": "Compromise User (Project Maintainer/Administrator)",
+                                    "avId": "AV-600",
+                                    "children": [{
+                                            "avName": "Bribe or Blackmail Legitimate User",                                           
+                                            "avId": "AV-601"
+                                        },
+                                        {
+                                            "avName": "Take-over Legitimate Account",                                           
+                                            "avId": "AV-602",
+                                            "children": [{
+                                                    "avName": "Reuse of Compromised Credentials",                                                   
+                                                    "avId": "AV-603"
+                                                },
+                                                {
+                                                    "avName": "Bruteforce",                                                   
+                                                    "avId": "AV-604"
+                                                },
+                                                {
+                                                    "avName": "Reuse of Leaked API Tokens",
+                                                    "avId": "AV-605"
+                                                },
+                                                {
+                                                    "avName": "Social Engineering to Obtain Credentials",
+                                                    "avId": "AV-606"
+                                                },
+                                                {
+                                                    "avName": "Reuse of Existing Session",                                                    
+                                                    "avId": "AV-607"
+                                                },
+                                                {
+                                                    "avName" : "Resurrect Expired Domain Associated With Legitimate Account",
+                                                    "avId" : "AV-608"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "avName": "Compromise Version Control System",
+                                    "avId": "AV-700",
+                                    "children": [{
+                                            "avName": "Exploit Weak Configuration",                                        
+                                            "avId": "AV-701"
+                                        },
+                                        {
+                                            "avName": "Exploit Vulnerabilities",                                        
+                                            "avId": "AV-702"
+                                        },
+                                        {
+                                            "avName": "Infect through Malicious Component",                                          
+                                            "avId": "AV-703"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "avName": "Inject During the Build of Legitimate Package",
+                    "avId": "AV-400",
+                    "children": [{
+                            "avName": "Run Malicious Build",                          
+                            "avId": "AV-401"
+                        },
+                        {
+                            "avName": "Tamper Build Job as Maintainer",                            
+                            "avId": "AV-402",
+                            "children": [{
+                                    "avName": "Bribe or Blackmail Legitimate User",                                    
+                                    "avId": "AV-601"
+                                },
+                                {
+                                    "avName": "Take-over Legitimate Account",
+                                    "avId": "AV-602",
+                                    "children": [{
+                                            "avName": "Reuse of Compromised Credentials",
+                                            "avId": "AV-603"
+                                        },
+                                        {
+                                            "avName": "Bruteforce",                                           
+                                            "avId": "AV-604"
+                                        },
+                                        {
+                                            "avName": "Reuse of Leaked API Tokens",
+                                            "avId": "AV-605"
+                                        },
+                                        {
+                                            "avName": "Social Engineering to Obtain Credentials",
+                                            "avId": "AV-606"
+                                        },
+                                        {
+                                            "avName": "Reuse of Existing Session",
+                                            "avId": "AV-607"
+                                        },
+                                        {
+                                            "avName" : "Resurrect Expired Domain Associated With Legitimate Account",
+                                            "avId" : "AV-608"
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "avName": "Become a Maintainer",
+                                    "avId": "AV-800"
+                                },
+                                {
+                                    "avName": "Compromise Maintainer System",
+                                    "avId": "AV-700",
+                                    "children": [{
+                                            "avName": "Exploit Weak Configuration",                                        
+                                            "avId": "AV-701"
+                                        },
+                                        {
+                                            "avName": "Exploit Vulnerabilities",                                           
+                                            "avId": "AV-702"
+                                        },
+                                        {
+                                            "avName": "Infect through Malicious Component",
+                                            "avId": "AV-703"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "avName": "Tamper with Exposed Build System",
+                            "avId": "AV-403",
+                            "children": [{
+                                    "avName": "Compromise User (Project Maintainer/Administrator)",
+                                    "avId": "AV-600",
+                                    
+                                   
+                                    "children": [{
+                                            "avName": "Bribe or Blackmail Legitimate User",
+                                            "avId": "AV-601"
+                                        },
+                                        {
+                                            "avName": "Take-over Legitimate Account",
+                                            "avId": "AV-602",
+                                            
+                                           
+                                            "children": [{
+                                                    "avName": "Reuse of Compromised Credentials",
+                                                    "avId": "AV-603"
+                                                },
+                                                {
+                                                    "avName": "Bruteforce",
+                                                    "avId": "AV-604"
+                                                },
+                                                {
+                                                    "avName": "Reuse of Leaked API Tokens",
+                                                    "avId": "AV-605"
+                                                },
+                                                {
+                                                    "avName": "Social Engineering to Obtain Credentials",
+                                                    "avId": "AV-606"
+                                                },
+                                                {
+                                                    "avName": "Reuse of Existing Session",
+                                                    "avId": "AV-607"
+                                                },
+                                                {
+                                                    "avName" : "Resurrect Expired Domain Associated With Legitimate Account",
+                                                    "avId" : "AV-608"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "avName": "Compromise Build System",
+                                    "avId": "AV-700",
+                                    "children": [{
+                                            "avName": "Exploit Weak Configuration",
+                                            "avId": "AV-701"
+                                        },
+                                        {
+                                            "avName": "Exploit Vulnerabilities",                                          
+                                            "avId": "AV-702"
+                                        },
+                                        {
+                                            "avName": "Infect through Malicious Component",                                           
+                                            "avId": "AV-703"
+                                        }
+                                    ]
+                                }
+
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "avName": "Distribute Malicious Version of Legitimate Package",
+                    "avId": "AV-500",
+                    "children": [{
+                            "avName": "Dangling Reference",                        
+                            "avId": "AV-501"
+                        },
+                        {
+                            "avName": "Mask Legitimate Package",                          
+                            "avId": "AV-502",
+                            "children": [{
+                                    "avName": "MITM Attack",
+                                    "avId": "AV-506"
+                                },
+                                {
+                                    "avName": "DNS Cache Poisoning",
+                                    "avId": "AV-507"
+                                },
+                                {
+                                    "avName": "Tamper Legitimate URL",
+                                    "avId": "AV-508"
+                                },
+                                {
+                                    "avName": "Abuse Dependency Resolution Mechanism",
+                                    "avId": "AV-509"
+                                }
+                            ]
+                        },
+                        {
+                            "avName": "Prevent Update to Non-Vulnerable Version",
+                            "avId": "AV-503"
+                        },
+                        {
+                            "avName": "Distribute as Package Maintainer",                           
+                            "avId": "AV-504",
+                            "children": [{
+                                    "avName": "Bribe or Blackmail Legitimate User",                                  
+                                    "avId": "AV-601"
+                                },
+                                {
+                                    "avName": "Take-over Legitimate Account",                                   
+                                    "avId": "AV-602",
+                                    
+                                   
+                                    "children": [{
+                                            "avName": "Reuse of Compromised Credentials",
+                                            "avId": "AV-603"
+                                           
+                                        },
+                                        {
+                                            "avName": "Bruteforce",                                            
+                                            "avId": "AV-604"
+                                           
+                                        },
+                                        {
+                                            "avName": "Reuse of Leaked API Tokens",
+                                            "avId": "AV-605"
+                                           
+                                        },
+                                        {
+                                            "avName": "Social Engineering to Obtain Credentials",
+                                            "avId": "AV-606"
+                                           
+                                        },
+                                        {
+                                            "avName": "Reuse of Existing Session",
+                                            "avId": "AV-607"
+                                           
+                                        },
+                                        {
+                                            "avName" : "Resurrect Expired Domain Associated With Legitimate Account",
+                                            "avId" : "AV-608"
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "avName": "Become a Maintainer",
+                                    "avId": "AV-800"
+                                   
+                                },
+                                {
+                                    "avName": "Compromise Maintainer System",
+                                    "avId": "AV-700",
+                                    
+                                   
+                                    "children": [{
+                                            "avName": "Exploit Weak Configuration",
+                                            "avId": "AV-701"
+                                           
+                                        },
+                                        {
+                                            "avName": "Exploit Vulnerabilities",
+                                            "avId": "AV-702"
+                                        },
+                                        {
+                                            "avName": "Infect through Malicious Component",
+                                            "avId": "AV-703"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "avName": "Inject into Hosting System",
+                            "avId": "AV-505",
+                            "children": [{
+                                    "avName": "Compromise User (Project Maintainer/Administrator)",
+                                    "avId": "AV-600",
+                                    
+                                   
+                                    "children": [{
+                                            "avName": "Bribe or Blackmail Legitimate User",                                       
+                                            "avId": "AV-601"
+                                        },
+                                        {
+                                            "avName": "Take-over Legitimate Account",                                            
+                                            "avId": "AV-602",
+                                            "children": [{
+                                                    "avName": "Reuse of Compromised Credentials",                                                   
+                                                    "avId": "AV-603"
+                                                },
+                                                {
+                                                    "avName": "Bruteforce",                                                   
+                                                    "avId": "AV-604"
+                                                },
+                                                {
+                                                    "avName": "Reuse of Leaked API Tokens",                                                    
+                                                    "avId": "AV-605"
+                                                },
+                                                {
+                                                    "avName": "Social Engineering to Obtain Credentials",
+                                                    "avId": "AV-606"
+                                                },
+                                                {
+                                                    "avName": "Reuse of Existing Session",                                                    
+                                                    "avId": "AV-607"
+                                                },
+                                                {
+                                                    "avName" : "Resurrect Expired Domain Associated With Legitimate Account",
+                                                    "avId" : "AV-608"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "avName": "Compromise Hosting System",
+                                    "avId": "AV-700",
+                                    "children": [{
+                                            "avName": "Exploit Weak Configuration",
+                                            "avId": "AV-701"
+                                        },
+                                        {
+                                            "avName": "Exploit Vulnerabilities",                                           
+                                            "avId": "AV-702"
+                                        },
+                                        {
+                                            "avName": "Infect through Malicious Component",
+                                            "avId": "AV-703"
+                                        }
+                                    ]
+                                }
+
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+
+
+    ]
+}

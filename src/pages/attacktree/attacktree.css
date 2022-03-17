@@ -1,0 +1,7 @@
+.home{
+    flex: 4;
+}
+
+.container{
+    display: flex;
+}

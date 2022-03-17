@@ -1,0 +1,24 @@
+{
+    "title": "",
+    "link": "",
+    "vectors": [
+        {
+            "avId": "",
+            "avName": "",
+            "scopeAvId": "",
+            "scopeAvName": ""
+        }
+    ],
+    "safeguards": [
+        {
+            "sgId": "",
+            "sgName": ""
+        }
+    ],
+    "tags": {
+        "ecosystems": ["Java", "JavaScript", "Linux", "Python", "C#", "C/C++", "PHP"],
+        "packages": ["event-stream", "..."], // Finish with "..." if the list is incomplete
+        "contents": ["peer-reviewed", "thesis", "vulnerability", "attack", "proof-of-concept", "presentation", "standard"],
+        "year": null
+    }
+}

@@ -1,0 +1,640 @@
+
+    [{
+        "sgId": "SG-001",
+        "sgName": "Maintain detailed Software Bills of Material (SBOM)",
+        "info": [{
+            "Description": "A Software Bill of Material (SBOM) is a list of components in a piece of software. The software BOM describes the components in a product, such as the list of its dependencies, their provenance etc. SBOMs are comparable to the list of ingredients on food packaging. The creation of SBOM can be automated and follow standard formats, like SPDX, CycloneDX, and SWID.",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "By maintaining a detailed SBOM, the Project Maintainer would detail the list of the dependencies in his/her project, their provenance and additional information regarding the software product",
+            "Administrator": "The administrators would need to implement and configure the generation and the secure provision of such artifacts, that are delivered to the consumers of open-source.",
+            "Downstream User": "Similarly to the code signing and signature verification, the downstream users need to inspect the SBOMs and verify the integrity of what he/she is consuming."
+        }]
+    },
+    {
+        "sgId": "SG-002",
+        "sgName": "Patch Management",
+        "info": [{
+            "Description": "By performing regular software updates on systems, it would allow to mitigate exploitation risk due to remaining to vulnerable versions of installed softwares on sensitive infrastructure (i.e., VCS, build system, hosting system and maintainer's system). Such patch management process depends on the presence of a complete inventory of software used through the development lifecycle. Such software updates are not to be confused with the process of \"updating dependencies\" of a given application. In fact, automated updates can result in malicious code installation if new versions have been compromised.",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": true,
+            "Project Maintainer": "Project Maintainer can establish a patch management process in order to perform security updates and avoid to use potentially vulnerable dependencies or software components. ",
+            "Administrator": "System administrators can establish a patch management process in order to perform security updates and avoid to use potentially vulnerable components in their infrastructures.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-003",
+        "sgName": "Software Composition Analysis (SCA)",
+        "info": [{
+            "Description": "Software Composition Analysis tools allow to automate both the production of SBOMs and also to inspect the components of which a software product is made of. Hence, the SCA can be considered as a process performed on top of SBOMs, and that can be customised to match the security requirements desired (e.g., integrity checks, quality and security metrics verification, provenance etc.).",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Project Maintainers would be involved in carrying on such analysis, in order to assess the security requirements at each step of the supply chain.",
+            "Administrator": "Administrator would be involved in carrying on such analysis, in order to assess the security requirements at each step of the supply chain.",
+            "Downstream User": "Open-Source Consumer would be involved in carrying on such analysis, in order to assess the security requirements at each step of the supply chain."
+        }]
+    },
+    {
+        "sgId": "SG-004",
+        "sgName": "Manual Source Code Review",
+        "info": [{
+            "Description": "Manual source code review is defined as the process of reading source code line-by-line with the goal of identify potential vulnerabilities or malicious code. This process can be slow and requires skill, experience and patience from the code reviewer. On the other hand, manual source code review has the advantage to identify vulnerable or malicious code in paths that can be missed by automated tools.Applied to the context of Open Source Software Supply Chain attacks, the manual source code review should target all direct and indirect project dependencies, to make sure that no malicious code is present at a specific point of time of the open-source project. In addition, the manual source code review should performed on regular bases, particularly when an update of the dependencies occur: in such way, a possible insertion of malicious code through new versions would be prevented.",
+
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Recovery Safeguard (R)": "",
+            "Project Maintainer": "",
+            "Administrator": "Administrator can perform manual source code review of the consumed open-source components, in order to assess the security requirements at each step of the supply chain.",
+            "Downstream User": "Downstream users can perform manual source code review of the consumed open-source components, in order to assess the security requirements at each step of the supply chain."
+        }]
+    },
+    {
+        "sgId": "SG-005",
+        "sgName": "Application Security Testing (AST)",
+        "info": [{
+            "Description": "<p>Application Security Testing consists in a process of performing security tests on applications to identify possible vulnerabilities, weaknesses or malicious code.Such Application Security Tests may happen in three different ways:<ul>  <li>Static Application Security Testing (SAST), is a testing methodology that analyze and scan an application without running it. Hence, this process is also known as White Box Testing, since analyses the inner structure of an application.</li> <li>Dynamic Application Security Testing (DAST), is a testing methodology that uses a Black Box Testing approach, conducting an assessment without accessing the application source code. Instead, the DAST attempt to capture the application behaviour actually running it in a secured environment (e.g., an instructed sandbox).</li> <li> The Interactive Application Security Testing (IAST) uses a Grey Box Testing approach, combining the functionalities of both SAST and DAST. In particular, a IAST tool occurs in real-time while the application is running  (like DAST), checking in parallel the source code (like SAST). The source code check happens at the post-build stage, while the pure SAST approach occurs before the code is been built. At the end, the IAST tool will report the line number of the issue from the source code while the application is running. </li> </ul> In the same fashion of the manual source code review, in the case of the Open-Source Software Supply Chain, the Application Security Testing should target all the direct and indirect dependencies, to make sure that no malicious code has been injected or executed.</p>",
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Recovery Safeguard (R)": "",
+            "Project Maintainer": "",
+            "Administrator": "Administrator can employ application security testing techniques or tools to scan the consumed open-source components, in order to assess the security requirements at each step of the supply chain.",
+            "Downstream User": "Downstream users can employ application security testing techniques or tools to scan the consumed open-source components, in order to assess the security requirements at each step of the supply chain."
+        }]
+    },
+    {
+        "sgId": "SG-006",
+        "sgName": "Runtime Application Self-Protection (RASP)",
+        "info": [{
+            "Description": "The Runtime Application Self-Protection consists in a runtime application, integrated in the actual application, that analyse the inbound/outbound traffic and the end-user behavioral pattern to prevent security attacks. Hence, while the SAST, DAST and IAST approaches inspect an application before or after its built, the RASP methodology is used after the production release.",
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": true,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open-Source Consumer can integrate RASP components in order to prevent abnormal behavior that could have been inserted stealthly inside the dependencies of their software products and that could manifest such conduct at run-time (e.g., via backdoors, logic-bomb, time-bomb)."
+        }]
+    },
+    {
+        "sgId": "SG-007",
+        "sgName": "Code Signing",
+        "info": [{
+            "Description": "Code signing enforces binary and application integrity, hence ensures that a program comes from a valid source  (authenticity)  and that has not been modified since it was signed (integrity). The efficacy of the code signing depends on the security of the underlying cryptographic mechanism and the related signing keys. Note that the validation of digital signatures and digests cannot protect against attacks that target the build process to inject malicious code. In fact, the signing process typically happens at the end of the build process at a time when potentially malicious tests and build plugins were already executed.It must be noted that the efficacy of code signing as a preventive safeguards depends on the scrutiny of the consumer when verifying the signature.",
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "Project Maintainer can digitally sign the packages when uploading them to a package repository such that downstream users can assess the integrity of what they are consuming.",
+            "Administrator": "Administrators can enforce code signing either providing signing functionalities when uploading a package to the package repositories or by verifying the signatures when a package maintainer uploads a content. In addition, the administrators of a package repository, for example, can provide this feature to consumers of open-source to allow them to check the integrity.",
+            "Downstream User": "Consumers can assess the integrity of the downloaded packages and that the provenance is a trusted source by checking the signatures."
+        }]
+    },
+    {
+        "sgId": "SG-008",
+        "sgName": "Build dependencies from source",
+        "info": [{
+            "Description": "By building the dependencies directly from the official source would prevent the possible compromission of a package, whether this latter occurs during the build or withing the hosting systems.Thus, the Open-Source consumer can rely on the original source code and build it directly from the trusted source.It must be noted that if the source code already contains malicious code, such countermeasure will be uneffective, since in this latter case, the malicious code would be also compiled. On the other hand, this safeguard will prevent all that cases in which the package has been tampered by external malicious actors, not at the source code level, but during or after its build (e.g., injecting malicious code during the build) or at the distribution level.",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "Administrators may establish the process of building packages directly from the official source code, rather than relying on the publishing of the built package. In this way, any compromise during or after a compromised build process would be prevented.",
+            "Downstream User": "Open-Source Consumers can employ such safeguard in order to prevent scenarios in which the legitimate packages has been tampered and hidden in binaries, rather than in source codes. Hence, by building their dependencies directly from the official sources, they would avoid to rely on components built by third parties."
+            
+        }]
+    },
+    {
+        "sgId": "SG-009",
+        "sgName": "Remove un-used Dependencies",
+        "info": [{
+            "Description": "Software developers declare direct dependencies on open-source components whose functionality they want to use in the software under development or during development, e.g. compile dependencies or build plugins. Those dependencies have their own dependencies, so-called indirect or \"transitive dependencies\", all of which are automatically resolved and downloaded by package managers like Gradle or npm. However, some of those transitive dependencies may not be needed in the specific development context, e.g. because a certain functionality of a direct dependency is not used. While the removal of such \"bloated dependencies\" can reduce the supply chain's attack surface, their identification is not straight-forward, e.g. due to dynamic programming features.",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open-Source Consumers can employ this safeguard to reduce their supply chain's attack surface."
+        }]
+    },
+    {
+        "sgId": "SG-010",
+        "sgName": "Prevent Script Execution",
+        "info": [{
+            "Description": "Some ecosystems support the automated execution of commands or scripts contained in a package during its  installation on a given system, e.g. Python or Node.js. Blocking or preventing such executions prevents malicious code from accessing protected resources or harming the system. It must be noted that disabling script execution does not prevent the dependency on a malicious component, but only the execution of malicious code at installation time.",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open Source Consumers may disable script execution, in order to avoid the execution of malicious code when downloading and installing an infected package."
+        }]
+    },
+    {
+        "sgId": "SG-011",
+        "sgName": "Typo Guard",
+        "info": [{
+            "Description": "Package Repositories may help in the prevention of name confusion attacks against packages, by embedding and implementing tools or strategies that would block typosquatted names. For example, the Levenshtein distance may highlight similarities between names and help to detect names similar to already reserved ones. In addition, Package Repositories can enforce naming policies to restrict the abuse of already existing names.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "Administrators of package repositories could integrate tools to prevent from users to upload packages whose name would trick downstream users to confuse them with other (legitimate) packages.",
+            "Downstream User": ""
+            
+        }]
+    },
+    {
+        "sgId": "SG-012",
+        "sgName": "Typo Detection",
+        "info": [{
+            "Description": "From the Open-Source Consumer perspective, the installation of typosquatted or combosquatted package names may be prevented implementing a tool that would warn (or ideally block) the user of a mistake in the name of the package that has to be installed. Hence, such tool should compare the package name provided by the user with a list of the legitimate ones. Typical strategies for checking mispelling in package names involves the use of the Levenshtein distance.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open-Source Consumer could be protected by the installation of typosquatted or combosquatted package names through the implementation or usage of tools that would warn (ideally block) the installation of a misspelled package."
+
+        }]
+    },
+    {
+        "sgId": "SG-013",
+        "sgName": "Use of Security, Quality and Health Metrics",
+        "info": [{
+            "Description": "Security, quality and health metrics help to assess the security posture of an open-source project and the security risks resulting from its use. Such metrics may consider, for instance, information about the lifeliness of a project or whether given security best-practices are applied. They help end-users to decide which components to consume by making them aware of the security implications, and can be computed prior to the first use but also on a continuous basis for dependencies established in the past.",
+
+            "Examples": [],
+            "Directive": true,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainers can use such metrics as checklists to secure their projects according to consumer expectations, and advertise the metrics or maturity levels on their Web pages, e.g. through badges or similar.",
+            "Administrator": "Providers or administrators of package repositories can consume or compute such metrics and display them prominently to open source consumers, e.g. in Web frontends or command line tools, in order to support them in the selection and monitoring.",
+            "Downstream User": "Open Source Consumers can use such metrics for the initial selection and the continuous monitoring of their open-source dependencies."
+        }]
+    },
+    {
+        "sgId": "SG-014",
+        "sgName": "Code Isolation and Sandboxing",
+        "info": [{
+            "Description": "Sandboxes offer isolated and instrumented environments, that are tipically used to separate and prevent harmful execution from tampering with other resources in a system. By executing open-source components in isolated environments during their consumption would prevent infections or unauthorized access to system or to sensitive resources.",
+            "Directive": false,
+            "Preventive": false,
+            "Detective": false,
+            "Corrective": true,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open Source Consumers could execute open source components in isolated environments in order to protect from executing malicious code."
+        }]
+    },
+    {
+        "sgId": "SG-015",
+        "sgName": "Pull/Merge Request Review",
+        "info": [{
+            "Description": "Pull requests are a way to inform contributors of an Open Source project of the changes that you may have pushed to a branch of a repository (e.g., in GitHub). Once a pull request is opened, this allows to discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the branch. Designing the collaboration in Open Source projects in such a way it would prevent malicious commits to be merged into the main branch before a review. A careful pull request review would help to spot attempt in the insertion of malicious code to a production branch. In particular, having a two-person review or, more generally, peer review, would ensure to have multiple parties to agree on the changes, so to decrease the likelihood of accepting malicious insertions.In addition, obfuscation techniques for pull requests (e.g., pull request sneaking) would be detected and hopefully rejected. A pull request review should not only involve the code review of the commits, but it should also take into account an analysis of the committer, the quality of the commits, the clarity of the information provided etc.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open-source Project Maintainers could design the collaboration to an Open Source Project such that they accept contributions only via pull/merge requests. This enforce a review process and a discussion before merging the code in production branches.",
+            "Administrator": "",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-016",
+        "sgName": "Protect Production Branch",
+        "info": [{
+            "Description": "Open Source Project Maintainers, (i.e. with admin permissions to a repository) can establish and manage protection rules for one or more branches. Some examples of such protection rules are: requiring and approving reviews, passing status checks for a pull requests for protected branches, accept only signed commits and so on. Enstablishing such rules may prevent injection of malicious code in source code bases or can enforce security best practices to guarantee integrity.",
+            
+            "Directive": false,
+            "Preventive": true,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainers could define and enable protection rules, especially for sensitive branches (i.e., production branches) to protect the source code from malicious injections.",
+            "Administrator": "",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-017",
+        "sgName": "Multi Factor Authentication",
+        "info": [{
+            "Description": "Multi-Factor Authentication is a method that enforces normal authentication processes by requiring two or more proofs of identity to authenticate to a system. An example would be username and password in addition to an one-time-password from a token generator or sent via email. Hence, an attacker would be required to collect all the pieces of evidence to hijack the identity of an user.In terms of Software Supply Chain Attacks, by enabling MFA would prevent account hijacking from malicious actors that would target sensitive resources, e.g., source code, build system, hosting system etc.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "By enabling MFA for their accounts on VCS or build systems, Project Maintainers would prevent all that attacks that would target the account impersonation after a compromission of the valid credentials (e.g., reuse of compromised credentials, obtentions of the credentials through social engineering attacks etc.). In ",
+            "Administrator": "System administrators could enforce MFA to enforce the authentication on the systems. In such a way, an attacker would not be able to impersonate a legitimate maintainer to tamper with the source code, build jobs or upload a malicious version of a legitimate package.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-018",
+        "sgName": "Password Policy",
+        "info": [{
+            "Description": "The use of strong password policies secures password-based authentication mechanisms, making it harder for an attacker to perform password guessing or password spraying attacks. Strong password policies may include minimum length rules, usage of symbols along with numbers and characters, for example. Finally, password aging would require to periodically update the password. Such policy would prevent reuse of stolen credentials.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": true,
+            "Project Maintainer": "Open Source Project Maintainers could establish a policy with which the credentials to access to the source code or the build infrastructure would be recycled frequently in order to prevent the reuse of leaked credentials by external threats.",
+            "Administrator": "Administrators could establish policies for the project maintainer's with which the password are aged, so they will be required to change them periodically.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-019",
+        "sgName": "Login Protection Mechanism",
+        "info": [{
+            "Description": "The taking over of maintainers or administrative accounts would be prevented or corrected by enforcing login protection mechanisms, such as:<ul> <li>Temporary account Locking, as soon as an account compromise is detected, so as to impede the propagation of damages from such compromission</li><li> Login throttling, to introduce time-out periods between a login attempt and another, so as to make unfeasible a bruteforce attack against the login mechanism</li><li> Use of CAPTCHAs, to prevent automated tools from performing bruteforce attacks</li> </ul>",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "Administrators could enforce the login protection against password spraying or bruteforce by enabling login throttling mechanisms.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-020",
+        "sgName": "Session Timeout",
+        "info": [{
+            "Description": "Enstablishing a timeout for existing sessions would allow to prevent session hijacking attempts since the existing session would be closed after a certain period of time, hence the attacker should replicate and succeed the session token stealing multiple times to persist.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "Administrators may prevent session hijacking through the establishment of session timeouts. Then, an attacker that succeeded in stealing a session token would be required to repeat the attack in order to re-hijack the session.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-021",
+        "sgName": "Token Protection Mechanisms",
+        "info": [{
+            "Description": "In addition to securing authentication mechanisms of user frontends, comparable measures should be employed for authentication mechanisms used for automation purposes, e.g. API tokens. Such preventive countermeasures may involve:<ul> <li> Token Encryption: by encrypting a token, an attacker would be required not only to steal the token, but also to decrypt it.</li> <li>Token Rotation: such techniques require the generation of new tokens for every session, which makes session hijacking more difficult for attackers, since he/she would be required to steal the session token every time.</li></ul> In addition, Cyber Threat Intelligence tools can be used to detect the accidental leakage of secrets, e.g. <a href='https://blogs.sap.com/2020/06/23/credential-digger-using-machine-learning-to-identify-hardcoded-credentials-in-github/' target='_blank'>Credential Digger</a> or <a href='https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning' target='_blank'>GitHub Secret Scanning</a>.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "Administrators may prevent session hijackings or the reuse of leaked API tokens through the encryption of session token, such as an attacker able to steal the encrypted token, would be required to decrypt it before using it. In the same fashion, Package Repositories may prevent session hijackings and persistency into a session by rotating the session tokens at every new session.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-022",
+        "sgName": "User Account Management",
+        "info": [{
+            "Description": "User Account Management consists in processes or criteria that allows organizations to control user accesses and to define access control lists, user lists and related privileges (i.e., roles) to protect against unauthorized accesses to resources and data. Thus, the management of user account requires the definition and the implementation of roles and responsibilities for each member of a project/organization, as well as its regular maintenance (e.g., removal of members)",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": true,
+            "Project Maintainer": "Open Source Project Maintainer may design the collaboration for a project, by defining the roles for each contributor, hence the definition of the related privileges to each user account.",
+            "Administrator": "Administrators may design the management of the services they provide (VCS, build or package distribution), by defining the roles for each user, hence the definition of the related privileges to each user account.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-023",
+        "sgName": "Audit",
+        "info": [{
+            "Description": "An IT Security Audit is a process by which an organization is complying with a set of external legal standards or guidelines (e.g., <a href='https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf' target='_blank'>NIST SP 800-53r5</a>. Hence, an audit compare the actual conditions with guidelines and involves an external check by a professional (i.e., the auditor). For example, an audit would check what kind of access rights management there is in place, what anti-malware software is used, which procedures are defined to respond to security incidents etc. Thus, while a security assessment could be an internal procedure that identifies the security weaknesses of a software or an infrastructure, a security audit aims to perform security compliance checks and risk assessments.",
+
+            "Directive": true,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "Project Maintainer may require or perform an audit to verify the compliance to security best practices and security standards within their organization. Hence, they would assess the actual risks related to security incidents.",
+            "Administrator": "System administrators may require or perform an audit to verify the compliance to security best practices and security standards within their organization. Hence, they would assess the actual risks related to security incidents.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-024",
+        "sgName": "Security Assessment",
+        "info": [{
+            "Description": "Security assessment is an incident prevention process that consists in identifying and remediating vulnerabilities before they could be exploited. This allows to reduce the risk of system compromises and to lose confidentiality, integrity or availability. Security assessments may target different layers and related testings: human security testings, physical security testing, data networks security testing etc.Thus, applied to the Open-Source supply chain attacks scenario, the scope of a security assessment could check the security posture with respect to all the attack vectors, in order to understand the adequacy and effectiveness of controls put in place.",
+
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "By performing a security assessment, project maintainers could identify and possibly remediate the actual weaknesses in their project, systems or infrastructure.",
+            "Administrator": "By performing a security assessment, administrators could identify and possibly remediate the actual weaknesses in their project, systems or infrastructure.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-025",
+        "sgName": "Vulnerability Assessment",
+        "info": [{
+            "Description": "Vulnerability assessment consists of a systematic examination of an information system or product to determine the security posture. Hence the process of a vulnerability assessment would produce the evaluation of the adequacy of security measures and their effectiveness",
+
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "By performing a vulnerability assessment, project maintainers may highlight the actual vulnerabilities available in their projects or infrastructure (without the actual knowledge of their exploitability). Hence they would be allowed to remediate to such weaknesses.",
+            "Administrator": "By performing a vulnerability assessment, administrators may highlight the actual vulnerabilities available in infrastructure (without the actual knowledge of their exploitability). Hence they would be allowed to remediate to such weaknesses.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-026",
+        "sgName": "Penetration Testing",
+        "info": [{
+            "Description": "Penetration testing is a test methodology in which the assessors, working under specific contraints, attempt to circumvent or defeat the security features of a system, software or network in order to highlight their deficiencies and identify the potential security weaknesses.Thus, applied to the Open-Source supply chain attacks scenario, the scope of a penetration test could require to check the security posture with respect to all the attack vectors, in order to understand the adequacy and effectiveness of controls put in place. In fact, performing a penetration test related to Open-Source supply chain attacks could require to perform also social engineering attacks, verify if developers may be subjected to name confusion attacks or would use trojan-horsed packages etc.",
+
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "Open-source project maintainers may perform penetration tests on their projects or systems in order to identify 0-day exploits before the attackers could actually exploit them. Hence they could fix such security weaknesses.",
+            "Administrator": "Administrators may perform penetration tests on their systems in order to identify 0-day exploits before the attackers could actually exploit them. Hence they could fix such security weaknesses.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-027",
+        "sgName": "Antivirus/Antimalware",
+        "info": [{
+            "Description": "An antivirus/antimalware tool is a software that detect malicious software using signatures or heuristics. The application of such tools, in the scope of Open-Source supply chain attacks could have a broader application, since they could involve the scan of binaries contained in packages.",
+
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainers may use antivirus/anti-malware programs in order to detect the presence of malwares in  their systems or within their infrastructure. Thus they would prevent infections and possible injections of malicious code within the source code or packages.",
+            "Administrator": "System administrators may use antivirus/anti-malware programs in order to detect the presence of malwares in the packages uploaded by the maintainers, in their systems or within the infrastructure.",
+            "Downstream User": "Open-Source Consumers may employ antivirus/antimalware programs to possibly detect the download of malicious open source components."
+        }]
+    },
+    {
+        "sgId": "SG-028",
+        "sgName": "Scoped Packages",
+        "info": [{
+            "Description": "Some package managers (e.g., npm and Yarn) allows organizations to define a scope for packages. Scopes allows to group packages below a specific name. Hence, users or organizations can define their own scope name, and only they can add packages under such scope. Thus, a malicious user would not be allowed to publish a package with the same name of a scoped package.Depending on the specific ecosystem, the implementation of scoping (and the related best-practices) may be different. For example, in Java ecosystems, especially for Maven, it is possible to define DNS based group-id's, hence a best practice would be to migrate group IDs to domain-base names. Conversely, in .NET ecosystems, package owners can reserve and protect their identity by reserving ID prefixes in public galleries. Thus, packages under a registered ID prefix can be uploaded only by approved accounts, protecting from dependency confusion attacks.",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "By specifying scopes for their packages, Project Maintainers would ensures that the packages below such scope would come frome their organization, preventing attackers by declaring packages with identical names.",
+            "Administrator": "Administrators of package repositories may enabline scoping features for package names, so users may specify the package name along with their scope.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-029",
+        "sgName": "Version Pinning",
+        "info": [{
+            "Description": "Version pinning consists of specifying precise version identifiers when downloading/installing packages or declaring dependencies, rather than using range expressions (e.g., \"1.2.3\" instead of \">=1.2\" or \"1.2.*\"). While exact version specifications prevent upgrade or downgrade attacks, they cannot prevent a compromised index from serving a malicious package having the same version identifier. In addition, it is worth to mention that the effectiveness of pinning the version of a package, relating to the updating process of dependencies, should not be automated, in the sense that it should always involve conscious decisions and clear understanding that no malicious code could be introduced via an update.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open-Source Consumers could prevent injection of vulnerable or malicious code through dependencies in their projects by pinning the versions for their dependencies. Hence, they would specify exact versions for packages, rather than using open ranges."
+        }]
+    },
+    {
+        "sgId": "SG-030",
+        "sgName": "Dependency Resolution Rules",
+        "info": [{
+            "Description": "Comparable to firewall rules, establishing resolution rules allows to define the priority with which the package manager will search and choose which package will be installed. Hence, enforcing resolution rules would prevent dependency confusion attacks.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open Source Consumer may enforce and define resolution rules for the packages, so to have a better management of the retrieval of the packages specified."
+        }]
+    },
+    {
+        "sgId": "SG-031",
+        "sgName": "Establish Internal Repository Mirrors and reference one private feed, not multiple",
+        "info": [{
+            "Description": "Most package manager clients will query all package feeds listed in the local configuration without regard for order or priorities. For package managers who do not prioritize feeds, the recommendation is to configure the client to reference a single private feed. This may require pushing public packages to the private feed manually o reconfiguring the private feed to pull them automatically.Configuring the package manager to use only a single source isolates from unexpected public feed changes.",
+ 
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainer may establish an internal repository for their dependencies or to reference one private feed (and not multiple). In such a way, the would have a better control over their consumed components and prevent attacks that would tamper packages in public hosting systems.",
+            "Administrator": "",
+            "Downstream User": "Open Source Consumer may establish an internal repository for their dependencies or to reference one private feed (and not multiple). In such a way, the would have a better control over their consumed components and prevent attacks that would tamper packages in public hosting systems."
+        }]
+    },
+    {
+        "sgId": "SG-032",
+        "sgName": "Isolation of build steps",
+        "info": [{
+            "Description": "The build service should ensure that individual build steps of a build process run in an isolated environment. In this way, two concurrent build cannot influence each other, it is impossible for one build to persist the build environment of a subsequent build, or shared caches cannot be tampered. ",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainer could design the build process for their components, such as each build step is isolated from the other ones. In this way a compromission of a single step would not propagate the infection through the consequent stages.",
+            "Administrator": "",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-033",
+        "sgName": "Ephemeral Build Environment",
+        "info": [{
+            "Description": "Use a clean build system, that is build jobs should not run on systems that have already executed other build jobs. This may be achieved by containerizing and constraining the builds. In fact, build jobs could be run in isolated environment (e.g., VMs or containers) in order to prevent the possibility to tamper other build jobs, so possibly injecting malicious code in other build instances. In addition, running build jobs in virtual environments would prevent that malicious run could infect the build system. In addition, by disabling caching for build jobs would prevent that malwares designed to use the cache as carrier of the infection could affect the build jobs, hence possibly infect the built component.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainer may avoid recurrence of infections due to an infected build environment by destroying and re-creating a new instance of it at every build process.",
+            "Administrator": "",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-034",
+        "sgName": "Use Minimal Set of Trusted Build Dependencies in the Release Job",
+        "info": [{
+            "Description": "The release job should use a minimal set of trusted build dependencies, while any tests and quality checks can be done in a dedicated job preceding the release build.",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainer may enforce policies with which, during the release build job, a minimal set of trusted dependencies will be used. Hence, all the unnecessary (and possibly infected) components would not tamper the release version of an open source component.",
+            "Administrator": "",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-035",
+        "sgName": "Configure build jobs through code",
+        "info": [{
+            "Description": "The definition and the configuration of build jobs is contained in files (e.g., YAML files), that are consequently stored in VCS along with the source code.",
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainer may define and configure the build jobs through code and store such files in source control managers.",
+            "Administrator": "",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-036",
+        "sgName": "Integrate Open Source Vulnerability scanners into CI/CD pipelines",
+        "info": [{
+            "Description": "By integrating vulnerability scanners into the CI/CD pipeline would allow to conduct vulnerability assessments on the potential software product that has to be built, preventing that such vulnerabilities will end up in the final release.",
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open Source Consumers may design or configure their build tool to integrate a vulnerability scanner within their CI/CD pipeline, so to perform vulnerability checks during the build process and prevent that the built component will contain vulnerabilities."
+        }]
+    },
+    {
+        "sgId": "SG-037",
+        "sgName": "Reproducible builds",
+        "info": [{
+            "Description": "By making a build reproducible would allow to verify that no vulnerabilities or malicious code have been introduced during the build process. Hence, by guaranteeing identical results at every build from a given source, allows multiple third parties to come to a consensus and possibly highlighting any deviations from the expected results. The goal of reproducible builds would firstly require a deterministic build system. Secondly, the build environment should either be recorded or pre-defined. Finally, users will be given a way to recreate such build environment, perform the build process and so validate that the output matches the initial and intended one.",
+
+            "Directive": false,
+            "Preventive": false,
+            "Detective": true,
+            "Corrective": true,
+            "Project Maintainer": "Open Source Project Maintainer could design their build process reproducible, so that the downstream users could replicate the build steps to obtain the exact replica of what they have downloaded and ensures that no tampering has occurred.",
+            "Administrator": "Package Repositories may follow the build guidelines defined for specific packages in order to offer to downstream users (i.e., Open-Source consumers), packages that can be verified to have followed such procedures. Thus, this would provide more guarantee of transparency for further inspections.",
+            "Downstream User": "Open Source Consumer could benefit from reproducible builds since they would be allowed to replicate the build steps and  verify that the integrity of the open source component has been preserved during the build."
+        }]
+    },
+    {
+        "sgId": "SG-038",
+        "sgName": "Preventive squatting",
+        "info": [{
+            "Description": "Project maintainers (or external users) can use this technique to prevent that packages with confusing names can be squatted by attackers. The number of confusing names, however, can be very large, wich makes it very difficult to preventively squat all of them.",
+            
+          
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainers could reserve squatted names for their packages, so as to prevent malicious user from creating name confusion attacks. ",
+            "Administrator": "Package Repositories may implement preventive squatting features for the submitted packages from the package mantainers, so that would be difficult for an attacker to perform name confusion attacks.",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-039",
+        "sgName": "Enstablish vetting process for Open-Source components",
+        "info": [{
+            "Description": "Maintaining an internal mirror allows an organization to properly manage which component should be used and which not. Most importantly, maintaining an internal mirror allows to vet the selected components, in order to refuse malicious packages, once detected and filtered out. In fact, by vetting the components before including them, would ensure that all packages would be safe to be used, preventing to install components that could have been modified by a malicious user in the public hosting systems.",
+            
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "Administrators may enforce the protection against the uploading of infected packages by vetting the submitted packages from the package maintainers.",
+            "Downstream User": "Open Source consumers may establish an internal mirror of vetted components for their dependencies, so as to prevent that infected packages would be consumed and so possibly affect the released component."
+        }]
+    },
+    {
+        "sgId": "SG-040",
+        "sgName": "Use encrypted communication protocols with the Administrator",
+        "info": [{
+            "Description": "When a communication protocol is unencrypted may allow an eavesdropper to intercept and analyse a private communication between two parties. Furthermore, a malicious actor could leverage such weakness in order to  interpose between the two communicating parts, then modify the content of the communication itself and perform the so called Man-In-The-Middle attacks. In the specific case of supply chain attacks, an attacker may interfere during the downloading of packets from the repository in order to modify the packets and provide to downstream users an infected version of them. Thus, by using encrypted communication protocols, such attacks may be prevented.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "Administrators may adopt encrypted communication protocols to prevent malicious users to perform MITM attacks and provide infected packages to the Open-Source Consumers",
+            "Downstream User": "Open Source Consumers may refuse to download open source components through unencrypted communications, so as to prevent MITM attacks to affect them."
+        }]
+    },
+    {
+        "sgId": "SG-041",
+        "sgName": "DNSSEC",
+        "info": [{
+            "Description": "The Domain Name System Security Extensions extend the traditional DNS protocol, by providing cryptographic authentication of data and data integrity. In fact, when a user needs to access a resource, he would typically rely on DNS infrastructures to locate it. Traditional DNSes may be subject to DNS Cache Poisoning attacks, where an attacker manipulate DNS responses in order to infect the DNS cache, so as to serve malicious responses to the requesters. DNSSEC protects from DNS Cache Poisoning attacks by digitally signing the DNS responses, so an attacker would not be able to craft malicious responses without having the rights to digitally sign on behalf of his/her targets.",
+            
+          
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "Administrators may configure to use DNSSEC for their infrastructure, so to digitally sign or verify the signatures of DNS responses and prevent DNS Cache Poisoning attack.",
+            "Downstream User": "Open-Source Consumers may verify that the DNS responses have been correctly signed and come from a trusted source."
+        }]
+    },
+    {
+        "sgId": "SG-042",
+        "sgName": "Use of Dedicated Build Service",
+        "info": [{
+            "Description": "Build processes should run in dedicated (and hardened) environments, e.g. a dedicated server or VM in a cloud environment, and not on developers' workstations. In this way the compromise of a developer's machine does not affect the build process and the resulting artifacts.",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "Open Source Project Maintainers may avoid issues related to tampering with build environments by using a dedicated (and hardened) environment for the build service, rather than their workstation.",
+            "Administrator": "",
+            "Downstream User": ""
+        }]
+    },
+    {
+        "sgId": "SG-043",
+        "sgName": "Integrity check of dependencies through cryptographic hashes",
+        "info": [{
+            "Description": "When consuming Open-Source packages as dependencies, an user should verify the provenance integrity by checking the related checksum (e.g., md5 or sha256 hashes). ",
+
+            "Directive": false,
+            "Preventive": true,
+            "Detective": false,
+            "Corrective": false,
+            "Project Maintainer": "",
+            "Administrator": "",
+            "Downstream User": "Open-source consumers should verify the cryptographic hashes of the consumed packages (and its dependencies) to check their integrity."
+        }]
+    }]

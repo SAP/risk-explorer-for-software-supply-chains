@@ -1,0 +1,16 @@
+.home{
+    flex: 4;
+}
+
+.container{
+    display: flex;
+    
+}
+
+.tableWrapper{
+    flex: 4;
+    margin-left: 310px;
+    margin-top: 55px;
+    margin-right:10px;
+}
+

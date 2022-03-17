@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+.home {
+    flex: 4;
+}
+
+.container {
+    display: flex;
+    z-index: 900;
+    opacity: 90%;
+    background-color: whitesmoke;
+    
+}
+
+#homeWrapperDiv{
+    flex: 4;
+    margin-left: 0px;
+    margin-top: 55px;
+    margin-right:10px;
+}
+
+.home a.active,
+.home a:hover {
+    text-decoration: none;
+    background-color: transparent;
+   
+}

@@ -1,0 +1,16 @@
+.home{
+    flex: 4;
+}
+
+.container{
+    display: flex;
+}
+
+#attacktableWrapperDiv{
+    flex: 4;
+    margin-left: 10px;
+    margin-top: 55px;
+    margin-right:10px;
+    overflow-y: auto;
+}
+

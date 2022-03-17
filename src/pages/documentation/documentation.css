@@ -1,0 +1,13 @@
+.home {
+    flex: 4;
+}
+
+.documContainer {
+    display: flex;
+    padding: 1%;
+    background-color: whitesmoke;
+}
+
+#oss-supp-model, #attacktree-fund, #jsondata{
+    scroll-margin: 55px;
+}

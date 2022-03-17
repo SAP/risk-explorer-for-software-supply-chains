@@ -1,0 +1,504 @@
+[{
+    "avId": "AV-000",
+    "avName": "Conduct Open-Source Supply Chain Attack",
+    "info": [{
+        "Description": "The attack tree focuses on open-source based software development practices, which involve the consumption of numerous open-source components throughout the entire development lifecycle, spanning from IDE plugins, test frameworks and build tools to runtime dependencies. In this context, the attacker's top-level goal is to place malicious code in open-source artifacts such that it is executed in the context of downstream projects, e.g., during its development or runtime. Such malware can exfiltrate data, represent or open a backdoor, as well as download and execute second-stage payload. Targeted assets can belong both to developers of downstream software projects, or their end-users, depending on the attacker's specific intention. However, the focus of this taxonomy is not on what malicious code does, but how attackers place it in upstream projects. Attackers can target any kind of project (e.g. libraries or word processors), direct or indirect downstream consumers, as many as possible, or very specific ones. The latter is possible by conditioning the execution of malicious code, e.g. on the lifecycle phase (install, test, etc.), application state, operating system, or properties of the downstream component it has been integrated into. Note that infections are not limited to adding malicious executable program code, but can also comprise insecure defaults, the re-introduction of previsously fixed vulnerabilities, the removal of authorization checks, the introduction of new dependencies (on attacker-controlled packages), tests, etc.",
+        "Impact": "Conduct a Software Supply Chain attack",
+        "Mapped Safeguard": [{
+            "sgId": "SG-001"
+        }, {
+            "sgId": "SG-002"
+        }, {
+            "sgId": "SG-003"
+        }, {
+            "sgId": "SG-005"
+        }, {
+            "sgId": "SG-006"
+        }, {
+            "sgId": "SG-010"
+        }, {
+            "sgId": "SG-013"
+        }, {
+            "sgId": "SG-014"
+        }, {
+            "sgId": "SG-023"
+        }, {
+            "sgId": "SG-024"
+        }, {
+            "sgId": "SG-025"
+        }, {
+            "sgId": "SG-026"
+        }, {
+            "sgId": "SG-036"
+        }, {
+            "sgId": "SG-039"
+        }]
+    }]
+}, {
+    "avId": "AV-100",
+    "avName": "Develop and Advertise Distinct Malicious Package from Scratch",
+    "info": [{
+        "Description": "This attack vector covers the creation of a new, seemingly legitimate and useful open-source project with the intention to use it for spreading malicious code, either from the beginning or at a later point in time. Besides creating the project and developing useful functionality, the attacker is required to advertise the project in order to attract victims.",
+        "Impact": "Inject Malicious Code in a component of the software supply chain, hiding the malicious code in a dependency of a seemingly harmless package",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-200",
+    "avName": "Create Name Confusion with Legitimate Package",
+    "info": [{
+        "Description": "The general idea behind name confusion is that attackers craft new component names that resemble names of legitimate open-source or system components, suggest trustworthy authors or play with common naming patterns in different languages or ecosystems. Malicious components with such names are then deployed on source code or package repositories waiting to be downloaded by victim users or developers. Since the package name does not yet exist in the respective repository, the deployment can be done very easily, without interferring with any legitimate packages, including the one(s) that inspired the new name. Child nodes of this attack vector relate to sub-techniques applying different modifications to the legitimate project name.",
+        "Impact": "Inject Malicious Code in a component of the software supply chain",
+        "Mapped Safeguard": [{
+            "sgId": "SG-007"
+        }, {
+            "sgId": "SG-011"
+        }, {
+            "sgId": "SG-012"
+        }, {
+            "sgId": "SG-038"
+        }]
+    }]
+}, {
+    "avId": "AV-201",
+    "avName": "Combosquatting",
+    "info": [{
+        "Description": "Combosquatting consists of creating a package name containing pre or post-fix additions to the name of a benign package. The attacker can use naming patterns that are common to general development practices (e.g., the addition of \"-dev\" or \"-rc\"), given ecosystems (e.g., the addition of \"3\" to suggest compatibility with Python 3) or indicate platform compatibility (e.g. \"i386\").",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-202",
+    "avName": "Altering Word Order",
+    "info": [{
+        "Description": "If the name of legitimate packages comprises multiple words, e.g. separated by hyphens or using camel case notation, this technique consists of re-arranging those words in a different order (for example \"test-vision-client\" instead of \"test-client-vision\")",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-203",
+    "avName": "Manipulating Word Separators",
+    "info": [{
+        "Description": "This technique consists of adding or altering word separators of legitimate packages, e.g. hyphens or underscores (for example \"setup-tools\" instead of \"setuptools\").",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-204",
+    "avName": "Typosquatting",
+    "info": [{
+        "Description": "Typosquatting is a technique originally known in the context of Website domains, and relies on mistakes such as typographical errors made by users when entering a website address into a web browser. In this context, the attacker exploits that users mistype names of legitimate packages during installation or when declaring dependencies.",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-205",
+    "avName": "Built-in Package",
+    "info": [{
+        "Description": "By creating a package whose name is identical to a built-in package (or module) of the respective programming language or ecosystem (for example \"subprocess\" for Python), a victim can be tricked into downloading and installing the malicious package through the package manager rather than using built-in functionality.",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-206",
+    "avName": "Brandjacking",
+    "info": [{
+        "Description": "This technique consists of crafting package names that create the impression of coming from a trustworthy author or entity, e.g. by using the same prefix as legitimate packages from such author (e.g. \"aws-\").",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-207",
+    "avName": "Similarity Attack",
+    "info": [{
+        "Description": "This technique covers misleading or similar names that do not fall in any other category of name confusion attacks.",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-001",
+    "avName": "Subvert Legitimate Package",
+    "info": [{
+        "Description": "This attack vector covers all attacks aiming to corrupt an existing, legitimate project, which requires compromising one or more of its numerous stakeholders or resources, e.g. its source code repository, build system or distribution infrastructure. <br>The three attack vectors \"Inject into Sources of Legitimate Package\", \"Inject during the Build of Legitimate Package\" and \"Distribute Malicious Version of Legitimate Package\" have in common that most of them tamper with resources of an existing, legitimate open-source project, i.e., its source code, build system or distribution channels. Developing and advertising a distinct malicious package from scratch, as well as creating name confusion with the one of a legitimate package, on the other hand, do not require to directly interfere with existing project resources or maintainers, but only require to trick the victim into the consumption of the malicious package.",
+        "Impact": "Execute Unauthorized Code",
+        "Mapped Safeguard": [{
+            "sgId": "SG-009"
+        }, {
+            "sgId": "SG-029"
+        }]
+    }]
+}, {
+    "avId": "AV-300",
+    "avName": "Inject Into Sources of Legitimate Package",
+    "info": [{
+        "Description": "This attack vector aims at injecting malicious code into the versioning control system of a legitimate project. Consequently, every user or system building the software from the sources will be affected by the attack, and - as far as this is the attackers intention - produce a binary package including the malicious code. Of course, this also comprises the project's standard build system producing the binary that will be distributed through the project's standard distribution mechanism, e.g., package repositories like Maven Central or npm. In other words, for the attacker, this technique has the advantage that all downstream users are affected, no matter whether they consume sources or pre-built binary artifacts. On the other hand, being part of the project's code base makes it easier to spot malicious code, e.g. through code reviews.",
+        "Impact": "Execute Unauthorized Code",
+        "Mapped Safeguard": [{
+            "sgId": "SG-004"
+        }]
+    }]
+}, {
+    "avId": "AV-301",
+    "avName": "Introduce Malicious Code through Hypocrite Merge Request",
+    "info": [{
+        "Description": "A vulnerability could be introduced in a project through a small patch to fix a minor issue, which actually introduces the remaining conditions of an immature vulnerability.  Compared to \"Hide in Pull Request\", this attack requires to analyze the project's code base beforehand to identify so-called immature vulnerabilities. Also, the malicious code is \"limited\" to introducing backdoors.",
+        "Impact": "Acceptance of malicious code from package maintainer",
+        "Mapped Safeguard": [{
+            "sgId": "SG-015"
+        }, {
+            "sgId": "SG-016"
+        }]
+    }]
+}, {
+    "avId": "AV-302",
+    "avName": "Contribute as Maintainer",
+    "info": [{
+        "Description": "The attacker obtains the permissions of a legitimate project maintainer to commit and push malicious code to the code base of the targeted project, directly or through pull/merge requests, depending on the project's development practice. The child nodes of this technique differ in regards to how those permissions are obtained.",
+        "Impact": "Injection of malicious code into a legitimate software component",
+        "Mapped Safeguard": [{
+            "sgId": "SG-015"
+        }, {
+            "sgId": "SG-016"
+        }, {
+            "sgId": "SG-022"
+        }]
+    }]
+}, {
+    "avId": "AV-303",
+    "avName": "Tamper with Version Control System",
+    "info": [{
+        "Description": "Open-source based software development relies on multiple systems, many of which are accessible online, e.g., source code repositories or build systems. Those systems can be subject to vulnerabilities, require secure configuration settings and come with privileged administrator accounts. In this specific case, the modification of a legitimate package, plugin or configuration file to include something malicious could be achieved by attacking the version control system on which such files are stored. Though the majority of open-source projects is hosted on GitHub or GitLab cloud services, some projects and open-source foundations still operate their own versioning control system.",
+        "Impact": "Modification of source code to include security flaws or malicious code",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-304",
+    "avName": "Make Immature Vulnerability Exploitable",
+    "info": [{
+        "Description": "A vulnerability could be introduced in a project through a small patch to fix a minor issue, which actually introduces the remaining conditions of a so-called immature vulnerability. This technique requires to analyze the project's code base beforehand to identify those immature vulnerabilities. Presumably, this technique is particularly geared towards creating backdoors in existing project capabilities. On the other hand, the addition of larger code chunks, e.g. to download and run second stage payload, can hardly be achieved using this technique.",
+        "Impact": "Acceptance of malicious code from package maintainer",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-305",
+    "avName": "Exploit Rendering Weakness",
+    "info": [{
+        "Description": "This technique exploits rendering weaknesses of user interfaces to hide malicious code such that it can hardly be spotted (if at all) during manual code or merge request reviews. Possible techniques include the misuse of Unicode's Bidi Algorithm or the manual tampering with large files that are typically created in some automated fashion.",
+        "Impact": "Acceptance of malicious code from package maintainer",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-306",
+    "avName": "Exploit Unicode Bidirectional Algorithm",
+    "info": [{
+        "Description": "The Unicode Bidirectional algorithm (a.k.a. Bidi) supports left-to-right and right-to-left text encodings. In particular, Bidi uses override control characters, which are invisible characters that enable switching the display ordering of groups of characters (e.g. U+202A is the Left-to-Right Embedding, U+202B is the Right-to-Left Embedding). An attacker may inject Unicode Bidi override characters into comments or strings to produce syntactically - valid source codes, but that hide semantically different codes(and potentially malicious).Possible expoits may perform early - returns, commenting - out or stretched strings (i.e. text that appears to be outside a string literal but that it is actually located within it).",
+        "Impact": "Acceptance of malicious code from package maintainer",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-307",
+    "avName": "Use Homoglyphs",
+    "info": [{
+        "Description": "Homoglyphs are characters that looks similar (if not the same), but are encoded and processed differently. An example is the Latin 'H' and the Cyrillic 'En' (i.e. \u041d). An attacker may define a malicious version of a function with apparently the same name - but exploiting homoglyphs - such that it will be invoked by the disguised user.",
+        "Impact": "Acceptance of malicious code from package maintainer",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-308",
+    "avName": "Prevent Display of File Differences",
+    "info": [{
+        "Description": "The attacker opens a pull request containing the malicious code for the targeted project, hoping that legitimate project maintainers will not notice it during the review and approval workflow. To increase chances that the malicious pull/merge request gets approved and merged into the project's code base, the attacker can build some trust beforehand, e.g., by submitting some benign contribution, or use techniques to hide or surpress the display of the malicious code in the approval workflow (a.k.a. pull request sneaking). In this particular case, the attacker may use special characters (e.g., the null character), such that the text editor will interprete them and the file difference will not be displayed.",
+        "Impact": "Acceptance of malicious code from package maintainer",
+        "Mapped Safeguard": [{
+            "sgId": "SG-015"
+        }, {
+            "sgId": "SG-016"
+        }]
+    }]
+}, {
+    "avId": "AV-309",
+    "avName": "Hide in Generated/Compiled/Minified Code",
+    "info": [{
+        "Description": "The attacker opens a pull/merge request containing the malicious code for the targeted project, hoping that legitimate project maintainers will not notice it during the review and approval workflow. To increase chances that the malicious PR gets approved and merged into the project's code base, the attacker can build some trust beforehand, e.g. by submitting benign contributions, or use techniques to hide or surpress the display of the malicious code in the approval workflow (a.k.a. pull request sneaking). In this particular case, the attacker may inject malicious code in generated/compiled/minified code, such that it would be hard to detect by the human code reviewer.",
+        "Impact": "Acceptance of malicious code from package maintainer",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-400",
+    "avName": "Inject During the Build of Legitimate Package",
+    "info": [{
+        "Description": "Downstream users of open-source projects typically consume pre-built components, which are created on build systems and distributed through package repositories like npm.<br><br>The injection of malicious code can happen during the build process. In contrast to injecting the malicious code into the project's code base, \"only\" the results of such compromised builds are affected, thus, open-source users building from source are safe. However, depending on the programming language used, e.g. compiled vs. interpreted, malicious code added during the build is more difficult to detect.",
+        "Impact": "Introduction of vulnerabilities or malicious components in a software product",
+        "Mapped Safeguard": [{
+            "sgId": "SG-008"
+        }, {
+            "sgId": "SG-032"
+        }, {
+            "sgId": "SG-033"
+        }, {
+            "sgId": "SG-034"
+        }, {
+            "sgId": "SG-035"
+        }, {
+            "sgId": "SG-037"
+        }, {
+            "sgId": "SG-043"
+        }]
+    }]
+}, {
+    "avId": "AV-401",
+    "avName": "Run Malicious Build",
+    "info": [{
+        "Description": "If build systems share resources between build jobs of different projects, e.g. plugins, configurations or caches, attackers can run a malicious build job to compromise such shared resources. Other projects will be affected once they consume the compromised shared resources.",
+        "Impact": "Introduction of vulnerabilities or malicious components in a software product",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-402",
+    "avName": "Tamper Build Job as Maintainer",
+    "info": [{
+        "Description": "Build jobs consume project sources to produce binary artifacts that can be readily used or deployed. Ideally, build jobs are defined in the source code repository itself, but they can also be read from other sources or be manually created using Web interfaces of build systems like Jenkins. In the latter cases, attackers can impersonate the maintainer in order to change the build job definition such that malicous code is injected into the final software product.",
+        "Impact": "Introduction of vulnerabilities or malicious components in a software product",
+        "Mapped Safeguard": [{
+            "sgId": "SG-022"
+        }]
+    }]
+}, {
+    "avId": "AV-403",
+    "avName": "Tamper with Exposed Build System",
+    "info": [{
+        "Description": "Build systems producing ready-made versions of open-source projects, and which are distributed through package repositories like npm, are often accessible online, and sometimes discoverable through services like Shodan. As for every other exposed system, attackers may exploit weak configurations and vulnerabilities or comprise administrators accounts. This way, attackers may tamper with resources used during the build jobs of projects using the respective system in order to inject malicious code into the binaries deployed to package repositories.",
+        "Impact": "Introduction of security flaws or malicious component in software product.",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-500",
+    "avName": "Distribute Malicious Version of Legitimate Package",
+    "info": [{
+        "Description": "Many open-source consumers do not build open-source components from the respective sources. Instead, they consume pre-built artifacts made available through package repositories like npm or PyPI. In addition to the official hosting channel, typically, those artifacts are mirrored in remote and local repositories or made available through CDNs, e.g., in case of JavaScript libraries loaded at Web page startup. Finally, another example of distribution channel through which such artifacts can be delivered are proxies.<br><br>The goal of this technique is to tamper with the distribution channels such that open-source consumers download compromised, malicious versions of legitimate packages.",
+        "Impact": "Infection through legitimate software distribution channels ",
+        "Mapped Safeguard": [{
+            "sgId": "SG-007"
+        }, {
+            "sgId": "SG-008"
+        }, {
+            "sgId": "SG-037"
+        }, {
+            "sgId": "SG-043"
+        }]
+    }]
+}, {
+    "avId": "AV-501",
+    "avName": "Dangling Reference",
+    "info": [{
+        "Description": "When an existing package is retired and removed by its maintainer, attackers can create a malicious package having the identical name. A dangling reference to the retired package will then be resolved to the malicious, revived package.",
+        "Impact": "Execute Unauthorized Code",
+        "Mapped Safeguard": [{
+            "sgId": "SG-030"
+        }, {
+            "sgId": "SG-031"
+        }]
+    }]
+}, {
+    "avId": "AV-502",
+    "avName": "Mask Legitimate Package",
+    "info": [{
+        "Description": "Packages like any other resource on the network, are identified by means of URLs. These URLs can be managed automatically by means of package managers or be present in web pages to allow downstream users to download the aforementioned packages. The user request to download a particular package, therefore involves the resolution of the path from which to obtain such component. Any manipulation of this mechanism can lead to the masking of a legitimate package in favor of a different (and potentially infected) version. Thus, MITM attacks, DNS Cache Poisoning, tampering the legitimate URL or abusing the dependency resolution mechanisms can result in the installation of malicious versions of packages.",
+        "Impact": "Installation of malicious package",
+        "Mapped Safeguard": [{
+            "sgId": "SG-031"
+        }]
+    }]
+}, {
+    "avId": "AV-503",
+    "avName": "Prevent Update to Non-Vulnerable Version",
+    "info": [{
+        "Description": "This technique is about the abuse of update systems by an attacker, so that he/she is able to manipulate metadata preventing the update to non-vulnerable versions of software components. Such goal can be achieved, for example, by replaying correctly signed old metadata or by forging metadata to indicate an unsatisfiable dependency for newer versions of packages.<br><br>Preventing a user from updating to non-vulnerable version of software component, an attacker would be exposing downstream users to the exploitation of known vulnerabilities.",
+        "Impact": "Exposure to known vulnerability",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-504",
+    "avName": "Distribute as Package Maintainer",
+    "info": [{
+        "Description": "This vector covers the use of a project's typical deployment workflows, processes or APIs to upload new malicious versions of existing open-source packages to the project's standard distribution channel, e.g. Administrator.",
+        "Impact": "Installation of malicious package",
+        "Mapped Safeguard": [{
+            "sgId": "SG-022"
+        }, {
+            "sgId": "SG-031"
+        }]
+    }]
+}, {
+    "avId": "AV-505",
+    "avName": "Inject into Hosting System",
+    "info": [{
+        "Description": "This vector reflects the goal to manipulate existing package versions hosted on distribution sites (e.g., package repositories, public and internal mirrors, proxies, project websites, CDN). Thereby he/she bypasses the standard deployment processes, but manipulates existing binaries stored in databases or filesystems.",
+        "Impact": "Infection through legitimate software distribution channels ",
+        "Mapped Safeguard": [{
+            "sgId": "SG-031"
+        }]
+    }]
+}, {
+    "avId": "AV-506",
+    "avName": "MITM",
+    "info": [{
+        "Description": "In a Man-In-The-Middle attack, an attacker is able to eavesdrop on the communication between two legitimately communicating entities. Hence he/she is able to intercept the traffic between the two counterparties and possibly manipulate it. In the specific case of software supply chain attacks, it can happen that the communication between the downstream users and the hosting system is not encrypted. This opens up the possibility for an attacker to manipulate the unencrypted traffic using proxies, hence to maliciously modify the packages downloaded from the legitimate hosting system.",
+        "Impact": "Infection of legitimate packages during the communication with legitimate hosting systems.",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-507",
+    "avName": "DNS Cache Poisoning",
+    "info": [{
+        "Description": "The purpose of Domain Name Servers (DNS) is to translate a domain name into an IP address to ease users when contacting an online resource and such mappings may be cached. An attacker may be able to exploit the caching mechanism (e.g., Kaminsky Attack) to modify the DNS cache to cause certain names to resolve to incorrect addresses, managed by the attackers. Hence, an adversary may be able to deviate the legitimate path to a valid package into an infected one. ",
+        "Impact": "Redirection of the user to a malicious source of infected packages",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-508",
+    "avName": "Tamper Legitimate URL",
+    "info": [{
+        "Description": "When a user or a software component (e.g. package manager) wishes to download a package, it will be identified by means of a URL. Any modification of the URLs of legitimate packages into a hosting system (rather than tampering with the communication or abusing the domain name resolution) would allow an adversary to identify a different (and potentially malicious) version than the legitimate and expected one by the user.",
+        "Impact": "Redirection of the user to a malicious source of infected packages",
+        "Mapped Safeguard": [{
+            "sgId": "SG-030"
+        }]
+    }]
+}, {
+    "avId": "AV-509",
+    "avName": "Abuse Dependency Resolution Mechanism",
+    "info": [{
+        "Description": "Most package managers implement a dependency resolution strategy, which decides which package version has to be downloaded, where to download from and the order of precedence when contacting multiple repositories. The specific implementation of such resolution mechanism and its configuration determines about the number and order of repositories to be queried, hence the use of mirrors. For instance, it can happen that packages in public repositories take precendence over internal, proprietary packages in internal repositories. This latter is also known as \"dependency confusion\".  In other words, the internal package is \"masked\" by the public one. As another example, it can happen that a public repository not provisioned by the legitimate project maintainers takes precedence.<br><br>Generally speaking, every abuse of the dependency resolution strategy would result in the installation of a package version that could not match the intended one, but the one deployed in an alternative repository or mirror.",
+        "Impact": "Installation of malicious package",
+        "Mapped Safeguard": [{
+            "sgId": "SG-030"
+        }]
+    }]
+}, {
+    "avId": "AV-600",
+    "avName": "Compromise User (Project Maintainer/Administrator)",
+    "info": [{
+        "Description": "A malicious actor may impersonate a valid account of a package maintainer, of a build system or hosting system administrator and so on, to inject malicious code and eventually conduct a supply chain attack. An attacker that is able to impersonate a legitimate user, would be able to bypass access controls on sensitive resources.",
+        "Impact": "Unauthorized access and/or modification of sensitive information and/or protected resources.",
+        "Mapped Safeguard": [{
+            "sgId": "SG-022"
+        }]
+    }]
+}, {
+    "avId": "AV-601",
+    "avName": "Bribe or Blackmail Legitimate User",
+    "info": [{
+        "Description": "An attacker may blackmail or corrupt a legitimate user to force him to inject malicious code or include weaknesses.",
+        "Impact": "Corruption of legitimate user and disruption of user trust",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-602",
+    "avName": "Take-over Legitimate Account",
+    "info": [{
+        "Description": "By taking over a legitimate account, an attacker is able to impersonate a legitimate user and to conduct malicious operations on behalf of him/her.",
+        "Impact": "Unauthorized access and/or modification of sensitive information and/or protected resources.",
+        "Mapped Safeguard": [{
+            "sgId": "SG-017"
+        }, {
+            "sgId": "SG-018"
+        }, {
+            "sgId": "SG-019"
+        }, {
+            "sgId": "SG-020"
+        }, {
+            "sgId": "SG-021"
+        }]
+    }]
+}, {
+    "avId": "AV-603",
+    "avName": "Reuse of Compromised Credentials",
+    "info": [{
+        "Description": "An attacker can conduct information gathering campaigns using OSINT tools, published compromised credentials after data breaches and so on, to obtain valid credentials for high-profile users (e.g., administrators) .The usage of valid and compromised credentials would allow a malicious user to access source code repositories, build systems, configuration files etc. to eventually inject malicious code.",
+        "Impact": "Unauthorized access and/or modification of sensitive information and/or protected resources.",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-604",
+    "avName": "Bruteforce",
+    "info": [{
+        "Description": "Bruteforce is a technique to compromise a user account by trying all the possible combinations of username and password, for example, to eventually find the exact match granting him unauthorized access.",
+        "Impact": "Unauthorized access and/or modification of sensitive information and/or protected resources.",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-605",
+    "avName": "Reuse of Leaked API Tokens",
+    "info": [{
+        "Description": "In their strive for build automation, developers sometimes disclose sensitive credentials, e.g., API tokens, in the project's source code repository. Attackers getting hold of such credentials can impersonate the owner, e.g., in order to inject malicious code or sign software artifacts.",
+        "Impact": "Unauthorized access and/or modification of sensitive information and/or protected resources.",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-606",
+    "avName": "Social Engineering to Obtain Credentials",
+    "info": [{
+        "Description": "Social engineering (SE) consists of a series of malicious activities accomplished through human interactions and uses psychological manipulation to trick users into making security mistakes or giving away sensitive information. In our particular scope, a SE attack aims at obtaining the credentials of a privileged user, e.g. project maintainer or build system administrator.",
+        "Impact": "Unauthorized access and/or modification of sensitive information and/or protected resources.",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-607",
+    "avName": "Reuse of Existing Session",
+    "info": [{
+        "Description": "This technique aims to disrupt the authentication mechanism of a system through session IDs (e.g., tokens, cookies etc.) or piggybacking on existing sessions (e.g. similarly in XSRF). An attacker that is able to hijack such sessions will be able to gain privileges of the targeted user.",
+        "Impact": "Session hijacking and Gain of Privileges",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-608",
+    "avName": "Resurrect Expired Domain Associated With Legitimate Account",
+    "info": [{
+        "Description": "Project maintainers may use email addresses for their VCS, build system or distribution platform that have expired domains. Thus, an attacker can buy such domain, log into the targeted system and change the password for that account. In such a way the attacker is able to compromise the project unless two-factor authentication is enabled.",
+        "Impact": "Gain of administrative privileges",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-700",
+    "avName": "Compromise  System",
+    "info": [{
+        "Description": "By compromising a VCS system, a package hosting system or a build system, an attacker would be able, respectively, to inject malicious source code, a malicious version of a package or to infect a software product during its build process.",
+        "Impact": "Unauthorized access to system information or functionality. System compromise.",
+        "Mapped Safeguard": [{
+            "sgId": "SG-042",
+            "scopeAvId": "AV-403"
+        }]
+    }]
+}, {
+    "avId": "AV-701",
+    "avName": "Exploit Weak Configuration",
+    "info": [{
+        "Description": "Weaknesses in configuration can happen at any level of the stack: Network services, OS level, web server, database etc. Such misconfigurations can be used by an attacker as an entry point to gain unauthorized access to sensitive resources or, depending on his/her level of privileges, could allow him also to modify resources (e.g., packages hosted in a Administrator).",
+        "Impact": "Unauthorized access to system information or functionality. System compromise.",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-702",
+    "avName": "Exploit Vulnerabilities",
+    "info": [{
+        "Description": "When a service is publicly exposed, an attacker may be able to find and exploit (known and unknown) software vulnerabilities to gain access to the host machine, allowing him/her unauthorized access to sensitive resources.",
+        "Impact": "Unauthorized access to system information or functionality. System compromise.",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-703",
+    "avName": "Infect through Malicious Component",
+    "info": [{
+        "Description": "Many systems used throughout software development are open-source themselves, e.g., plugins for Jenkins, Maven or Visual Studio Code, or integrate open-source components. A compromised build tool, for instance, can infect any software built using that tool, along the lines of the famous 'Reflections on Trusting Trust' from K. Thompson. The infection of components through the infection of open-source used during development, build and distribution threby corresponds to the recursive application of the attack tree.",
+        "Impact": "",
+        "Mapped Safeguard": []
+    }]
+}, {
+    "avId": "AV-800",
+    "avName": "Become Maintainer",
+    "info": [{
+        "Description": "An attacker convinces or tricks a legitimate Project Maintainer (using social engineering techniques) to provide him or her aditional permissions, thus, to promote the attacker to a maintainer or even project owner. As a result, the attacker receives (higher) privileges for project-related resources, e.g., the source code repository, the build system or the Administrator. Many open-source projects are anyways short on resources (cf. https://www.codeshelter.co/ or https://jazzband.co), and sometimes the original maintainers simply cannot or do not want to continue project maintenance anymore, both of which makes such projects prone for these social-engineering attacks.",
+        "Impact": "Gain of privileges",
+        "Mapped Safeguard": []
+    }]
+}]
