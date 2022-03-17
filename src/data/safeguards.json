@@ -237,16 +237,16 @@
     },
     {
         "sgId": "SG-017",
-        "sgName": "Multi Factor Authentication",
+        "sgName": "Multi-Factor Authentication",
         "info": [{
-            "Description": "Multi-Factor Authentication is a method that enforces normal authentication processes by requiring two or more proofs of identity to authenticate to a system. An example would be username and password in addition to an one-time-password from a token generator or sent via email. Hence, an attacker would be required to collect all the pieces of evidence to hijack the identity of an user.In terms of Software Supply Chain Attacks, by enabling MFA would prevent account hijacking from malicious actors that would target sensitive resources, e.g., source code, build system, hosting system etc.",
+            "Description": "Multi-factor authentication (MFA) requires users to present two or more proofs of identity to authenticate to a system. One example would be username and password in addition to an one-time-password created by a token generator. With MFA in place, attackers are required to collect all the pieces of evidence to hijack a user's identity, which is significantly more difficult. In regard to supply chain attacks, MFA protects user accounts on sensitive systems like source code repositories, build systems or package repositories.",
 
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "By enabling MFA for their accounts on VCS or build systems, Project Maintainers would prevent all that attacks that would target the account impersonation after a compromission of the valid credentials (e.g., reuse of compromised credentials, obtentions of the credentials through social engineering attacks etc.). In ",
-            "Administrator": "System administrators could enforce MFA to enforce the authentication on the systems. In such a way, an attacker would not be able to impersonate a legitimate maintainer to tamper with the source code, build jobs or upload a malicious version of a legitimate package.",
+            "Project Maintainer": "By enabling MFA for their user accounts, project maintainers significantly reduce the risk of being impersonated by attackers through, for instance, the reuse of compromised credentials or bruteforce attacks.",
+            "Administrator": "System administrators could enforce MFA on their systems, and disable less secure authentication mechanisms.",
             "Downstream User": ""
         }]
     },
