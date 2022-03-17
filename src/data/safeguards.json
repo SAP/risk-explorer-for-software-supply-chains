@@ -581,15 +581,15 @@
         "sgId": "SG-040",
         "sgName": "Use encrypted communication protocols with the Administrator",
         "info": [{
-            "Description": "When a communication protocol is unencrypted may allow an eavesdropper to intercept and analyse a private communication between two parties. Furthermore, a malicious actor could leverage such weakness in order to  interpose between the two communicating parts, then modify the content of the communication itself and perform the so called Man-In-The-Middle attacks. In the specific case of supply chain attacks, an attacker may interfere during the downloading of packets from the repository in order to modify the packets and provide to downstream users an infected version of them. Thus, by using encrypted communication protocols, such attacks may be prevented.",
+            "Description": "Unencrypted communication protocols allow eavesdroppers to intercept, analyse and modify the communication between two parties (Man-In-The-Middle attacks). In the specific case of supply chain attacks, an attacker may interfere during the download of packages by open-source consumers from internal or public package repositories in order to supply a malicious version of the requested package.",
 
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
             "Project Maintainer": "",
-            "Administrator": "Administrators may adopt encrypted communication protocols to prevent malicious users to perform MITM attacks and provide infected packages to the Open-Source Consumers",
-            "Downstream User": "Open Source Consumers may refuse to download open source components through unencrypted communications, so as to prevent MITM attacks to affect them."
+            "Administrator": "Administrators of package distribution infrastructure, e.g. package repositories, should adopt encrypted communication protocols to prevent malicious users from conducting MITM attacks.",
+            "Downstream User": "Open Source Consumers may refuse to download open source components through unencrypted communication channels in order to prevent MITM attacks."
         }]
     },
     {
@@ -612,13 +612,13 @@
         "sgId": "SG-042",
         "sgName": "Use of Dedicated Build Service",
         "info": [{
-            "Description": "Build processes should run in dedicated (and hardened) environments, e.g. a dedicated server or VM in a cloud environment, and not on developers' workstations. In this way the compromise of a developer's machine does not affect the build process and the resulting artifacts.",
+            "Description": "Build processes should run in dedicated (and hardened) environments, e.g., a dedicated server or VM in a cloud environment, and not on developers' workstations. In this way the compromise of a developer's machine does not affect the build process and the resulting artifacts.",
 
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "Open Source Project Maintainers may avoid issues related to tampering with build environments by using a dedicated (and hardened) environment for the build service, rather than their workstation.",
+            "Project Maintainer": "Open-Source Project Maintainers may avoid issues related to tampering with build environments by using a dedicated (and hardened) environment for the build service, rather than their workstation.",
             "Administrator": "",
             "Downstream User": ""
         }]
@@ -627,7 +627,7 @@
         "sgId": "SG-043",
         "sgName": "Integrity check of dependencies through cryptographic hashes",
         "info": [{
-            "Description": "When consuming Open-Source packages as dependencies, an user should verify the provenance integrity by checking the related checksum (e.g., md5 or sha256 hashes). ",
+            "Description": "Developers can verify the integrity of their direct and transitive dependencies by specifying and checking cryptographic hashes, e.g. SHA-256 or SHA-512 digests. This supports detecting a later compromise of those packages in, e.g., local build system caches, internal repository mirrors or even public package repositories.",
 
             "Directive": false,
             "Preventive": true,
@@ -635,6 +635,6 @@
             "Corrective": false,
             "Project Maintainer": "",
             "Administrator": "",
-            "Downstream User": "Open-source consumers should verify the cryptographic hashes of the consumed packages (and its dependencies) to check their integrity."
+            "Downstream User": "Open-Source Consumers can verify the cryptographic hashes of the consumed packages (and its dependencies) to check their integrity."
         }]
     }]
