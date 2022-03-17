@@ -78,7 +78,7 @@ function generateVectorList(row) {
         row.vectors.forEach(x => {
 
             if (x.scopeAvId) {
-                var vectorString = <div> [{x.avId}] {x.avName} under the scope of [{x.scopeAvId} {x.scopeAvName}</div>
+                var vectorString = <div> [{x.avId}] {x.avName} in the scope of [{x.scopeAvId}] {x.scopeAvName}</div>
 
             } else {
                 var vectorString = <div> [{x.avId}] {x.avName}</div>
@@ -213,17 +213,17 @@ class References extends Component {
                 },
                 {
                     id: "ecosystems",
-                    label: "Ecosystem"
+                    label: "Ecosystem(s)"
                 }
             ],
             headCellsNotSortable: [
                 {
                     id: "vector",
-                    label: "Related Attack Vector"
+                    label: "Related Attack Vector(s)"
                 },
                 {
                     id: "safeguards",
-                    label: "Related Safeguards"
+                    label: "Related Safeguard(s)"
                 },
                 {
                     id: "tags",
@@ -231,7 +231,7 @@ class References extends Component {
                 },
                 {
                     id: "package",
-                    label: "Affected Packages"
+                    label: "Affected Package(s)"
                 }
             ]
         }
