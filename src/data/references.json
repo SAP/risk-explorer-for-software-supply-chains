@@ -5459,7 +5459,7 @@
     },
     {
         "title": "Practical Automated Detection of Malicious npm Packages",
-        "link": "https://thehackernews.com/2022/03/popular-npm-package-updated-to-wipe.html",
+        "link": "https://arxiv.org/abs/2202.13953",
         "vectors": [{
                 "avId": "AV-100",
                 "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
@@ -5475,10 +5475,16 @@
                 "avName": "Abuse Dependency Resolution Mechanism"
             }
         ],
+        "safeguards": [
+        {
+            "sgId": "SG-005",
+            "sgName": "Application Security Testing (AST)"
+        }
+    ],
         "tags": {
             "ecosystems": ["JavaScript"],
-            "packages": ["node-ipc"],
-            "contents": ["attack"],
+            "packages": [],
+            "contents": ["peer-reviewed","attack"],
             "year": 2022
         }
     }
