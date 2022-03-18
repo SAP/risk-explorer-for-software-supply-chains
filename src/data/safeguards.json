@@ -222,9 +222,9 @@
     },
     {
         "sgId": "SG-016",
-        "sgName": "Protect Production Branch",
+        "sgName": "Protect Sensitive Branches",
         "info": [{
-            "Description": "Open Source Project Maintainers, (i.e. with admin permissions to a repository) can establish and manage protection rules for one or more branches. Some examples of such protection rules are: requiring and approving reviews, passing status checks for a pull requests for protected branches, accept only signed commits and so on. Establishing such rules may prevent injection of malicious code in source code bases or can enforce security best practices to guarantee integrity.",
+            "Description": "Code review tools like Gerrit or GitHub allow project maintainers to protect particularly sensitive branches in versioning control systems like Git. Examples rules comprise the requirement to sign commits, or a minimum number of positive review approvals or successul status checks before code changes can be merged into a protected target branch. Protection rules can be used to enforce review best-practices that increase the chances of detecting malicious code contributions.",
             
             "Directive": false,
             "Preventive": true,
@@ -237,16 +237,16 @@
     },
     {
         "sgId": "SG-017",
-        "sgName": "Multi Factor Authentication",
+        "sgName": "Multi-Factor Authentication",
         "info": [{
-            "Description": "Multi-Factor Authentication is a method that enforces normal authentication processes by requiring two or more proofs of identity to authenticate to a system. An example would be username and password in addition to an one-time-password from a token generator or sent via email. Hence, an attacker would be required to collect all the pieces of evidence to hijack the identity of an user.In terms of Software Supply Chain Attacks, by enabling MFA would prevent account hijacking from malicious actors that would target sensitive resources, e.g., source code, build system, hosting system etc.",
+            "Description": "Multi-factor authentication (MFA) requires users to present two or more proofs of identity to authenticate to a system. One example would be username and password in addition to an one-time-password created by a token generator. With MFA in place, attackers are required to collect all the pieces of evidence to hijack a user's identity, which is significantly more difficult. In regard to supply chain attacks, MFA protects user accounts on sensitive systems like source code repositories, build systems or package repositories.",
 
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "By enabling MFA for their accounts on VCS or build systems, Project Maintainers would prevent all that attacks that would target the account impersonation after a compromission of the valid credentials (e.g., reuse of compromised credentials, obtentions of the credentials through social engineering attacks etc.). In ",
-            "Administrator": "System administrators could enforce MFA to enforce the authentication on the systems. In such a way, an attacker would not be able to impersonate a legitimate maintainer to tamper with the source code, build jobs or upload a malicious version of a legitimate package.",
+            "Project Maintainer": "By enabling MFA for their user accounts, project maintainers significantly reduce the risk of being impersonated by attackers through, for instance, the reuse of compromised credentials or bruteforce attacks.",
+            "Administrator": "System administrators could enforce MFA on their systems, and disable less secure authentication mechanisms.",
             "Downstream User": ""
         }]
     },
@@ -491,14 +491,14 @@
     },
     {
         "sgId": "SG-034",
-        "sgName": "Use Minimal Set of Trusted Build Dependencies in the Release Job",
+        "sgName": "Minimal Set of Trusted Build Dependencies in Release Jobs",
         "info": [{
-            "Description": "The release job should use a minimal set of trusted build dependencies, while any tests and quality checks can be done in a dedicated job preceding the release build.",
+            "Description": "Those build jobs or pipeline stages, which produce the artifact that will eventually be distributed to downstream users, can be configured to only rely on a minimal set of trusted build dependencies. Tools and plugins related to functional tests, quality assurance, vulnerability detection, documentation etc. can be run separately in order to avoid malicious tampering with the build artifact.",
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "Open Source Project Maintainer may enforce policies with which, during the release build job, a minimal set of trusted dependencies will be used. Hence, all the unnecessary (and possibly infected) components would not tamper the release version of an open source component.",
+            "Project Maintainer": "Open-Source Project Maintainer may configure their build jobs and pipelines such that a minimal set of trusted dependencies is used for the creation of the final artifact.",
             "Administrator": "",
             "Downstream User": ""
         }]
@@ -581,15 +581,15 @@
         "sgId": "SG-040",
         "sgName": "Use encrypted communication protocols",
         "info": [{
-            "Description": "When a communication protocol is unencrypted may allow an eavesdropper to intercept and analyse a private communication between two parties. Furthermore, a malicious actor could leverage such weakness in order to  interpose between the two communicating parts, then modify the content of the communication itself and perform the so called Man-In-The-Middle attacks. In the specific case of supply chain attacks, an attacker may interfere during the downloading of packets from the repository in order to modify the packets and provide to downstream users an infected version of them. Thus, by using encrypted communication protocols, such attacks may be prevented.",
+            "Description": "Unencrypted communication protocols allow eavesdroppers to intercept, analyse and modify the communication between two parties (Man-In-The-Middle attacks). In the specific case of supply chain attacks, an attacker may interfere during the download of packages by open-source consumers from internal or public package repositories in order to supply a malicious version of the requested package.",
 
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
             "Project Maintainer": "",
-            "Administrator": "Administrators may adopt encrypted communication protocols to prevent malicious users to perform MITM attacks and provide infected packages to the Open-Source Consumers",
-            "Downstream User": "Open Source Consumers may refuse to download open source components through unencrypted communications, so as to prevent MITM attacks to affect them."
+            "Administrator": "Administrators of package distribution infrastructure, e.g. package repositories, should adopt encrypted communication protocols to prevent malicious users from conducting MITM attacks.",
+            "Downstream User": "Open Source Consumers may refuse to download open source components through unencrypted communication channels in order to prevent MITM attacks."
         }]
     },
     {
@@ -612,13 +612,13 @@
         "sgId": "SG-042",
         "sgName": "Use of Dedicated Build Service",
         "info": [{
-            "Description": "Build processes should run in dedicated (and hardened) environments, e.g. a dedicated server or VM in a cloud environment, and not on developers' workstations. In this way the compromise of a developer's machine does not affect the build process and the resulting artifacts.",
+            "Description": "Build processes should run in dedicated (and hardened) environments, e.g., a dedicated server or VM in a cloud environment, and not on developers' workstations. In this way the compromise of a developer's machine does not affect the build process and the resulting artifacts.",
 
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "Open Source Project Maintainers may avoid issues related to tampering with build environments by using a dedicated (and hardened) environment for the build service, rather than their workstation.",
+            "Project Maintainer": "Open-Source Project Maintainers may avoid issues related to tampering with build environments by using a dedicated (and hardened) environment for the build service, rather than their workstation.",
             "Administrator": "",
             "Downstream User": ""
         }]
@@ -627,7 +627,7 @@
         "sgId": "SG-043",
         "sgName": "Integrity check of dependencies through cryptographic hashes",
         "info": [{
-            "Description": "When consuming Open-Source packages as dependencies, an user should verify the provenance integrity by checking the related checksum (e.g., md5 or sha256 hashes). ",
+            "Description": "Developers can verify the integrity of their direct and transitive dependencies by specifying and checking cryptographic hashes, e.g. SHA-256 or SHA-512 digests. This supports detecting a later compromise of those packages in, e.g., local build system caches, internal repository mirrors or even public package repositories.",
 
             "Directive": false,
             "Preventive": true,
@@ -635,6 +635,6 @@
             "Corrective": false,
             "Project Maintainer": "",
             "Administrator": "",
-            "Downstream User": "Open-source consumers should verify the cryptographic hashes of the consumed packages (and its dependencies) to check their integrity."
+            "Downstream User": "Open-Source Consumers can verify the cryptographic hashes of the consumed packages (and its dependencies) to check their integrity."
         }]
     }]

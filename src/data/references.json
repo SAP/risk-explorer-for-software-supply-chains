@@ -313,7 +313,7 @@
             },
             {
                 "sgId": "SG-034",
-                "sgName": "Use Minimal Set of Trusted Build Dependencies in the Release Job"
+                "sgName": "Minimal Set of Trusted Build Dependencies in Release Jobs"
             }
         ]
     },
@@ -822,7 +822,7 @@
             },
             {
                 "sgId": "SG-017",
-                "sgName": "Multi Factor Authentication"
+                "sgName": "Multi-Factor Authentication"
             },
             {
                 "sgId": "SG-019",
@@ -938,7 +938,7 @@
         "link": "https://attack.mitre.org/mitigations/M1032/",
         "safeguards": [{
             "sgId": "SG-017",
-            "sgName": "Multi Factor Authentication"
+            "sgName": "Multi-Factor Authentication"
         }],
         "tags": {
             "contents": ["standard"],
@@ -2772,7 +2772,7 @@
             },
             {
                 "sgId": "SG-017",
-                "sgName": "Multi Factor Authentication"
+                "sgName": "Multi-Factor Authentication"
             },
             {
                 "sgId": "SG-011",
@@ -3508,7 +3508,7 @@
             },
             {
                 "sgId": "SG-017",
-                "sgName": "Multi Factor Authentication"
+                "sgName": "Multi-Factor Authentication"
             },
             {
                 "sgId": "SG-019",
@@ -4242,7 +4242,7 @@
             "sgName": "Pull/Merge Request Review"
         }, {
             "sgId": "SG-016",
-            "sgName": "Protect Production Branch"
+            "sgName": "Protect Sensitive Branches"
         }],
         "tags": {
             "ecosystems": ["GitHub"],
@@ -4556,7 +4556,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-016",
-            "sgName": "Protect Production Branch"
+            "sgName": "Protect Sensitive Branches"
         }],
         "tags": {
             "contents": ["peer-reviewed"],

@@ -78,7 +78,7 @@ function generateVectorList(row) {
         row.vectors.forEach(x => {
 
             if (x.scopeAvId) {
-                var vectorString = <div> [{x.avId}] {x.avName} under the scope of [{x.scopeAvId} {x.scopeAvName}</div>
+                var vectorString = <div> [{x.avId}] {x.avName} in the scope of [{x.scopeAvId}] {x.scopeAvName}</div>
 
             } else {
                 var vectorString = <div> [{x.avId}] {x.avName}</div>
@@ -213,17 +213,17 @@ class References extends Component {
                 },
                 {
                     id: "ecosystems",
-                    label: "Ecosystem"
+                    label: "Ecosystem(s)"
                 }
             ],
             headCellsNotSortable: [
                 {
                     id: "vector",
-                    label: "Related Attack Vector"
+                    label: "Related Attack Vector(s)"
                 },
                 {
                     id: "safeguards",
-                    label: "Related Safeguards"
+                    label: "Related Safeguard(s)"
                 },
                 {
                     id: "tags",
@@ -231,7 +231,7 @@ class References extends Component {
                 },
                 {
                     id: "package",
-                    label: "Affected Packages"
+                    label: "Affected Package(s)"
                 }
             ]
         }
@@ -281,9 +281,10 @@ class References extends Component {
                         <Box sx={{ width: '65%', maxWidth: "65%", display: "block", marginLeft: 'auto', marginRight: "auto", marginTop: "2%" }}>
                             <Typography variant="h2" gutterBottom component="div">References</Typography>
                             <Typography variant="subtitle1" gutterBottom component="div">
-                                The following references describe peer-review papers, standards, master/PhD thesis, as well as real-world attacks and vulnerabilities that could result in supply chain attacks.
-                                <br></br>
-                                Comparable datasets related to real-world attacks are the <a href="https://dasfreak.github.io/Backstabbers-Knife-Collection/" target="_blank">Backstabber's Knife Collection</a> and the <a href="https://github.com/IQTLabs/software-supply-chain-compromises" target="_blank">Supply Chain Compromises</a> maintained by IQT Labs.
+                                All of the references below relate in one way or the other to software supply chain security, e.g. by describing real-world attacks or vulnerabilities, analyzing ecosystem weaknesses, presenting proof-of-concepts or suggesting safeguards. 
+                                References are linked to attack vectors and safeguards where applicable, and tags like &quot;peer-reviewed&quot; or &quot;attack&quot; are used to categorize the content.
+                                Though the names of affected open-source projects and packages are provided in the last table column, supporting lookups, we do not strive for completeness.
+                                In this context, also refer to other data sets related to real-world attacks, e.g. the <a href="https://dasfreak.github.io/Backstabbers-Knife-Collection/" target="_blank">Backstabber's Knife Collection</a> or IQT Labs' <a href="https://github.com/IQTLabs/software-supply-chain-compromises" target="_blank">Supply Chain Compromises</a>.
                             </Typography>
                             <TableContainer component={Paper}>
                                 <Table aria-label="collapsible table">
