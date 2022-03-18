@@ -102,16 +102,16 @@
     },
     {
         "sgId": "SG-008",
-        "sgName": "Build dependencies from source",
+        "sgName": "Build Dependencies from Source",
         "info": [{
-            "Description": "By building the dependencies directly from the official source would prevent the possible compromission of a package, whether this latter occurs during the build or withing the hosting systems.Thus, the Open-Source consumer can rely on the original source code and build it directly from the trusted source.It must be noted that if the source code already contains malicious code, such countermeasure will be uneffective, since in this latter case, the malicious code would be also compiled. On the other hand, this safeguard will prevent all that cases in which the package has been tampered by external malicious actors, not at the source code level, but during or after its build (e.g., injecting malicious code during the build) or at the distribution level.",
+            "Description": "Rather than downloading pre-built binary artifacts from package repositories or other distribution channels, open-source consumers can build the software themselves from the respective source code. This avoids consuming artifacts that have been compromised during their build (cf. attack vector \"Injecting during the Build of Legitimate Package\") or distribution  (cf. attack vector \"Distribute Malicious Version of Legitimate Package\"). Obviously, this cannot protect against attack vectors injecting malicious code into the project's source code repository.",
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
             "Project Maintainer": "",
-            "Administrator": "Administrators may establish the process of building packages directly from the official source code, rather than relying on the publishing of the built package. In this way, any compromise during or after a compromised build process would be prevented.",
-            "Downstream User": "Open-Source Consumers can employ such safeguard in order to prevent scenarios in which the legitimate packages has been tampered and hidden in binaries, rather than in source codes. Hence, by building their dependencies directly from the official sources, they would avoid to rely on components built by third parties."
+            "Administrator": "Providers of package repositories may build packages directly from the official source code, rather than permitting the upload of artifacts built somewhere else.",
+            "Downstream User": "Open-Source Consumers can employ such safeguard in order to prevent scenarios in which the legitimate packages has been tampered and hidden in binaries, rather than in source code. By building their dependencies directly from the official sources, they avoid relying on components built by third parties."
             
         }]
     },
