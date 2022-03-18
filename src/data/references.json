@@ -5444,8 +5444,8 @@
         }
     },
     {
-        "title": "Popular NPM Package Updated to Wipe Russia, Belarus Systems to Protest Ukraine Invasion",
-        "link": "https://thehackernews.com/2022/03/popular-npm-package-updated-to-wipe.html",
+        "title": "Alert: peacenotwar module sabotages npm developers in the node-ipc package to protest the invasion of Ukraine",
+        "link": "https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/",
         "vectors": [{
             "avId": "AV-100",
             "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
