@@ -284,7 +284,7 @@
         "sgId": "SG-020",
         "sgName": "Session Timeout",
         "info": [{
-            "Description": "Enstablishing a timeout for existing sessions would allow to prevent session hijacking attempts since the existing session would be closed after a certain period of time, hence the attacker should replicate and succeed the session token stealing multiple times to persist.",
+            "Description": "Establishing a timeout for existing sessions would allow to prevent session hijacking attempts since the existing session would be closed after a certain period of time, hence the attacker should replicate and succeed the session token stealing multiple times to persist.",
 
             "Directive": false,
             "Preventive": true,
@@ -512,7 +512,7 @@
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "Open Source Project Maintainer may define and configure the build jobs through code and store such files in source control managers.",
+            "Project Maintainer": "Open Source Project Maintainer may define and configure the build jobs through code and store such files in source control.",
             "Administrator": "",
             "Downstream User": ""
         }]
@@ -528,14 +528,14 @@
             "Corrective": false,
             "Project Maintainer": "",
             "Administrator": "",
-            "Downstream User": "Open Source Consumers may design or configure their build tool to integrate a vulnerability scanner within their CI/CD pipeline, so to perform vulnerability checks during the build process and prevent that the built component will contain vulnerabilities."
+            "Downstream User": "Open Source Consumers may design or configure their build pipeline to integrate a vulnerability scanner, so to perform vulnerability checks during the build process and prevent that the built component will contain vulnerabilities."
         }]
     },
     {
         "sgId": "SG-037",
         "sgName": "Reproducible builds",
         "info": [{
-            "Description": "By making a build reproducible would allow to verify that no vulnerabilities or malicious code have been introduced during the build process. Hence, by guaranteeing identical results at every build from a given source, allows multiple third parties to come to a consensus and possibly highlighting any deviations from the expected results. The goal of reproducible builds would firstly require a deterministic build system. Secondly, the build environment should either be recorded or pre-defined. Finally, users will be given a way to recreate such build environment, perform the build process and so validate that the output matches the initial and intended one.",
+            "Description": "Making a build reproducible allows to verify that no vulnerabilities or malicious code has been introduced during the build process. Identical results for every build of a given source allow multiple parties to come to a consensus and to highlight any deviations from the expected build result. Reproducible builds firstly require a deterministic build system. Secondly, the build environment should either be recorded or pre-defined. Finally, users will be given a way to recreate such build environment, perform the build process and so validate that the output matches the intended one.",
 
             "Directive": false,
             "Preventive": false,
@@ -550,21 +550,21 @@
         "sgId": "SG-038",
         "sgName": "Preventive squatting",
         "info": [{
-            "Description": "Project maintainers (or external users) can use this technique to prevent that packages with confusing names can be squatted by attackers. The number of confusing names, however, can be very large, wich makes it very difficult to preventively squat all of them.",
+            "Description": "Package names that ressemble legitimate ones can be proactively registered by benign parties before they can be squatted by attackers. This technique can be applied by package repositories (e.g. npm package \"epress\"), project maintainers (e.g., PyPI package \"bs4\") or other parties. However, since the number of candidate package names can be very large, it seems impossible to preventively register all of them.",
             
           
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "Open Source Project Maintainers could reserve squatted names for their packages, so as to prevent malicious user from creating name confusion attacks. ",
-            "Administrator": "Package Repositories may implement preventive squatting features for the submitted packages from the package mantainers, so that would be difficult for an attacker to perform name confusion attacks.",
+            "Project Maintainer": "Open Source Project Maintainers could register names for their packages to prevent malicious users from creating name confusion attacks.",
+            "Administrator": "Package Repositories may implement preventive squatting features for the submitted packages from the package mantainers.",
             "Downstream User": ""
         }]
     },
     {
         "sgId": "SG-039",
-        "sgName": "Enstablish vetting process for Open-Source components",
+        "sgName": "Establish vetting process for open-source components",
         "info": [{
             "Description": "Maintaining an internal mirror allows an organization to properly manage which component should be used and which not. Most importantly, maintaining an internal mirror allows to vet the selected components, in order to refuse malicious packages, once detected and filtered out. In fact, by vetting the components before including them, would ensure that all packages would be safe to be used, preventing to install components that could have been modified by a malicious user in the public hosting systems.",
             
@@ -579,7 +579,7 @@
     },
     {
         "sgId": "SG-040",
-        "sgName": "Use encrypted communication protocols with the Administrator",
+        "sgName": "Use encrypted communication protocols",
         "info": [{
             "Description": "Unencrypted communication protocols allow eavesdroppers to intercept, analyse and modify the communication between two parties (Man-In-The-Middle attacks). In the specific case of supply chain attacks, an attacker may interfere during the download of packages by open-source consumers from internal or public package repositories in order to supply a malicious version of the requested package.",
 
