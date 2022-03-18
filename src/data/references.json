@@ -5442,6 +5442,45 @@
             "contents": [],
             "year": 1984
         }
+    },
+    {
+        "title": "Popular NPM Package Updated to Wipe Russia, Belarus Systems to Protest Ukraine Invasion",
+        "link": "https://thehackernews.com/2022/03/popular-npm-package-updated-to-wipe.html",
+        "vectors": [{
+            "avId": "AV-100",
+            "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
+        }],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["node-ipc"],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "Practical Automated Detection of Malicious npm Packages",
+        "link": "https://thehackernews.com/2022/03/popular-npm-package-updated-to-wipe.html",
+        "vectors": [{
+                "avId": "AV-100",
+                "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
+            },
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package"
+            }, {
+                "avId": "AV-602",
+                "avName": "Take-over Legitimate Account"
+            }, {
+                "avId": "AV-509",
+                "avName": "Abuse Dependency Resolution Mechanism"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["node-ipc"],
+            "contents": ["attack"],
+            "year": 2022
+        }
     }
 
 
