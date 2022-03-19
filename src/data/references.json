@@ -5519,5 +5519,24 @@
             "contents": [],
             "year": 2021
         }
+    },
+    {
+        "title": "NPM Library (ua-parser-js) Hijacked: What You Need to Know",
+        "link": "https://www.rapid7.com/blog/post/2021/10/25/npm-library-ua-parser-js-hijacked-what-you-need-to-know/",
+        "vectors": [
+            {
+                "avId": "AV-602",
+                "avName": "Take-over Legitimate Account",
+                "scopeAvId": "AV-504",
+                "scopeAvName": "Distribute as Package Maintainer"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["ua-parser-js"],
+            "contents": ["attack"],
+            "year": 2021
+        }
     }
+
 ]
