@@ -34,13 +34,13 @@ function referencesListConstructor(row) {
             foundReferences[i].tags.contents.forEach((e) => {
                 if (e === "attack") {
                     chipsList.push(<Chip label={e} size="small" color="error" />)
-                } else if (e === "peer-reviewed") (
+                } else if (e === "peer-reviewed") {
                     chipsList.push(<Chip label={e} size="small" color="primary" />)
-                )
-
+                } else if (e === "standard") {
+                    chipsList.push(<Chip label={e} size="small" color="default" />)
+                }
             })
         }
-
 
         referencesList.push(
             <TableRow key={foundReferences[i].title}>

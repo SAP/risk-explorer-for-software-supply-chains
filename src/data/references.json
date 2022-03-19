@@ -4893,7 +4893,7 @@
         }
     },
     {
-        "title": "Supply chain attack patterns: Framework and Catalog",
+        "title": "Supply Chain Attack Patterns: Framework and Catalog",
         "link": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.648.6043&rep=rep1&type=pdf",
         "vectors": [{
             "avId": "AV-000",
@@ -5193,8 +5193,6 @@
             "sgName": "Application Security Testing (AST)"
         }],
         "tags": {
-
-            "contents": ["standard"],
             "year": 2010
         }
     },
