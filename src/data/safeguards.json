@@ -3,7 +3,7 @@
         "sgId": "SG-001",
         "sgName": "Software Bill of Materials (SBOM)",
         "info": [{
-            "Description": "A Software Bill of Materials (SBOM) is a list of components related to a given software artifact, comparable to the list of ingredients on food packaging. Those components are typically runtime dependencies of the artifact in question, but can also comprise other dependency types. The content and properties of SBOMs decide about use-cases and capabilities, esp. the kind of verifications that can be exercised by downstream consumers. For instance, SBOMs can be machine-readable, timestamped and signed, and individual dependencies can be defined using consistent naming schemes and digests. The creation of SBOMs can be automated. SPDX, CycloneDX, and SWID are prominent machine-readable standards and formats for SBOMs.",
+            "Description": "A Software Bill of Materials (SBOM) is a list of components related to a given software artifact, comparable to the list of ingredients on food packaging. Those components are typically runtime dependencies of the artifact in question, but can also comprise other dependency types. The content and properties of SBOMs decide about use-cases and capabilities, esp. the kind of verifications that can be exercised by downstream consumers. For instance, SBOMs can be machine-readable, timestamped and signed, whereas individual dependencies can be identified using consistent naming schemes and digests, and described in regard to provenance and pedigree. The creation of SBOMs can be automated. SPDX, CycloneDX, and SWID are prominent machine-readable standards and formats for SBOMs.",
             "Directive": false,
             "Preventive": true,
             "Detective": true,
@@ -45,16 +45,15 @@
         "sgId": "SG-004",
         "sgName": "Manual Source Code Review",
         "info": [{
-            "Description": "Manual source code review is defined as the process of reading source code line-by-line with the goal of identify potential vulnerabilities or malicious code. This process can be slow and requires skill, experience and patience from the code reviewer. On the other hand, manual source code review has the advantage to identify vulnerable or malicious code in paths that can be missed by automated tools.Applied to the context of Open Source Software Supply Chain attacks, the manual source code review should target all direct and indirect project dependencies, to make sure that no malicious code is present at a specific point of time of the open-source project. In addition, the manual source code review should performed on regular bases, particularly when an update of the dependencies occur: in such way, a possible insertion of malicious code through new versions would be prevented.",
-
+            "Description": "Manual source code reviews comprise the inspection of a software's entire code base by a human reviewer in order to identify security flaws or malicous code. They can outperform automated tools in the detection of certain vulnerability types, e.g. flaws in application/business logic or authorization checks. However, manual source code reviews are slow and require skilled, experienced and patient code reviewers. As such, they are more suitable for highly sensitive projects, e.g. in military contexts or critical infratructures, especially when considering that such reviews have to be performed for all direct and transitive dependencies of a given development project.",
             "Directive": false,
             "Preventive": false,
             "Detective": true,
             "Corrective": false,
             "Recovery Safeguard (R)": "",
             "Project Maintainer": "",
-            "Administrator": "Administrator can perform manual source code review of the consumed open-source components, in order to assess the security requirements at each step of the supply chain.",
-            "Downstream User": "Downstream users can perform manual source code review of the consumed open-source components, in order to assess the security requirements at each step of the supply chain."
+            "Administrator": "",
+            "Downstream User": "Downstream users can perform manual source code reviews of consumed open-source components."
         }]
     },
     {
