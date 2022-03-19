@@ -17,13 +17,13 @@
         "sgId": "SG-002",
         "sgName": "Patch Management",
         "info": [{
-            "Description": "By performing regular software updates on systems, it would allow to mitigate exploitation risk due to remaining to vulnerable versions of installed softwares on sensitive infrastructure (i.e., VCS, build system, hosting system and maintainer's system). Such patch management process depends on the presence of a complete inventory of software used through the development lifecycle. Such software updates are not to be confused with the process of \"updating dependencies\" of a given application. In fact, automated updates can result in malicious code installation if new versions have been compromised.",
+            "Description": "All the systems and software used throughout the development lifecycle should be reflected in an accurate inventory. Patch management makes sure that those are up-to-date and free of vulnerabilities that could be used by attackers to compromise project resources, e.g. source code, build configuration or binary artifacts. It depends on the respective component or ecosystem whether automated update mechanisms are available, and individual risk analyses can be employed to decide whether such mechanisms or manual updates are preferred. For example, the use of version ranges when specifying application dependencies can result in automated updates, and has been misused in the past to deliver malicious versions to downstream users (cf. \"Version Pinning\").",
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": true,
-            "Project Maintainer": "Project Maintainer can establish a patch management process in order to perform security updates and avoid to use potentially vulnerable dependencies or software components. ",
-            "Administrator": "System administrators can establish a patch management process in order to perform security updates and avoid to use potentially vulnerable components in their infrastructures.",
+            "Project Maintainer": "Project Maintainer can establish a patch management process in order to perform security updates of all systems and software used throughout the development lifecycle.",
+            "Administrator": "System administrators can establish a patch management process in order to perform security updates, thus, avoid the use of vulnerable components in their infrastructures.",
             "Downstream User": ""
         }]
     },
