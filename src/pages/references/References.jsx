@@ -162,9 +162,9 @@ function Row(props) {
         <React.Fragment>
             <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
 
-                <TableCell align="left"><div>{row.title}</div></TableCell>
-                <TableCell component="th" scope="row">
-                    <a href={row.link} target="_blank" >{row.link.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/g) + "/..."}</a>
+                <TableCell align="left">
+                    <div>{row.title}</div>
+                    <div><a href={row.link} target="_blank" >{row.link.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/g) + "/..."}</a></div>
                 </TableCell>
                 <TableCell align="left">{row.tags && row.tags.year ? row.tags.year : ""}</TableCell>
                 <TableCell align="left">{generateEcosystemList(row)}</TableCell>
@@ -202,10 +202,6 @@ class References extends Component {
                 {
                     id: "title",
                     label: "Title"
-                },
-                {
-                    id: "link",
-                    label: "Link"
                 },
                 {
                     id: "year",

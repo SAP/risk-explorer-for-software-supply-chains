@@ -396,7 +396,7 @@ class Documentation extends Component {
                                             `
 [{
         "sgId": "SG-001",
-        "sgName": "Maintain detailed Software Bills of Material (SBOM)",
+        "sgName": "Software Bill of Materials (SBOM)",
         "info": [{
             "Description": "A Software Bill of Material (SBOM) is a ...",
             "Directive": false,

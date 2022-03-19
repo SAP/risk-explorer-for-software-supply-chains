@@ -196,9 +196,9 @@ class Home extends Component {
 
                                                 <h1 style={{ color: "#555", fontWeight: 'normal', fontSize: "2.4vw", marginTop: '5%' }}>How to Use</h1>
                                                 <p style={{ fontSize: "1 vw", fontWeight: 'lighter', color: "#555", padding: "5%" }}>
-                                                    We built a visualization tool to explore the taxonomy of OSS Supply Chain attacks. Just single-click
-                                                    on a node to expand or collapse it, then to show the associated information, like its description,
-                                                    scientific references, associated examples and the related countermeasures to mitigate it.
+                                                    Explore the taxonomy with help of the visualization tool: Single-click
+                                                    on a node to expand or collapse it, and to show associated information like its description,
+                                                    references, associated examples and related countermeasures.
 
                                                     <Box sx={{ '& button': { m: 1 } }} style={{ marginTop: "5%" }}>
                                                         <div>
@@ -238,7 +238,7 @@ class Home extends Component {
                                                 <CodeIcon sx={{ fontSize: '3vw', marginTop: '10%', color: 'rgba(88, 156, 228, 1)' }} />
                                                 <h1 style={{ color: "#555", textAlign: 'center', fontWeight: 'normal', fontSize: "2.4vw", marginTop: '5%' }}>Contribute</h1>
                                                 <p style={{ fontSize: "1 vw", textAlign: "center", fontWeight: 'lighter', color: "#555", padding: "5%" }}>
-                                                    The data model underlying the visualization comprises attack vectors, examples and safeguards that reference each other.
+                                                    The data model underlying the visualization comprises attack vectors, safeguards and references, all associated to one another.
 
                                                     <Box sx={{ '& button': { m: 1 } }} style={{ marginTop: "21%" }}>
                                                         <div>

@@ -637,7 +637,7 @@
         "link": "https://www.mitre.org/sites/default/files/publications/pr-21-0278-deliver-uncompromised-securing-critical-software-supply-chains.pdf",
         "safeguards": [{
                 "sgId": "SG-001",
-                "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+                "sgName": "Software Bill of Materials (SBOM)"
             },
             {
                 "sgId": "SG-003",
@@ -2521,7 +2521,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-001",
-            "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+            "sgName": "Software Bill of Materials (SBOM)"
         }],
         "tags": {
             "ecosystems": [],
@@ -2723,7 +2723,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-001",
-            "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+            "sgName": "Software Bill of Materials (SBOM)"
         }],
         "tags": {
             "ecosystems": ["Java", "JavaScript", "Linux", "Python", "C#", "Ruby", "PHP"],
@@ -3587,7 +3587,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-001",
-            "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+            "sgName": "Software Bill of Materials (SBOM)"
         }, {
             "sgId": "SG-002",
             "sgName": "Patch Management"
@@ -4260,7 +4260,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-001",
-            "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+            "sgName": "Software Bill of Materials (SBOM)"
         }, {
             "sgId": "SG-002",
             "sgName": "Patch Management"
@@ -4586,7 +4586,7 @@
             "sgName": "Code Isolation and Sandboxing"
         }, {
             "sgId": "SG-001",
-            "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+            "sgName": "Software Bill of Materials (SBOM)"
         }, {
             "sgId": "SG-005",
             "sgName": "Application Security Testing (AST)"
@@ -4893,7 +4893,7 @@
         }
     },
     {
-        "title": "Supply chain attack patterns: Framework and Catalog",
+        "title": "Supply Chain Attack Patterns: Framework and Catalog",
         "link": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.648.6043&rep=rep1&type=pdf",
         "vectors": [{
             "avId": "AV-000",
@@ -4901,7 +4901,7 @@
         }],
         "safeguards": [{
                 "sgId": "SG-001",
-                "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+                "sgName": "Software Bill of Materials (SBOM)"
             },
             {
                 "sgId": "SG-003",
@@ -4934,7 +4934,7 @@
 
         "safeguards": [{
                 "sgId": "SG-001",
-                "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+                "sgName": "Software Bill of Materials (SBOM)"
             },
             {
                 "sgId": "SG-003",
@@ -4970,7 +4970,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-001",
-            "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+            "sgName": "Software Bill of Materials (SBOM)"
         }, {
             "sgId": "SG-003",
             "sgName": "Software Composition Analysis (SCA)"
@@ -5100,7 +5100,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-001",
-            "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+            "sgName": "Software Bill of Materials (SBOM)"
         }, {
             "sgId": "SG-003",
             "sgName": "Software Composition Analysis (SCA)"
@@ -5184,7 +5184,7 @@
         }],
         "safeguards": [{
             "sgId": "SG-001",
-            "sgName": "Maintain detailed Software Bills of Material (SBOM)"
+            "sgName": "Software Bill of Materials (SBOM)"
         }, {
             "sgId": "SG-003",
             "sgName": "Software Composition Analysis (SCA)"
@@ -5193,8 +5193,6 @@
             "sgName": "Application Security Testing (AST)"
         }],
         "tags": {
-
-            "contents": ["standard"],
             "year": 2010
         }
     },
@@ -5487,7 +5485,39 @@
             "contents": ["peer-reviewed","attack"],
             "year": 2022
         }
+    },
+    {
+        "title": "Software Component Verification Standard - V2 Software Bill of Materials",
+        "link": "https://owasp-scvs.gitbook.io/scvs/v2-software-bill-of-materials",
+        "vectors": [],
+        "safeguards": [
+        {
+            "sgId": "SG-001",
+            "sgName": "Software Bill of Materials (SBOM)"
+        }
+    ],
+        "tags": {
+            "ecosystems": [],
+            "packages": [],
+            "contents": ["standard"],
+            "year": 2020
+        }
+    },
+    {
+        "title": "Survey of Existing SBOM Formats and Standards",
+        "link": "https://www.ntia.gov/files/ntia/publications/sbom_formats_survey-version-2021.pdf",
+        "vectors": [],
+        "safeguards": [
+        {
+            "sgId": "SG-001",
+            "sgName": "Software Bill of Materials (SBOM)"
+        }
+    ],
+        "tags": {
+            "ecosystems": [],
+            "packages": [],
+            "contents": [],
+            "year": 2021
+        }
     }
-
-
 ]
