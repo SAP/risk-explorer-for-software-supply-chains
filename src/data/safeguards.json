@@ -1,16 +1,16 @@
 
     [{
         "sgId": "SG-001",
-        "sgName": "Maintain detailed Software Bills of Material (SBOM)",
+        "sgName": "Software Bill of Materials (SBOM)",
         "info": [{
-            "Description": "A Software Bill of Material (SBOM) is a list of components in a piece of software. The software BOM describes the components in a product, such as the list of its dependencies, their provenance etc. SBOMs are comparable to the list of ingredients on food packaging. The creation of SBOM can be automated and follow standard formats, like SPDX, CycloneDX, and SWID.",
+            "Description": "A Software Bill of Materials (SBOM) is a list of components related to a given software artifact, comparable to the list of ingredients on food packaging. Those components are typically runtime dependencies of the artifact in question, but can also comprise other dependency types. The content and properties of SBOMs decide about use-cases and capabilities, esp. the kind of verifications that can be exercised by downstream consumers. For instance, SBOMs can be machine-readable, timestamped and signed, and individual dependencies can be defined using consistent naming schemes and digests. The creation of SBOMs can be automated. SPDX, CycloneDX, and SWID are prominent machine-readable standards and formats for SBOMs.",
             "Directive": false,
             "Preventive": true,
             "Detective": true,
             "Corrective": false,
-            "Project Maintainer": "By maintaining a detailed SBOM, the Project Maintainer would detail the list of the dependencies in his/her project, their provenance and additional information regarding the software product",
-            "Administrator": "The administrators would need to implement and configure the generation and the secure provision of such artifacts, that are delivered to the consumers of open-source.",
-            "Downstream User": "Similarly to the code signing and signature verification, the downstream users need to inspect the SBOMs and verify the integrity of what he/she is consuming."
+            "Project Maintainer": "Project Maintainers can produce and distribute SBOMs as to support downstream consumers in activities such as verification, vulnerability management or license compliance.",
+            "Administrator": "Service providers of package repositories or distribution sites can verify, publish and analyze SBOMs on their end to support downstream users in the selection of components.",
+            "Downstream User": "Downstream users can demand SBOMs for new procurements, inspect and analyze the SBOMs to check provenance, license compliance, known vulnerabilities, etc."
         }]
     },
     {
