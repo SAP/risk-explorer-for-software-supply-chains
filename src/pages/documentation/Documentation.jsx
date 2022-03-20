@@ -1,5 +1,5 @@
 import "./documentation.css"
-import React, { Component, useEffect } from 'react'
+import React, { Component} from 'react'
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
 import Box from '@mui/material/Box';
@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import ossSupModel from '../../images/OSS-SuppChainModel-FMC-modified.png'
 import attacktreeExample from '../../images/AttackTreeExample-modified.png'
 
-import { IoDocumentTextOutline } from 'react-icons/io5';
 
 
 
@@ -41,7 +40,7 @@ class Documentation extends Component {
 
     scrollToDiv = () => {
         let currentLocation = window.location.href;
-        const hasDivAnchor = currentLocation.includes("\#");
+        const hasDivAnchor = currentLocation.includes("#");
         if (hasDivAnchor) {
             const anchorDivId = `${currentLocation.substring(currentLocation.indexOf("#") + 1)}`.split("#")[1]
             this.setState({ anchorId: anchorDivId })
@@ -87,7 +86,7 @@ class Documentation extends Component {
                                 <Typography variant="h2" gutterBottom component="div">Open-Source Software Supply Chain Model</Typography>
 
                                 <Typography variant="subtitle1" gutterBottom>
-                                    This section describes a generic and high-level model of open-source software supply chains. It covers typical systems, stakeholders and interactions that are relevant in the context of developing, building and distributing open-source artifacts, and which are targeted by the taxonomy's attack vectors. Using the <a href="http://www.fmc-modeling.org/" target="_blank">FMC notation</a>, the model looks as follows:
+                                    This section describes a generic and high-level model of open-source software supply chains. It covers typical systems, stakeholders and interactions that are relevant in the context of developing, building and distributing open-source artifacts, and which are targeted by the taxonomy's attack vectors. Using the <a href="http://www.fmc-modeling.org/" target="_blank" rel="noreferrer">FMC notation</a>, the model looks as follows:
                                 </Typography>
 
                                 <img style={{ width: "100%", display: "block", marginLeft: 'auto', marginRight: "auto", marginTop: "2%", marginBottom: "2%" }} src={ossSupModel} alt="OSS Supply Chain Model" />
@@ -100,7 +99,7 @@ class Documentation extends Component {
                                     <br></br><br></br>
                                     <ul>
                                         <li><b>Version control systems (VCS)</b> host the source code of open-source projects, together with related metadata and configuration files. They track and manage all the changes to
-                                            the source code thoughout the project lifetime. Plain VCSs (like <a href="https://git-scm.com/" target="_blank">Git</a>) do not require its users to authenticate, but
+                                            the source code thoughout the project lifetime. Plain VCSs (like <a href="https://git-scm.com/" target="_blank" rel="noreferrer">Git</a>) do not require its users to authenticate, but
                                             complementary tools offer additional functionalities. For example, they may provide issue trackers or improved security controls, like authentication, management of more fine-grained permissions
                                             or review workflows.</li><br></br>
                                         <li><b>Build systems</b> generate binary artifacts (like an executable or a compressed archive) starting from the project's codebase. CI/CD pipelines consist of a series of steps that have to be
@@ -114,7 +113,7 @@ class Documentation extends Component {
                                         CI/CD pipelines are automated through CI/CD tools, like Jenkins or Travis CI. 
                                         The generated files and artifacts are then distributed to downstream users for easy consumption. </li><br></br>
                                         <li><b>Distribution platforms</b> make pre-built OSS artifacts accessible to downstream users, for example through package managers or via manual download.
-                                            As "distribution platform" we do not only consider public package repositories (like <a href="https://pypi.org/" target="_blank">PyPI</a> or <a href="https://search.maven.org/" target="_blank">Maven Central</a>),
+                                            As "distribution platform" we do not only consider public package repositories (like <a href="https://pypi.org/" target="_blank" rel="noreferrer">PyPI</a> or <a href="https://search.maven.org/" target="_blank" rel="noreferrer">Maven Central</a>),
                                             but also internal/external mirrors, content delivery networks (CDN) or proxies.</li><br></br>
                                         <li><b>Workstations of OSS Maintainers and Administrators</b> are also considered in the attack scenario, even though they are not explicitly depicted, because project maintainers and administrators use them to for privileged access to sensitive resources (like the project's codebase or the build system's web interface).</li><br></br>
                                     </ul>
@@ -148,7 +147,7 @@ class Documentation extends Component {
                                 <Typography variant="h2" gutterBottom component="div">Attack Trees 101</Typography>
 
                                 <Typography variant="body1" gutterBottom>
-                                    <a href="https://www.schneier.com/academic/archives/1999/12/attack_trees.html" target="_blank">Attack trees</a> are a formal representation of attacker goals and techniques.
+                                    <a href="https://www.schneier.com/academic/archives/1999/12/attack_trees.html" target="_blank" rel="noreferrer">Attack trees</a> are a formal representation of attacker goals and techniques.
                                     They support organizations and especially defenders to understand current exposure to threat and to identify the possible countermeasures to be used to protect the assets.
                                     <br></br><br></br>
                                     At the <b>root</b> of an attack tree the attacker's top-level goal is represented. Such goal is iteratively refined by its children into sub-goals.
@@ -167,7 +166,7 @@ class Documentation extends Component {
                             <div id="jsondata" style={{ marginTop: "10%" }}>
                                 <Typography variant="h2" gutterBottom component="div">JSON Data Structure</Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    To facilitate the improvement, update and extension of the data underlying the visualization, the dataset is split into four <a href="https://www.json.org/json-en.html" target="_blank">JSON</a> files:
+                                    To facilitate the improvement, update and extension of the data underlying the visualization, the dataset is split into four <a href="https://www.json.org/json-en.html" target="_blank" rel="noreferrer">JSON</a> files:
                                     <ul>
                                         <li><pre style={{ display: 'inline-block', fontFamily: "Courier New" }}>{`attackvectors.json`}</pre> contains a flat list of all attack vectors, each one having an identifier, a name and description as well as other properties</li>
                                         <li><pre style={{ display: 'inline-block', fontFamily: "Courier New" }}>{`taxonomy.json`}</pre> creates the tree structure by referencing and nesting all the attack vectors</li>
