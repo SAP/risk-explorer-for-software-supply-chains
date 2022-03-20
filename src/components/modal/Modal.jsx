@@ -5,8 +5,7 @@ import parse from 'html-react-parser';
 
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+
 
 
 const style = {
@@ -28,8 +27,8 @@ const style = {
 };
 
 export default function SGModal(props) {
-  const [open, setOpen] = React.useState(props.open);
-  const handleOpen = () => setOpen(true);
+  const [,setOpen] = React.useState(props.open);
+  
   const handleClose = () => setOpen(false);
 
   return (

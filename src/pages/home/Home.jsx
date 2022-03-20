@@ -254,7 +254,7 @@ class Home extends Component {
                                                                     <p>Read about the JSON files and their structure</p>
                                                                 </Grid>
                                                                 <Grid item xs={6}>
-                                                                    <a style={{ color: 'white', textDecoration: 'inherit' }} href="https://github.com/SAP/risk-explorer-for-sofware-supply-chains" target='_blank'>
+                                                                    <a style={{ color: 'white', textDecoration: 'inherit' }} href="https://github.com/SAP/risk-explorer-for-sofware-supply-chains" target='_blank' rel="noreferrer">
                                                                         <Button variant="outlined" style={{ width: '85%' }} size='large'>
 
                                                                             <GitHubIcon />
@@ -304,11 +304,11 @@ class Home extends Component {
 
                             <Grid container spacing={2}>
                                 <Grid item xs={8}>
-                                <a className="logo"  href="https://www.sap.com/" target="_blank"><img style={{width:"5%", left:"0", marginLeft:"1%", marginTop:'.3%'}} src={sapLogo} alt="SAP Logo" /></a>
+                                <a className="logo"  href="https://www.sap.com/" target="_blank" rel="noreferrer"><img style={{width:"5%", left:"0", marginLeft:"1%", marginTop:'.3%'}} src={sapLogo} alt="SAP Logo" /></a>
                                 </Grid>
                                 <Grid item xs={4}>
 
-                                <a className="logo"  href="https://www.sparta.eu/" target="_blank"><img style={{width:"9%", marginLeft:"87%", marginTop:'.3%'}} src={spartaLogo} alt="SPARTA Logo" /></a>
+                                <a className="logo"  href="https://www.sparta.eu/" target="_blank" rel="noreferrer"><img style={{width:"9%", marginLeft:"87%", marginTop:'.3%'}} src={spartaLogo} alt="SPARTA Logo" /></a>
                                 </Grid>
                                 <Grid item xs={10}>
                                 <p style={{color:"white",fontSize:"12px",fontWeight:"light",marginLeft:"1%"}}> Copyright (c) 2022 SAP SE or an SAP affiliate company and Risk Explorer for Software Supply Chains contributors</p>
