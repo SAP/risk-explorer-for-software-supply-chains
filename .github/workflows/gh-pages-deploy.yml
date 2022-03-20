@@ -13,6 +13,8 @@ jobs:
         
       - name: Checkout branch
         uses: actions/checkout@v3.0.0
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Install and Build 
         run: |
