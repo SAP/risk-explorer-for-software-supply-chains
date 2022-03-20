@@ -14,11 +14,14 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v3.0.0
 
-      - name: Clean install dependencies
-        run: npm ci
-
-      - name: Run deploy script
+      - name: Install and Build 
         run: |
-          git config user.name "piergiorgioladisa" && git config user.email "44639444+piergiorgioladisa@users.noreply.github.com"
+          npm ci
           npm i --save @fortawesome/fontawesome-svg-core
-          npm run deploy
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
