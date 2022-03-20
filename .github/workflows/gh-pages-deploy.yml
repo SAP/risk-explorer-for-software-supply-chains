@@ -21,4 +21,5 @@ jobs:
       - name: Run deploy script
         run: |
           git config user.name "piergiorgioladisa" && git config user.email "44639444+piergiorgioladisa@users.noreply.github.com"
+          npm install --save @fortawesome/fontawesome-free
           npm run deploy
