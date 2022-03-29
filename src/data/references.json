@@ -5537,6 +5537,22 @@
             "contents": ["attack"],
             "year": 2021
         }
+    },
+    {
+        "title": "Top Five Challenges in Software Supply Chain Security: Observations From 30 Industry and Government Organizations",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9740718",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "tags": {
+            "ecosystems": [],
+            "packages": [], 
+            "contents": [],
+            "year": 2022
+        }
     }
 
 ]
