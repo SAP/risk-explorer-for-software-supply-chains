@@ -164,7 +164,7 @@ function Row(props) {
 
                 <TableCell align="left">
                     <div>{row.title}</div>
-                    <div><a href={row.link} target="_blank" >{row.link.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/g) + "/..."}</a></div>
+                    {/* <div><a href={row.link} target="_blank" >{row.link.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/g) + "/..."}</a></div> */}
                 </TableCell>
                 <TableCell align="left">{row.tags && row.tags.year ? row.tags.year : ""}</TableCell>
                 <TableCell align="left">{generateEcosystemList(row)}</TableCell>
