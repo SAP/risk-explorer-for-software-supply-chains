@@ -59,29 +59,19 @@ function getComparator(order, orderBy) {
         : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-function stableSort(array, comparator) {
-    const stabilizedThis = array.map((el, index) => [el, index]);
-    stabilizedThis.sort((a, b) => {
-        const order = comparator(a[0], b[0]);
-        if (order !== 0) {
-            return order;
-        }
-        return a[1] - b[1];
-    });
 
-    return stabilizedThis.map((el) => el[0]);
-}
 
 function generateVectorList(row) {
     var vectList = []
+    var vectorString
     if (row.vectors) {
         row.vectors.forEach(x => {
 
             if (x.scopeAvId) {
-                var vectorString = <div> [{x.avId}] {x.avName} in the scope of [{x.scopeAvId}] {x.scopeAvName}</div>
+                vectorString = <div> [{x.avId}] {x.avName} in the scope of [{x.scopeAvId}] {x.scopeAvName}</div>
 
             } else {
-                var vectorString = <div> [{x.avId}] {x.avName}</div>
+                vectorString = <div> [{x.avId}] {x.avName}</div>
             }
 
             vectList.push(vectorString)
@@ -122,7 +112,7 @@ function generateEcosystemList(row) {
 }
 
 function createTagChip(label) {
-    if (label == "attack") {
+    if (label === "attack") {
         return <Chip label={label} size="small" color="error" />
     } else if (label === "peer-reviewed") {
         return <Chip label={label} size="small" color="primary" />
@@ -156,7 +146,7 @@ function generateAffectedPackagesList(row) {
 
 function Row(props) {
     const { row } = props;
-    const [open, setOpen] = React.useState(false);
+    
 
     return (
         <React.Fragment>
@@ -164,7 +154,7 @@ function Row(props) {
 
                 <TableCell align="left">
                     <div>{row.title}</div>
-                    {/* <div><a href={row.link} target="_blank" >{row.link.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/g) + "/..."}</a></div> */}
+                    <div><a href={row.link} target="_blank" rel="noreferrer">{row.link.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/g) + "/..."}</a></div>
                 </TableCell>
                 <TableCell align="left">{row.tags && row.tags.year ? row.tags.year : ""}</TableCell>
                 <TableCell align="left">{generateEcosystemList(row)}</TableCell>
@@ -280,7 +270,7 @@ class References extends Component {
                                 All of the references below relate in one way or the other to software supply chain security, e.g. by describing real-world attacks or vulnerabilities, analyzing ecosystem weaknesses, presenting proof-of-concepts or suggesting safeguards. 
                                 References are linked to attack vectors and safeguards where applicable, and tags like &quot;peer-reviewed&quot; or &quot;attack&quot; are used to categorize the content.
                                 Though the names of affected open-source projects and packages are provided in the last table column, supporting lookups, we do not strive for completeness.
-                                In this context, also refer to other data sets related to real-world attacks, e.g. the <a href="https://dasfreak.github.io/Backstabbers-Knife-Collection/" target="_blank">Backstabber's Knife Collection</a> or IQT Labs' <a href="https://github.com/IQTLabs/software-supply-chain-compromises" target="_blank">Supply Chain Compromises</a>.
+                                In this context, also refer to other data sets related to real-world attacks, e.g. the <a href="https://dasfreak.github.io/Backstabbers-Knife-Collection/" target="_blank" rel="noreferrer">Backstabber's Knife Collection</a> or IQT Labs' <a href="https://github.com/IQTLabs/software-supply-chain-compromises" target="_blank" rel="noreferrer">Supply Chain Compromises</a>.
                             </Typography>
                             <TableContainer component={Paper}>
                                 <Table aria-label="collapsible table">

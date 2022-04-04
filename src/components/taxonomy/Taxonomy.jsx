@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./taxonomy.css"
-import { select, hierarchy, tree, zoom, event } from "d3"
+import { select, hierarchy, tree, zoom} from "d3"
 import sg_table from "../../data/safeguards.json"
 import SGModal from "../modal/Modal";
 import AttackSearchbar from '../attacksearchbar/AttackSearchbar'
@@ -28,9 +28,8 @@ function useQuery() {
 var firstLoad = true;
 
 function Taxonomy({ data }) {
-    const svgRef = useRef();
+    
     const wrapperRef = useRef();
-
     const [openSnackbar, setOpenSnackbar] = React.useState(false);  // Manage the state of the snackbar in the sidebar
     let query = useQuery();
     var avFromLink = query.get("av")
@@ -55,7 +54,7 @@ function Taxonomy({ data }) {
     const [avText, setAVText] = useState("Attack Vector");
     const [avLink, setAVLink] = useState(window.location.origin + window.location.pathname + "#" + location.pathname);
     const [descText, setDescText] = useState("Click on a node to show its info");
-    const [referencesText, setRefText] = useState("");
+    const [, setRefText] = useState("");
     var referencesList = []
     const [examplesText, setExText] = useState("");
     const [safeguardsText, setSgText] = useState("");
@@ -80,7 +79,7 @@ function Taxonomy({ data }) {
         if (attack.info[0].Reference) {
             var listOfReferences = attack.info[0].Reference;
             for (var i = 0; i < listOfReferences.length; i++) {
-                referencesList.push(<li key={i}><a href={listOfReferences[i].refLink} target="_blank">{listOfReferences[i].refTitle}</a></li>);
+                referencesList.push(<li key={i}><a href={listOfReferences[i].refLink} target="_blank" rel="noreferrer">{listOfReferences[i].refTitle}</a></li>);
             }
 
             setRefText(referencesList);
@@ -97,7 +96,7 @@ function Taxonomy({ data }) {
         // scope of tampering with VCS and in tampering build job
         var substIDCurrentNode = node.data.avId.substr(0, 4)
         var substIDParentNode = node.parent.data.avId.substr(0, 4)
-        if (substIDCurrentNode != substIDParentNode) {
+        if (substIDCurrentNode !== substIDParentNode) {
             return node.parent
         } else {
             return findParentScope(node.parent)
@@ -115,7 +114,7 @@ function Taxonomy({ data }) {
 
         var foundExamples = attackexamplestable.filter(element => element.vectors && element.vectors.some(x => x.avId === attackID))
 
-        if (foundExamples.length != 0) {
+        if (foundExamples.length !== 0) {
             console.log(foundExamples)
 
             foundExamples.forEach(function (example, index) {
@@ -152,7 +151,7 @@ function Taxonomy({ data }) {
                 }
 
 
-                examplesList.push(<li key={i}><a href={finalExamples[i].link} target="_blank">{finalExamples[i].title}</a>&nbsp;{chipsList}</li>);
+                examplesList.push(<li key={i}><a href={finalExamples[i].link} target="_blank" rel="noreferrer">{finalExamples[i].title}</a>&nbsp;{chipsList}</li>);
                 chipsList = []
             }
             setExText(examplesList);
@@ -171,14 +170,15 @@ function Taxonomy({ data }) {
         var textBuilder = []
         var safeguardsInheritedList = []
         var textBuilderInherited = []
+        var mapped_safeguards, i, found
         setSgText(); // Clean the text of the safeguards
         attackSafeguardsCollector.forEach(element => {
 
             if (!element.avId) {
                 setSgText();
-                var mapped_safeguards = element.match.info[0]["Mapped Safeguard"];
-                for (var i = 0; i < mapped_safeguards.length; i++) {
-                    var found = sg_table.find(element => element.sgId === mapped_safeguards[i].sgId)
+                mapped_safeguards = element.match.info[0]["Mapped Safeguard"];
+                for (i = 0; i < mapped_safeguards.length; i++) {
+                    found = sg_table.find((element,i,mapped_safeguards) => element.sgId === mapped_safeguards[i].sgId)
                     safeguardsList.push(<li key={i}><a href={() => false} className="safeguardsLink" id={found.sgId} onClick={((e) => buildSafeguardModal(e))}>[{found.sgId}] {found.sgName}</a> </li>)
 
                 }
@@ -186,9 +186,9 @@ function Taxonomy({ data }) {
             }
             if (element.avId) {
                 setSgInheritedText()
-                var mapped_safeguards = element.match.info[0]["Mapped Safeguard"];
-                for (var i = 0; i < mapped_safeguards.length; i++) {
-                    var found = sg_table.find(element => element.sgId === mapped_safeguards[i].sgId)
+                mapped_safeguards = element.match.info[0]["Mapped Safeguard"];
+                for (i = 0; i < mapped_safeguards.length; i++) {
+                    found = sg_table.find(element => element.sgId === mapped_safeguards[i].sgId)
                     safeguardsInheritedList.push(<li key={i}><a href={() => false} className="safeguardsLink" id={found.sgId} onClick={((e) => buildSafeguardModal(e))}>[{found.sgId}] {found.sgName}</a> </li>)
 
                 }
@@ -216,8 +216,6 @@ function Taxonomy({ data }) {
         var sgReferencesContent = []
         var stakeholdersRoleContent = []
         var chipsList = []
-
-        var stakeholdersRoleContent = []
         setSgDescr(found.info[0].Description)
 
 
@@ -231,7 +229,7 @@ function Taxonomy({ data }) {
             } else if (e['tags']['contents'] && e['tags']['contents'].some(x => x === "peer-reviewed")) {
                 chipsList.push(<Chip label={'peer-reviewed'} size="small" color="primary" />)
             }
-            sgReferencesContent.push(<div><a href={e.link} target="_blank">{e.title}</a>&nbsp;{chipsList}</div>)
+            sgReferencesContent.push(<div><a href={e.link} target="_blank" rel="noreferrer">{e.title}</a>&nbsp;{chipsList}</div>)
             chipsList = []
         })
         setSgReferences(sgReferencesContent)
@@ -306,7 +304,7 @@ function Taxonomy({ data }) {
             if (selectedAttack !== avFromLink) {
                 setSelectedAttack(selectedAttack)
                 currentUrlParams.set('av', selectedAttack);
-                navigate('/attacktree' + "?" + currentUrlParams.toString())
+                navigate('/attacktree?' + currentUrlParams.toString())
             }
         }
 
@@ -322,13 +320,14 @@ function Taxonomy({ data }) {
 
         var centerWidth = width / 5;
         var centerHeigth = height / 2;
+        var svg
 
         // append the svg object to the body of the page
         // appends a 'group' element to 'svg'
         // moves the 'group' element to the top left margin
 
         if (!selectedAttack && !selectedSafeguard && select("#attacktreeSVG")._groups[0][0] == null) {
-            var svg = select("#treeContainer").append("svg")
+            svg = select("#treeContainer").append("svg")
                 .attr('id', 'attacktreeSVG')
                 .attr("width", '100%')
                 .attr("height", '76%')
@@ -340,7 +339,7 @@ function Taxonomy({ data }) {
                 .attr("transform", "translate("
                     + centerWidth + "," + centerHeigth + ")");
         } else {
-            var svg = select("#attacktreeSVG").selectAll("g > *").remove()
+            svg = select("#attacktreeSVG").selectAll("g > *").remove()
             svg = select("#attacktreeSVG")
                 .call(zoom().on("zoom", function (event) {
                     svg.attr("transform", event.transform)
@@ -452,7 +451,7 @@ function Taxonomy({ data }) {
 
 
         // Assigns parent, children, height, depth
-        var root = hierarchy(data, function (d) { return d.children; });
+        root = hierarchy(data, function (d) { return d.children; });
 
         function collapseAllNotFound(d) {
 
@@ -553,7 +552,7 @@ function Taxonomy({ data }) {
                     if (d.data.avId.substr(0, 4) === "AV-7") {
                         return "darkgreen"
                     }
-                    if (d.data.stroke_color != undefined) {
+                    if (d.data.stroke_color !== undefined) {
                         return d.data.stroke_color;
                     }
                     return "steelblue"
@@ -588,7 +587,7 @@ function Taxonomy({ data }) {
             nodeUpdate.select('circle.node')
                 .attr('r', 10)
                 .style("fill", function (d) {
-                    if (d.class == "found") {
+                    if (d.class === "found") {
                         return "tomato"
                     }
                     if (d.class === "patched") {
@@ -694,7 +693,7 @@ function Taxonomy({ data }) {
                 });
 
             // Remove any exiting links
-            var linkExit = link.exit().transition()
+            link.exit().transition()
                 .duration(duration)
                 .attr('d', function (d) {
                     var o = { x: source.x, y: source.y }
@@ -732,7 +731,7 @@ function Taxonomy({ data }) {
                 }
 
 
-                if (d.target.__data__.class == "patchedChild") {
+                if (d.target.__data__.class === "patchedChild") {
                     opacifiesChild(d.target.__data__);
                 }
 
@@ -747,7 +746,7 @@ function Taxonomy({ data }) {
                 onPressHandler_examples(d.srcElement.__data__);
 
                 currentUrlParams.set('av', d.srcElement.__data__.data.avId);
-                navigate('/attacktree' + "?" + currentUrlParams.toString())
+                navigate('/attacktree?' + currentUrlParams.toString())
 
                 var avSafeguardsCollector = [];
                 if (found.info[0]['Mapped Safeguard']) {
@@ -910,7 +909,7 @@ function Taxonomy({ data }) {
 
                                     opacifiesChild(d)
 
-                                    var parent = d.parent;
+                                    parent = d.parent;
                                     while (parent !== null) {
                                         ancestors.push(parent);
 
@@ -929,7 +928,7 @@ function Taxonomy({ data }) {
 
 
 
-                                    var parent = d.parent;
+                                    parent = d.parent;
                                     while (parent !== null) {
                                         ancestors.push(parent);
 
@@ -984,8 +983,8 @@ function Taxonomy({ data }) {
 
                 <div className="featuredItem">
                     <Button style={{ maxWidth: '1.5vw', maxHeight: '1.5vw', minWidth: '1.5vw', minHeight: '1.5vw', marginRight: "2%" }} variant="outlined" onClick={() => {
-                        { navigator.clipboard.writeText(avLink) }
-                        setOpenSnackbar(true);;
+                        navigator.clipboard.writeText(avLink)
+                        setOpenSnackbar(true);
                     }}>
                         <ShareIcon />
                     </Button>

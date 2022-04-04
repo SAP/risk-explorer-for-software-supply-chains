@@ -2,7 +2,6 @@ import "./attackvectors.css"
 import React, { Component, useState } from 'react'
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
-import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
@@ -26,7 +25,6 @@ import Chip from '@mui/material/Chip';
 
 function referencesListConstructor(row) {
 
-    var attackID = row.avId
     var chipsList = []
     var referencesList = []
     var foundReferences = referencestable.filter(element => element.vectors && element.vectors.some(x => x.avId === row.avId))
@@ -47,7 +45,7 @@ function referencesListConstructor(row) {
         referencesList.push(
             <TableRow key={foundReferences[i].title}>
                 <TableCell component="th" scope="row">
-                    <a href={foundReferences[i].link} target="_blank">{foundReferences[i].title}</a>&nbsp;{chipsList}
+                    <a href={foundReferences[i].link} target="_blank" rel="noreferrer">{foundReferences[i].title}</a>&nbsp;{chipsList}
                 </TableCell>
             </TableRow>
         );
@@ -248,10 +246,7 @@ class Attackvectors extends Component {
 
 
     render() {
-        const options = {
-
-            movableRows: true
-        };
+        
         return (
             <div className="home">
                 <Topbar handleClickTopbar={this.handleClick} />
