@@ -1,0 +1,29 @@
+name: Deploy to github pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  gh-pages-deploy:
+    name: Deploying to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js for use with actions
+        uses: actions/setup-node@v3.0.0
+        
+      - name: Checkout branch
+        uses: actions/checkout@v3.0.0
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Install and Build 
+        run: |
+          npm ci
+          npm i --save @fortawesome/fontawesome-svg-core
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
