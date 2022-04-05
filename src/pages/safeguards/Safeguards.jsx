@@ -24,12 +24,15 @@ import referencestable from '../../data/references.json'
 function referencesListConstructor(row) {
 
   
-    var chipsList = []
-    var referencesList = []
+    var chipsList = []          // List to hold the set of tags per-reference
+    var referencesList = []     // List to hold the set of references per-safeguard
+
+    // Collect the refs from the references table related to the specific safeguard
     var foundReferences = referencestable.filter(element => element.safeguards && element.safeguards.some(x => x.sgId === row.sgId))
 
     for (var i = 0; i < foundReferences.length; i++) {
-        if (foundReferences[i].tags.contents) {
+
+        if (foundReferences[i].tags.contents) {     // Create the set of tags per reference
             foundReferences[i].tags.contents.forEach((e) => {
                 if (e === "attack") {
                     chipsList.push(<Chip label={e} size="small" color="error" />)
@@ -192,7 +195,8 @@ class Safeguards extends Component {
     }
 
 
-    handleClick() {
+    // Handler for the opening of the sidebar
+    handleClick() { 
         this.setState({ sidebarOpen: !this.state.sidebarOpen });
         if (!this.state.sidebarOpen) {
             document.getElementById('tableWrapperDiv').style.marginLeft = "310px"

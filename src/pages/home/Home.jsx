@@ -83,9 +83,10 @@ class Home extends Component {
                 <div className="container">
                     <Sidebar open={this.state.sidebarOpen} />
                     <div className="tableWrapper" id="homeWrapperDiv">
-                        <Box
-                            sx={boxStyle}
-                        >
+
+                        <Box sx={boxStyle}>
+
+                            {/* Box for the title, tree image, description and button to the taxonomy */}
 
                             <Grid container spacing={2}>
                                 <Grid item xs={2}>
@@ -150,7 +151,6 @@ class Home extends Component {
                                         {...({ timeout: 3000 } )}
                                     >
                                         {
-                                        //  <img style={{width:"100%", position: "absolute", right:"0", padding:"3%", marginTop:'0%', transform: 'rotate(45deg)'}} src={attacktreeImage} alt="SAP Logo" />
                                                 <AttacktreeImage style={{position:'absolute', width:'50%',right:'0'}}></AttacktreeImage>
                                         }
                                     </Grow>
@@ -163,9 +163,9 @@ class Home extends Component {
 
                         </Box>
 
-                        <Box
-                            sx={boxStyle2}
-                        >
+                        <Box sx={boxStyle2} >
+
+                            {/* Box for the footer */}
 
 
                             <Grid container spacing={2}>
@@ -239,7 +239,6 @@ class Home extends Component {
                                                 <h1 style={{ color: "#555", textAlign: 'center', fontWeight: 'normal', fontSize: "2.4vw", marginTop: '5%' }}>Contribute</h1>
                                                 <p style={{ fontSize: "1 vw", textAlign: "center", fontWeight: 'lighter', color: "#555", padding: "5%" }}>
                                                     The data model underlying the visualization comprises attack vectors, safeguards and references, all associated to one another.
-
                                                     <Box sx={{ '& button': { m: 1 } }} style={{ marginTop: "21%" }}>
                                                         <div>
                                                             <Grid container spacing={2}>
@@ -262,46 +261,19 @@ class Home extends Component {
                                                                     </a>
                                                                     <p> Create pull requests to add real-life examples or other improvements</p>
                                                                 </Grid>
-
                                                             </Grid>
-
-
                                                         </div>
-
                                                     </Box>
-
-
                                                 </p>
-
-
-
-
                                             </Paper>
                                         </Grid>
-
                                     </Grid>
-
                                 </Grid>
-
-
-
-
-
-
                             </Grid>
-
-
-
-
-
-
                         </Box>
 
-                        <Box
-                            sx={boxStyle3}
-
-                        >
-
+                        <Box sx={boxStyle3} >
+                            {/* Box for the footer */}
                             <Grid container spacing={2}>
                                 <Grid item xs={8}>
                                 <a className="logo"  href="https://www.sap.com/" target="_blank" rel="noreferrer"><img style={{width:"5%", left:"0", marginLeft:"1%", marginTop:'.3%'}} src={sapLogo} alt="SAP Logo" /></a>

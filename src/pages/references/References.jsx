@@ -15,53 +15,9 @@ import referencestable from '../../data/references.json'
 import Chip from '@mui/material/Chip';
 import TableSortLabel from '@mui/material/TableSortLabel';
 
-function descendingComparator(a, b, orderBy) {
-
-    
-
-    if (orderBy === 'year' || orderBy === 'ecosystems') {
-        if (b['tags'] && a['tags']) {
-        
-            if (!b['tags'][orderBy]) {
-                return -1
-            }
-            if (!a['tags'][orderBy]) {
-                return 1
-            }
-            if (b['tags'][orderBy] < a['tags'][orderBy]) {
-
-                return -1;
-            }
-            if (b['tags'][orderBy] > a['tags'][orderBy]) {
-                return 1;
-            }
-            return 0;
-
-        }else{
-            return 0;
-        }
-    }else{
-        if (b[orderBy] < a[orderBy]) {
-            return -1;
-        }
-        if (b[orderBy] > a[orderBy]) {
-            return 1;
-        }
-        return 0;
-    }
-
-   
-}
-
-function getComparator(order, orderBy) {
-    return order === 'desc'
-        ? (a, b) => descendingComparator(a, b, orderBy)
-        : (a, b) => -descendingComparator(a, b, orderBy);
-}
-
-
 
 function generateVectorList(row) {
+    // Creates the list of attack vectors related to the reference
     var vectList = []
     var vectorString
     if (row.vectors) {
@@ -69,11 +25,9 @@ function generateVectorList(row) {
 
             if (x.scopeAvId) {
                 vectorString = <div> [{x.avId}] {x.avName} in the scope of [{x.scopeAvId}] {x.scopeAvName}</div>
-
             } else {
                 vectorString = <div> [{x.avId}] {x.avName}</div>
             }
-
             vectList.push(vectorString)
 
         })
@@ -83,16 +37,12 @@ function generateVectorList(row) {
 }
 
 function generateSafeguardsList(row) {
+    // Creates the list of safeguards related to the reference
     var sgList = []
     if (row.safeguards) {
         row.safeguards.forEach(x => {
-
-            
             var safeguardsString = <div> [{x.sgId}] {x.sgName}</div>
-            
-
             sgList.push(safeguardsString)
-
         })
         return sgList
     }
@@ -144,9 +94,52 @@ function generateAffectedPackagesList(row) {
     return affectedPackagesList
 }
 
+function descendingComparator(a, b, orderBy) {
+    // Sorting function modified starting from https://mui.com/components/tables/#sorting-amp-selecting
+    if (orderBy === 'year' || orderBy === 'ecosystems') {
+        if (b['tags'] && a['tags']) {
+
+            if (!b['tags'][orderBy]) {
+                return -1
+            }
+            if (!a['tags'][orderBy]) {
+                return 1
+            }
+            if (b['tags'][orderBy] < a['tags'][orderBy]) {
+
+                return -1;
+            }
+            if (b['tags'][orderBy] > a['tags'][orderBy]) {
+                return 1;
+            }
+            return 0;
+
+        } else {
+            return 0;
+        }
+    } else {
+        if (b[orderBy] < a[orderBy]) {
+            return -1;
+        }
+        if (b[orderBy] > a[orderBy]) {
+            return 1;
+        }
+        return 0;
+    }
+
+
+}
+
+function getComparator(order, orderBy) {
+    return order === 'desc'
+        ? (a, b) => descendingComparator(a, b, orderBy)
+        : (a, b) => -descendingComparator(a, b, orderBy);
+}
+
+
 function Row(props) {
     const { row } = props;
-    
+
 
     return (
         <React.Fragment>
@@ -225,6 +218,8 @@ class References extends Component {
         this.handleRequestSort = this.handleRequestSort.bind(this)
     }
 
+
+    // Handler for the opening of the sidebar
     handleClick() {
         this.setState({ sidebarOpen: !this.state.sidebarOpen });
         if (!this.state.sidebarOpen) {
@@ -238,17 +233,13 @@ class References extends Component {
     }
 
 
-
+    // Handler for sorting the rows 
     handleRequestSort = (event, property) => {
-        
 
         const isAsc = this.state.orderBy === property && this.state.order === 'asc';
-
         isAsc ? this.setState({ order: "desc" }) : this.setState({ order: "asc" });
         this.setState({ orderBy: property })
         this.setState({ data: this.state.data.sort(getComparator(this.state.order, this.state.orderBy)) })
-        
-        //this.setState({data: stableSort(this.state.data, getComparator(this.state.order, this.state.orderBy))})
 
     };
 
@@ -267,7 +258,7 @@ class References extends Component {
                         <Box sx={{ width: '65%', maxWidth: "65%", display: "block", marginLeft: 'auto', marginRight: "auto", marginTop: "2%" }}>
                             <Typography variant="h2" gutterBottom component="div">References</Typography>
                             <Typography variant="subtitle1" gutterBottom component="div">
-                                All of the references below relate in one way or the other to software supply chain security, e.g. by describing real-world attacks or vulnerabilities, analyzing ecosystem weaknesses, presenting proof-of-concepts or suggesting safeguards. 
+                                All of the references below relate in one way or the other to software supply chain security, e.g. by describing real-world attacks or vulnerabilities, analyzing ecosystem weaknesses, presenting proof-of-concepts or suggesting safeguards.
                                 References are linked to attack vectors and safeguards where applicable, and tags like &quot;peer-reviewed&quot; or &quot;attack&quot; are used to categorize the content.
                                 Though the names of affected open-source projects and packages are provided in the last table column, supporting lookups, we do not strive for completeness.
                                 In this context, also refer to other data sets related to real-world attacks, e.g. the <a href="https://dasfreak.github.io/Backstabbers-Knife-Collection/" target="_blank" rel="noreferrer">Backstabber's Knife Collection</a> or IQT Labs' <a href="https://github.com/IQTLabs/software-supply-chain-compromises" target="_blank" rel="noreferrer">Supply Chain Compromises</a>.
@@ -300,10 +291,10 @@ class References extends Component {
                                     </TableHead>
                                     <TableBody>
                                         {
-                                            
-                                                this.state.data.map((row) => (
-                                                    <Row key={row["link"]} row={row} />
-                                                ))
+
+                                            this.state.data.map((row) => (
+                                                <Row key={row["link"]} row={row} />
+                                            ))
 
                                         }
                                     </TableBody>
