@@ -147,7 +147,6 @@
         "sgName": "Typo Guard",
         "info": [{
             "Description": "Package Repositories may help in the prevention of name confusion attacks against packages, by embedding and implementing tools or strategies that would block typosquatted names. For example, the Levenshtein distance may highlight similarities between names and help to detect names similar to already reserved ones. In addition, Package Repositories can enforce naming policies to restrict the abuse of already existing names.",
-
             "Directive": false,
             "Preventive": true,
             "Detective": true,
@@ -162,16 +161,14 @@
         "sgId": "SG-012",
         "sgName": "Typo Detection",
         "info": [{
-            "Description": "From the Open-Source Consumer perspective, the installation of typosquatted or combosquatted package names may be prevented implementing a tool that would warn (or ideally block) the user of a mistake in the name of the package that has to be installed. Hence, such tool should compare the package name provided by the user with a list of the legitimate ones. Typical strategies for checking mispelling in package names involves the use of the Levenshtein distance.",
-
+            "Description": "The installation of typosquatted or combosquatted package names by open-source consumers may be prevented by a tool that warns the user (or blocks the installation altogether) if the requested package name is similar to other packages existing in the respective repository. Such tool would compare the requested package name provided by the user with those of other existing packages, typically using string similarity metrics like the Levenshtein distance, and could consult additional characteristics like download numbers or project lifeliness to understand whether the requested package name has been squatted.",
             "Directive": false,
             "Preventive": true,
             "Detective": true,
             "Corrective": false,
             "Project Maintainer": "",
             "Administrator": "",
-            "Downstream User": "Open-Source Consumer could be protected by the installation of typosquatted or combosquatted package names through the implementation or usage of tools that would warn (ideally block) the installation of a misspelled package."
-
+            "Downstream User": "Open-source consumers could be protected from the installation of typosquatted or combosquatted packages by tools that analyse and compare package names and other characteristics to determine if a requested package has been squatted."
         }]
     },
     {
@@ -179,7 +176,6 @@
         "sgName": "Use of Security, Quality and Health Metrics",
         "info": [{
             "Description": "Security, quality and health metrics help to assess the security posture of an open-source project and the security risks resulting from its use. Such metrics may consider, for instance, information about the lifeliness of a project or whether given security best-practices are applied. They help end-users to decide which components to consume by making them aware of the security implications, and can be computed prior to the first use but also on a continuous basis for dependencies established in the past.",
-
             "Examples": [],
             "Directive": true,
             "Preventive": true,
