@@ -264,14 +264,13 @@
         "sgId": "SG-019",
         "sgName": "Login Protection Mechanism",
         "info": [{
-            "Description": "The taking over of maintainers or administrative accounts would be prevented or corrected by enforcing login protection mechanisms, such as:<ul> <li>Temporary account Locking, as soon as an account compromise is detected, so as to impede the propagation of damages from such compromission</li><li> Login throttling, to introduce time-out periods between a login attempt and another, so as to make unfeasible a bruteforce attack against the login mechanism</li><li> Use of CAPTCHAs, to prevent automated tools from performing bruteforce attacks</li> </ul>",
-
+            "Description": "The take-over of maintainer or administrative accounts can be prevented or corrected by login protection mechanisms, e.g.:<ul> <li>Login throttling introduces wait times after a given number of failed login attempts, to slow down bruteforce attacks.</li><li>CAPTCHAs hinder automated tools from performing bruteforce attacks.</li><li>Temporary account locking prevents further damage after an account compromise has been detected.</li></ul>",
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
             "Project Maintainer": "",
-            "Administrator": "Administrators could enforce the login protection against password spraying or bruteforce by enabling login throttling mechanisms.",
+            "Administrator": "System and service administrators can use different login protection mechanisms against password spraying or bruteforce attacks.",
             "Downstream User": ""
         }]
     },
