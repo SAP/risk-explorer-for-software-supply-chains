@@ -515,14 +515,14 @@
         "sgId": "SG-036",
         "sgName": "Integrate Open Source Vulnerability scanners into CI/CD pipelines",
         "info": [{
-            "Description": "By integrating vulnerability scanners into the CI/CD pipeline would allow to conduct vulnerability assessments on the potential software product that has to be built, preventing that such vulnerabilities will end up in the final release.",
+            "Description": "Open-source components affected by supply chain attacks are sometimes reflected in the databases underlying open-source vulnerability scanners. In such cases, vulnerability scanners can detect whether a given application or project depends on a malicious package (on top of detecting the use of components with known vulnerabilities), e.g., when running CI/CD pipelines.",
             "Directive": false,
             "Preventive": false,
             "Detective": true,
             "Corrective": false,
             "Project Maintainer": "",
             "Administrator": "",
-            "Downstream User": "Open Source Consumers may design or configure their build pipeline to integrate a vulnerability scanner, so to perform vulnerability checks during the build process and prevent that the built component will contain vulnerabilities."
+            "Downstream User": "Open-source consumers may design or configure their build pipeline to integrate a vulnerability scanner that checks whether a development project depends on vulnerable or malicious open-source components."
         }]
     },
     {
