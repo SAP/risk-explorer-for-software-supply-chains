@@ -60,7 +60,7 @@
         "sgId": "SG-005",
         "sgName": "Application Security Testing (AST)",
         "info": [{
-            "Description": "<p>Application Security Testing consists in a process of performing security tests on applications to identify possible vulnerabilities, weaknesses or malicious code.Such Application Security Tests may happen in three different ways:<ul>  <li>Static Application Security Testing (SAST), is a testing methodology that analyze and scan an application without running it. Hence, this process is also known as White Box Testing, since analyses the inner structure of an application.</li> <li>Dynamic Application Security Testing (DAST), is a testing methodology that uses a Black Box Testing approach, conducting an assessment without accessing the application source code. Instead, the DAST attempt to capture the application behaviour actually running it in a secured environment (e.g., an instructed sandbox).</li> <li> The Interactive Application Security Testing (IAST) uses a Grey Box Testing approach, combining the functionalities of both SAST and DAST. In particular, a IAST tool occurs in real-time while the application is running  (like DAST), checking in parallel the source code (like SAST). The source code check happens at the post-build stage, while the pure SAST approach occurs before the code is been built. At the end, the IAST tool will report the line number of the issue from the source code while the application is running. </li> </ul> In the same fashion of the manual source code review, in the case of the Open-Source Software Supply Chain, the Application Security Testing should target all the direct and indirect dependencies, to make sure that no malicious code has been injected or executed.</p>",
+            "Description": "<p>Application Security Testing consists of a process of performing security tests on applications to identify possible vulnerabilities, weaknesses, or malicious code. Such Application Security Tests may happen in three different ways:<ul>  <li>Static Application Security Testing (SAST), is a testing methodology that analyzes and scan an application without running it. Hence, this process is also known as White Box Testing, since analyses the inner structure of an application.</li> <li>Dynamic Application Security Testing (DAST), is a testing methodology that uses a Black Box Testing approach, conducting an assessment without accessing the application source code. Instead, the DAST attempt to capture the application behavior by running it in a secured environment (e.g., an instructed sandbox).</li> <li> The Interactive Application Security Testing (IAST) uses a Grey Box Testing approach, combining the functionalities of both SAST and DAST. In particular, an IAST tool occurs in real-time while the application is running  (like DAST), checking in parallel the source code (like SAST). The source code check happens at the post-build stage, while the pure SAST approach occurs before the code has been built. Finally, the IAST tool will report the line number of the issue from the source code during the execution of the application. </li> </ul> In the same fashion as the manual source code review, in the case of the Open-Source Software Supply Chain, the Application Security Testing should target all the direct and indirect dependencies, to make sure that no malicious code has been injected or executed.</p>",
             "Directive": false,
             "Preventive": false,
             "Detective": true,
@@ -75,7 +75,7 @@
         "sgId": "SG-006",
         "sgName": "Runtime Application Self-Protection (RASP)",
         "info": [{
-            "Description": "The Runtime Application Self-Protection consists in a runtime application, integrated in the actual application, that analyse the inbound/outbound traffic and the end-user behavioral pattern to prevent security attacks. Hence, while the SAST, DAST and IAST approaches inspect an application before or after its built, the RASP methodology is used after the production release.",
+            "Description": "The Runtime Application Self-Protection consists of a runtime application, integrated with the actual application, that analyzes the inbound/outbound traffic and the end-user behavioral pattern to prevent security attacks. Hence, while the SAST, DAST, and IAST approach inspects an application before or after its build, the RASP methodology is used after the production release. In the specific case of Open-Source Software Supply Chain attacks, this would involve analyzing the behavior of the imported components and checking the presence of unwanted code beyond what is expected. For example, in the case of injection attacks on Node.js APIs (like eval), this would involve processing the Abstract Syntax Tree to look for unwanted behavior at runtime.",            
             "Directive": false,
             "Preventive": false,
             "Detective": true,
@@ -147,7 +147,6 @@
         "sgName": "Typo Guard",
         "info": [{
             "Description": "Package Repositories may help in the prevention of name confusion attacks against packages, by embedding and implementing tools or strategies that would block typosquatted names. For example, the Levenshtein distance may highlight similarities between names and help to detect names similar to already reserved ones. In addition, Package Repositories can enforce naming policies to restrict the abuse of already existing names.",
-
             "Directive": false,
             "Preventive": true,
             "Detective": true,
@@ -162,16 +161,14 @@
         "sgId": "SG-012",
         "sgName": "Typo Detection",
         "info": [{
-            "Description": "From the Open-Source Consumer perspective, the installation of typosquatted or combosquatted package names may be prevented implementing a tool that would warn (or ideally block) the user of a mistake in the name of the package that has to be installed. Hence, such tool should compare the package name provided by the user with a list of the legitimate ones. Typical strategies for checking mispelling in package names involves the use of the Levenshtein distance.",
-
+            "Description": "The installation of typosquatted or combosquatted package names by open-source consumers may be prevented by a tool that warns the user (or blocks the installation altogether) if the requested package name is similar to other packages existing in the respective repository. Such tool would compare the requested package name provided by the user with those of other existing packages, typically using string similarity metrics like the Levenshtein distance, and could consult additional characteristics like download numbers or project lifeliness to understand whether the requested package name has been squatted.",
             "Directive": false,
             "Preventive": true,
             "Detective": true,
             "Corrective": false,
             "Project Maintainer": "",
             "Administrator": "",
-            "Downstream User": "Open-Source Consumer could be protected by the installation of typosquatted or combosquatted package names through the implementation or usage of tools that would warn (ideally block) the installation of a misspelled package."
-
+            "Downstream User": "Open-source consumers could be protected from the installation of typosquatted or combosquatted packages by tools that analyse and compare package names and other characteristics to determine if a requested package has been squatted."
         }]
     },
     {
@@ -179,7 +176,6 @@
         "sgName": "Use of Security, Quality and Health Metrics",
         "info": [{
             "Description": "Security, quality and health metrics help to assess the security posture of an open-source project and the security risks resulting from its use. Such metrics may consider, for instance, information about the lifeliness of a project or whether given security best-practices are applied. They help end-users to decide which components to consume by making them aware of the security implications, and can be computed prior to the first use but also on a continuous basis for dependencies established in the past.",
-
             "Examples": [],
             "Directive": true,
             "Preventive": true,
@@ -259,7 +255,7 @@
             "Preventive": true,
             "Detective": false,
             "Corrective": true,
-            "Project Maintainer": "Open Source Project Maintainers could establish a policy with which the credentials to access to the source code or the build infrastructure would be recycled frequently in order to prevent the reuse of leaked credentials by external threats.",
+            "Project Maintainer": "Open Source Project Maintainers could establish a policy with which the credentials to access to the source code or the build infrastructure would be changed periodically in order to prevent the reuse of leaked credentials by external threats.",
             "Administrator": "Administrators could establish policies for the project maintainer's with which the password are aged, so they will be required to change them periodically.",
             "Downstream User": ""
         }]
@@ -268,14 +264,13 @@
         "sgId": "SG-019",
         "sgName": "Login Protection Mechanism",
         "info": [{
-            "Description": "The taking over of maintainers or administrative accounts would be prevented or corrected by enforcing login protection mechanisms, such as:<ul> <li>Temporary account Locking, as soon as an account compromise is detected, so as to impede the propagation of damages from such compromission</li><li> Login throttling, to introduce time-out periods between a login attempt and another, so as to make unfeasible a bruteforce attack against the login mechanism</li><li> Use of CAPTCHAs, to prevent automated tools from performing bruteforce attacks</li> </ul>",
-
+            "Description": "The take-over of maintainer or administrative accounts can be prevented or corrected by login protection mechanisms, e.g.:<ul> <li>Login throttling introduces wait times after a given number of failed login attempts, to slow down bruteforce attacks.</li><li>CAPTCHAs hinder automated tools from performing bruteforce attacks.</li><li>Temporary account locking prevents further damage after an account compromise has been detected.</li></ul>",
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
             "Project Maintainer": "",
-            "Administrator": "Administrators could enforce the login protection against password spraying or bruteforce by enabling login throttling mechanisms.",
+            "Administrator": "System and service administrators can use different login protection mechanisms against password spraying or bruteforce attacks.",
             "Downstream User": ""
         }]
     },
@@ -520,14 +515,14 @@
         "sgId": "SG-036",
         "sgName": "Integrate Open Source Vulnerability scanners into CI/CD pipelines",
         "info": [{
-            "Description": "By integrating vulnerability scanners into the CI/CD pipeline would allow to conduct vulnerability assessments on the potential software product that has to be built, preventing that such vulnerabilities will end up in the final release.",
+            "Description": "Open-source components affected by supply chain attacks are sometimes reflected in the databases underlying open-source vulnerability scanners. In such cases, vulnerability scanners can detect whether a given application or project depends on a malicious package (on top of detecting the use of components with known vulnerabilities), e.g., when running CI/CD pipelines.",
             "Directive": false,
             "Preventive": false,
             "Detective": true,
             "Corrective": false,
             "Project Maintainer": "",
             "Administrator": "",
-            "Downstream User": "Open Source Consumers may design or configure their build pipeline to integrate a vulnerability scanner, so to perform vulnerability checks during the build process and prevent that the built component will contain vulnerabilities."
+            "Downstream User": "Open-source consumers may design or configure their build pipeline to integrate a vulnerability scanner that checks whether a development project depends on vulnerable or malicious open-source components."
         }]
     },
     {
