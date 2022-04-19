@@ -177,8 +177,10 @@ function Taxonomy({ data }) {
             if (!element.avId) {
                 setSgText();
                 mapped_safeguards = element.match.info[0]["Mapped Safeguard"];
+                
                 for (i = 0; i < mapped_safeguards.length; i++) {
-                    found = sg_table.find((element,i,mapped_safeguards) => element.sgId === mapped_safeguards[i].sgId)
+
+                    found = sg_table.find(x => x.sgId ===  mapped_safeguards[i].sgId)
                     safeguardsList.push(<li key={i}><a href={() => false} className="safeguardsLink" id={found.sgId} onClick={((e) => buildSafeguardModal(e))}>[{found.sgId}] {found.sgName}</a> </li>)
 
                 }
@@ -750,7 +752,6 @@ function Taxonomy({ data }) {
 
                 var avSafeguardsCollector = [];
                 if (found.info[0]['Mapped Safeguard']) {
-
                     avSafeguardsCollector.push({ "match": found, "avId": null, "avName": null })
                 }
 
