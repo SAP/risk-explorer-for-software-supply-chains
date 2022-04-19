@@ -1,6 +1,6 @@
 {
   "name": "attacktree",
-  "homepage": "https://sap.github.io/risk-explorer-for-sofware-supply-chains/",
+  "homepage": "https://sap.github.io/risk-explorer-for-software-supply-chains/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
