@@ -1,6 +1,6 @@
 # Risk Explorer for Software Supply Chains
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE.txt)
-[![REUSE status](https://api.reuse.software/badge/github.com/sap/risk-explorer-for-sofware-supply-chains)](https://api.reuse.software/info/github.com/sap/risk-explorer-for-sofware-supply-chains)
+[![REUSE status](https://api.reuse.software/badge/github.com/sap/risk-explorer-for-software-supply-chains)](https://api.reuse.software/info/github.com/sap/risk-explorer-for-software-supply-chains)
 
 ## About this project
 
@@ -16,7 +16,7 @@ In more detail, project and tool provide the following information:
 
 ## Requirements and Setup
 
-Simply [access the tool online](https://sap.github.io/risk-explorer-for-sofware-supply-chains/) using your favorite browser. Make sure to enable JavaScript and use a desktop environment for a better experience.
+Simply [access the tool online](https://sap.github.io/risk-explorer-for-software-supply-chains/) using your favorite browser. Make sure to enable JavaScript and use a desktop environment for a better experience.
 
 If you want to run a local version of the code you need to install [Node.js](https://nodejs.dev/learn/how-to-install-nodejs), then from inside the project directory (where `package.json` is located):
 1. Install the required dependencies via `npm install`
@@ -24,7 +24,7 @@ If you want to run a local version of the code you need to install [Node.js](htt
    
 ## Support, Feedback, Contributing
 
-This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/risk-explorer-for-sofware-supply-chains/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
+This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/risk-explorer-for-software-supply-chains/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
 
 ## Code of Conduct
 
@@ -32,4 +32,4 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Licensing
 
-Copyright 2022 SAP SE or an SAP affiliate company and Risk Explorer for Software Supply Chains contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/risk-explorer-for-sofware-supply-chains/).
+Copyright 2022 SAP SE or an SAP affiliate company and Risk Explorer for Software Supply Chains contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/risk-explorer-for-software-supply-chains/).

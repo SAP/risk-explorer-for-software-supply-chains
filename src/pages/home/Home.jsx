@@ -253,7 +253,7 @@ class Home extends Component {
                                                                     <p>Read about the JSON files and their structure</p>
                                                                 </Grid>
                                                                 <Grid item xs={6}>
-                                                                    <a style={{ color: 'white', textDecoration: 'inherit' }} href="https://github.com/SAP/risk-explorer-for-sofware-supply-chains" target='_blank' rel="noreferrer">
+                                                                    <a style={{ color: 'white', textDecoration: 'inherit' }} href="https://github.com/SAP/risk-explorer-for-software-supply-chains" target='_blank' rel="noreferrer">
                                                                         <Button variant="outlined" style={{ width: '85%' }} size='large'>
 
                                                                             <GitHubIcon />

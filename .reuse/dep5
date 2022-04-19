@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: risk-explorer-for-sofware-supply-chains
+Upstream-Name: risk-explorer-for-software-supply-chains
 Upstream-Contact: henrik.plate@sap.com
-Source: https://github.com/sap/risk-explorer-for-sofware-supply-chains
+Source: https://github.com/sap/risk-explorer-for-software-supply-chains
 Disclaimer: The code in this project may include calls to APIs ("API Calls") of
  SAP or third-party products or services developed outside of this project
  ("External Products").
@@ -25,5 +25,5 @@ Disclaimer: The code in this project may include calls to APIs ("API Calls") of
  parties the right to use of access any SAP External Product, through API Calls.
 
 Files: .gitignore CODE_OF_CONDUCT.md CONTRIBUTING.md LICENSE package-lock.json package.json README.md references-template.json src/* public/* .github/*
-Copyright:  2022 SAP SE or an SAP affiliate company and risk-explorer-for-sofware-supply-chains contributors
+Copyright:  2022 SAP SE or an SAP affiliate company and risk-explorer-for-software-supply-chains contributors
 License: Apache-2.0
