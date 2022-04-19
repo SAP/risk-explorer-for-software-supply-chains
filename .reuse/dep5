@@ -24,6 +24,6 @@ Disclaimer: The code in this project may include calls to APIs ("API Calls") of
  you any rights to use or access any SAP External Product, or provide any third
  parties the right to use of access any SAP External Product, through API Calls.
 
-Files: .gitignore, CODE_OF_CONDUCT.md, CONTRIBUTING.md, LICENSE, package-lock.json, package.json, README.md, references-template.json, src, public
+Files: .gitignore CODE_OF_CONDUCT.md CONTRIBUTING.md LICENSE package-lock.json package.json README.md references-template.json src/* public/* .github/*
 Copyright:  2022 SAP SE or an SAP affiliate company and risk-explorer-for-sofware-supply-chains contributors
 License: Apache-2.0
