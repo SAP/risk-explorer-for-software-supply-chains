@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-
     "@emotion/styled": "11.6.0",
     "@fortawesome/free-solid-svg-icons": "5.15.4",
     "@fortawesome/react-fontawesome": "0.1.16",
@@ -26,16 +25,14 @@
     "react-native": "0.67.2",
     "react-router-dom": "6.2.1",
     "react-router-native": "6.2.1",
-    
     "react-select": "5.2.1",
     "react-tabulator": "0.16.1",
     "react-tree-graph": "6.1.0",
     "resize-observer-polyfill": "1.5.1",
     "web-vitals": "2.1.2"
-
   },
   "devDependencies": {
-    "react-scripts": "5.0.0"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
