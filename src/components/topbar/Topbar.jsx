@@ -34,7 +34,7 @@ export default class Topbar extends Component {
                             <div className="topbarIconContainer">
 
                                 <span className="logo">
-                                    <a className="logo"  href="https://github.com/SAP/risk-explorer-for-sofware-supply-chains" target="_blank" rel="noreferrer"><GitHubIcon style={{fontSize: "30px",marginTop:"45%"}}></GitHubIcon></a>
+                                    <a className="logo"  href="https://github.com/SAP/risk-explorer-for-software-supply-chains" target="_blank" rel="noreferrer"><GitHubIcon style={{fontSize: "30px",marginTop:"45%"}}></GitHubIcon></a>
                                 </span>
 
                             </div>
