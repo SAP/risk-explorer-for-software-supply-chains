@@ -5553,6 +5553,25 @@
             "contents": [],
             "year": 2022
         }
+    },
+    {
+        "title": "StarJacking - Making Your New Open Source Package Popular in a Snap",
+        "link": "https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/",
+        "vectors": [
+            {
+                "avId": "AV-100",
+                "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
+            },
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python", "JavaScript"],
+            "packages": [], 
+            "contents": [],
+            "year": 2022
+        }
     }
-
 ]
