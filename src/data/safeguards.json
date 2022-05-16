@@ -455,16 +455,15 @@
     },
     {
         "sgId": "SG-032",
-        "sgName": "Isolation of build steps",
+        "sgName": "Isolation of Builds",
         "info": [{
-            "Description": "The build service should ensure that individual build steps of a build process run in an isolated environment. In this way, two concurrent build cannot influence each other, it is impossible for one build to persist the build environment of a subsequent build, or shared caches cannot be tampered. ",
-
+            "Description": "The build service and build jobs should ensure that individual builds run in an isolated environment such that one build can neither influence the build service as a whole nor other builds of the same or other development projects. In particular, this concerns access to shared resources like download caches.",
             "Directive": false,
             "Preventive": true,
             "Detective": false,
             "Corrective": false,
-            "Project Maintainer": "Open Source Project Maintainer could design the build process for their components, such as each build step is isolated from the other ones. In this way a compromission of a single step would not propagate the infection through the consequent stages.",
-            "Administrator": "",
+            "Project Maintainer": "Open source project maintainers should design build jobs or pipelines such that each build is isolated from other ones.",
+            "Administrator": "Administrators of build services or systems should isolate the build environments of different development projects such that the builds of one project cannot influence the builds of other projects or the build service as a whole.",
             "Downstream User": ""
         }]
     },
