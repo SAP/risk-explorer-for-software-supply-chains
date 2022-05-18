@@ -5555,6 +5555,27 @@
         }
     },
     {
+
+        "title": "A Beautiful Factory for Malicious Packages",
+        "link": "https://checkmarx.com/blog/a-beautiful-factory-for-malicious-packages/",
+        "vectors": [
+            {    
+                    "avId": "AV-200",
+                    "avName": "Create Name Confusion with Legitimate Package"
+            },
+            {
+                    "avId": "AV-509",
+                    "avName": "Abuse Dependency Resolution Mechanism"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": [], 
+            "contents": ["attack"],
+            "year": 2022
+        }
+    }, 
+    {
         "title": "StarJacking - Making Your New Open Source Package Popular in a Snap",
         "link": "https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/",
         "vectors": [
@@ -5573,5 +5594,6 @@
             "contents": [],
             "year": 2022
         }
+
     }
 ]
