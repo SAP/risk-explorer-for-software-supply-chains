@@ -5574,6 +5574,22 @@
             "year": 2022
         }
         
+    },
+    {
+        "title": "How I hacked CTX and PHPass Modules",
+        "link": "https://sockpuppets.medium.com/how-i-hacked-ctx-and-phpass-modules-656638c6ec5e",
+        "vectors": [
+            {    
+                    "avId": "AV-608",
+                    "avName": "Resurrect Expired Domain Associated With Legitimate Account"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Rust","Python","GitHub"],
+            "packages": [], 
+            "contents": ["attack"],
+            "year": 2022
+        }
     }
 
 ]
