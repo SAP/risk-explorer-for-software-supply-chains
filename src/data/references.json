@@ -5596,20 +5596,16 @@
         }
     },
     {
-        "title": "PyPI package 'ctx' and PHP library 'phpass' compromised to steal environment variables",
-        "link": "https://blog.sonatype.com/pypi-package-ctx-compromised-are-you-at-risk",
+        "title": "How I hacked CTX and PHPass Modules",
+        "link": "https://sockpuppets.medium.com/how-i-hacked-ctx-and-phpass-modules-656638c6ec5e",
         "vectors": [
             {
-                "avId": "AV-504",
-                "avName": "Distribute as Package Maintainer"
-            },
-            {
-                "avId": "AV-302",
-                "avName": "Contribute as Maintainer"
+                "avId": "AV-608",
+                "avName": "Resurrect Expired Domain Associated With Legitimate Account"
             }
         ],
         "tags": {
-            "ecosystems": ["Python", "PHP"],
+            "ecosystems": ["Python", "PHP", "Rust"],
             "packages": ["ctx", "phpass"],
             "contents": ["attack"],
             "year": 2022
