@@ -5594,6 +5594,61 @@
             "contents": [],
             "year": 2022
         }
-
+    },
+    {
+        "title": "PyPI package 'ctx' and PHP library 'phpass' compromised to steal environment variables",
+        "link": "https://blog.sonatype.com/pypi-package-ctx-compromised-are-you-at-risk",
+        "vectors": [
+            {
+                "avId": "AV-602",
+                "avName": "Take-over Legitimate Account",
+                "scopeAvId": "AV-504",
+                "scopeAvName": "Distribute as Package Maintainer"
+            },
+            {
+                "avId": "AV-602",
+                "avName": "Take-over Legitimate Account",
+                "scopeAvId": "AV-302",
+                "scopeAvName": "Contribute as Maintainer"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python", "PHP"],
+            "packages": ["ctx", "phpass"],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "This Week in Malware—Malicious Rust crate, 'colors' typosquats",
+        "link": "https://blog.sonatype.com/this-week-in-malware-may-13th-edition",
+        "vectors": [
+            {
+                "avId": "AV-203",
+                "avName": "Manipulating Word Separators"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Rust"],
+            "packages": ["rustdecimal"],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "Remember npm library 'colors'? There's no such thing as 'colors-2.0'",
+        "link": "https://blog.sonatype.com/remember-npm-library-colors-theres-no-such-thing-as-colors-2.0",
+        "vectors": [
+            {
+                "avId": "AV-201",
+                "avName": "Combosquatting"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["colors2.0", "colors-2.2.0", "colors-3.0"],
+            "contents": ["attack"],
+            "year": 2022
+        }
     }
 ]
