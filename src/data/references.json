@@ -5600,16 +5600,12 @@
         "link": "https://blog.sonatype.com/pypi-package-ctx-compromised-are-you-at-risk",
         "vectors": [
             {
-                "avId": "AV-602",
-                "avName": "Take-over Legitimate Account",
-                "scopeAvId": "AV-504",
-                "scopeAvName": "Distribute as Package Maintainer"
+                "avId": "AV-504",
+                "avName": "Distribute as Package Maintainer"
             },
             {
-                "avId": "AV-602",
-                "avName": "Take-over Legitimate Account",
-                "scopeAvId": "AV-302",
-                "scopeAvName": "Contribute as Maintainer"
+                "avId": "AV-302",
+                "avName": "Contribute as Maintainer"
             }
         ],
         "tags": {
