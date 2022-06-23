@@ -94,7 +94,7 @@
     "avId": "AV-205",
     "avName": "Built-in Package",
     "info": [{
-        "Description": "By creating a package whose name is identical to a built-in package (or module) of the respective programming language or ecosystem (for example \"subprocess\" for Python), a victim can be tricked into downloading and installing the malicious package through the package manager rather than using built-in functionality.",
+        "Description": "By creating a package whose name is identical to a built-in package (or module, class, function, etc.) of the respective programming language or ecosystem (for example \"subprocess\" for Python), a victim can be tricked into downloading and installing the malicious package through the package manager rather than using built-in functionality.",
         "Impact": "Create name confusion, resulting in the installation of a malicious package",
         "Mapped Safeguard": []
     }]

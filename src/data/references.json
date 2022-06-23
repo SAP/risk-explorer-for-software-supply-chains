@@ -5642,5 +5642,41 @@
             "contents": ["attack"],
             "year": 2022
         }
+    },
+    {
+        "title": "This week in malware - a 'fix-crash' info-stealer and 500+ malicious npm packages",
+        "link": "https://blog.sonatype.com/this-week-in-malware-a-fix-crash-info-stealer-and-500-malicious-npm-packages",
+        "vectors": [
+            {
+                "avId": "AV-205",
+                "avName": "Built-in Package"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["advance-string-index", "add-to-unscopables", "..."],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "This week in malware - 400+ npm packages target Azure, Uber, Airbnb developers",
+        "link": "https://blog.sonatype.com/this-week-in-malware-400-npm-packages-target-azure-uber-airbnb-developers",
+        "vectors": [
+            {
+                "avId": "AV-206",
+                "avName": "Brandjacking"
+            },
+            {
+                "avId": "AV-509",
+                "avName": "Abuse Dependency Resolution Mechanism"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["azure-arm-mariadb-samples-ts", "azure-iot-device-update-samples-js", "...", "uber-origin", "uber-one", "..."],
+            "contents": ["attack"],
+            "year": 2022
+        }
     }
 ]
