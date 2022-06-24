@@ -5594,6 +5594,89 @@
             "contents": [],
             "year": 2022
         }
-
+    },
+    {
+        "title": "How I hacked CTX and PHPass Modules",
+        "link": "https://sockpuppets.medium.com/how-i-hacked-ctx-and-phpass-modules-656638c6ec5e",
+        "vectors": [
+            {
+                "avId": "AV-608",
+                "avName": "Resurrect Expired Domain Associated With Legitimate Account"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python", "PHP", "Rust"],
+            "packages": ["ctx", "phpass"],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "This Week in Malware - Malicious Rust crate, 'colors' typosquats",
+        "link": "https://blog.sonatype.com/this-week-in-malware-may-13th-edition",
+        "vectors": [
+            {
+                "avId": "AV-203",
+                "avName": "Manipulating Word Separators"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Rust"],
+            "packages": ["rustdecimal"],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "Remember npm library 'colors'? There's no such thing as 'colors-2.0'",
+        "link": "https://blog.sonatype.com/remember-npm-library-colors-theres-no-such-thing-as-colors-2.0",
+        "vectors": [
+            {
+                "avId": "AV-201",
+                "avName": "Combosquatting"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["colors2.0", "colors-2.2.0", "colors-3.0"],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "This week in malware - a 'fix-crash' info-stealer and 500+ malicious npm packages",
+        "link": "https://blog.sonatype.com/this-week-in-malware-a-fix-crash-info-stealer-and-500-malicious-npm-packages",
+        "vectors": [
+            {
+                "avId": "AV-205",
+                "avName": "Built-in Package"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["advance-string-index", "add-to-unscopables", "..."],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "This week in malware - 400+ npm packages target Azure, Uber, Airbnb developers",
+        "link": "https://blog.sonatype.com/this-week-in-malware-400-npm-packages-target-azure-uber-airbnb-developers",
+        "vectors": [
+            {
+                "avId": "AV-206",
+                "avName": "Brandjacking"
+            },
+            {
+                "avId": "AV-509",
+                "avName": "Abuse Dependency Resolution Mechanism"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["azure-arm-mariadb-samples-ts", "azure-iot-device-update-samples-js", "...", "uber-origin", "uber-one", "..."],
+            "contents": ["attack"],
+            "year": 2022
+        }
     }
 ]
