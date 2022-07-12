@@ -5678,5 +5678,21 @@
             "contents": ["attack"],
             "year": 2022
         }
-    }
+    },
+    {
+        "title": "Update: IconBurst NPM software supply chain attack grabs data from apps and websites" ,
+        "link":"https://blog.reversinglabs.com/blog/iconburst-npm-software-supply-chain-attack-grabs-data-from-apps-websites",
+        "vectors": [
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["icon-package", "ionicio", "...", "footericon"],
+            "contents": ["attack"],
+            "year": 2022
+         }
+    }        
 ]
