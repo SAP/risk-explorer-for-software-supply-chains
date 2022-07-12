@@ -115,6 +115,14 @@
         "Mapped Safeguard": []
     }]
 }, {
+    "avId": "AV-208",
+    "avName": "Omitting Scope or Namespace",
+    "info": [{
+        "Description": "This technique consists of taking the name of a package with scope (or namespace) and publishing it without the scope.",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
     "avId": "AV-001",
     "avName": "Subvert Legitimate Package",
     "info": [{
