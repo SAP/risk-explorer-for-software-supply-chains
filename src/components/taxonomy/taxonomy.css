@@ -73,26 +73,6 @@ path.link {
     z-index: 0;
 }
 
-.featuredMoney {
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.featuredMoneyRate {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.featuredIcon {
-    font-size: 14px;
-    margin-left: 5px;
-    color: green;
-}
-
-.featuredIcon.negative {
-    color: red;
-}
 
 .featuredSub {
     font-size: 15px;

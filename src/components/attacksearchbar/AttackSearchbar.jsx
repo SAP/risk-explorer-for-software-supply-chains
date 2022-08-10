@@ -6,9 +6,10 @@ const styles = {
     container: base => ({
         ...base,
         flex: 1,
-        width: "11%",
+        width: "95%",
         position: "absolute",
         top: "60px",
+        left: "1px",
         right: "20px"
     })
 };
