@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./taxonomy.css"
-import { select, hierarchy, tree, zoom} from "d3"
+import { select, hierarchy, tree, zoom } from "d3"
 import sg_table from "../../data/safeguards.json"
 import SGModal from "../modal/Modal";
 import AttackSearchbar from '../attacksearchbar/AttackSearchbar'
 import SafeguardSearchbar from "../safeguardsearchbar/SafeguardSearchbar";
+import Legend from '../legend/Legend'
 import attackvectorstable from "../../data/attackvectors.json"
 import attackexamplestable from "../../data/references.json"
 import ShareIcon from '@mui/icons-material/Share';
@@ -14,7 +15,10 @@ import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import Chip from '@mui/material/Chip';
 import parse from 'html-react-parser';
-
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 
 // A custom hook that builds on useLocation to parse
@@ -28,12 +32,17 @@ function useQuery() {
 var firstLoad = true;
 
 function Taxonomy({ data }) {
-    
+
     const wrapperRef = useRef();
     const [openSnackbar, setOpenSnackbar] = React.useState(false);  // Manage the state of the snackbar in the sidebar
     let query = useQuery();
     var avFromLink = query.get("av")
 
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+        setValue(newValue);
+    };
 
     // URL-related variables
     const location = useLocation();     // Object to process the current URL
@@ -177,10 +186,10 @@ function Taxonomy({ data }) {
             if (!element.avId) {
                 setSgText();
                 mapped_safeguards = element.match.info[0]["Mapped Safeguard"];
-                
+
                 for (i = 0; i < mapped_safeguards.length; i++) {
 
-                    found = sg_table.find(x => x.sgId ===  mapped_safeguards[i].sgId)
+                    found = sg_table.find(x => x.sgId === mapped_safeguards[i].sgId)
                     safeguardsList.push(<li key={i}><a href={() => false} className="safeguardsLink" id={found.sgId} onClick={((e) => buildSafeguardModal(e))}>[{found.sgId}] {found.sgName}</a> </li>)
 
                 }
@@ -960,6 +969,38 @@ function Taxonomy({ data }) {
 
     }, [data, selectedAttack, selectedSafeguard]);
 
+    interface TabPanelProps {
+        children?: React.ReactNode;
+        index: number;
+        value: number;
+    }
+
+    function TabPanel(props: TabPanelProps) {
+        const { children, value, index, ...other } = props;
+
+        return (
+            <div
+                role="tabpanel"
+                hidden={value !== index}
+                id={`simple-tabpanel-${index}`}
+                aria-labelledby={`simple-tab-${index}`}
+                {...other}
+            >
+                {value === index && (
+                    <Box sx={{ p: 3 }}>
+                        <Typography>{children}</Typography>
+                    </Box>
+                )}
+            </div>
+        );
+    }
+
+    function a11yProps(index: number) {
+        return {
+            id: `simple-tab-${index}`,
+            'aria-controls': `simple-tabpanel-${index}`,
+        };
+    }
 
 
 
@@ -969,9 +1010,33 @@ function Taxonomy({ data }) {
 
         <div className="taxonomy" id='taxonomyDiv'>
             {isOpen && <SGModal sgID={sgID} sgName={sgName} open={isOpen} setIsOpen={setIsOpen} sgDescription={sgDesc} sgReferences={sgReferences} sgType={sgType} stakeholdersRole={stakeholdersRole} />}
-            {selectedSafeguard.length === 0 ? <AttackSearchbar selectedAttack={setSelectedAttack} disable={false} fromUrl={avFromLink} /> : <AttackSearchbar selectedAttack={setSelectedAttack} disable={true} />}
-            {selectedAttack.length === 0 ? <SafeguardSearchbar selectedSafeguard={setSelectedSafeguard} disable={false} /> : <SafeguardSearchbar selectedSafeguard={setSelectedSafeguard} disable={true} />}
 
+
+
+
+
+            <Box sx={{
+                position: "absolute", top: "60px", right: "20px", minWidth: 340,
+                maxWidth: "15%",
+                minHeight: 150,
+                maxHeight: '10vh',
+            }}>
+                <Box sx={{}}>
+                    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                        <Tab label="Searchbars" {...a11yProps(0)} />
+                        <Tab label="Legend" {...a11yProps(1)} />
+
+                    </Tabs>
+                </Box>
+                <TabPanel value={value} index={0}>
+                    {selectedSafeguard.length === 0 ? <AttackSearchbar selectedAttack={setSelectedAttack} disable={false} fromUrl={avFromLink} /> : <AttackSearchbar selectedAttack={setSelectedAttack} disable={true} />}
+                    {selectedAttack.length === 0 ? <SafeguardSearchbar selectedSafeguard={setSelectedSafeguard} disable={false} /> : <SafeguardSearchbar selectedSafeguard={setSelectedSafeguard} disable={true} />}
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                    <Legend></Legend>
+                </TabPanel>
+
+            </Box>
 
             <div className="taxonomyWrapper">
 
@@ -983,7 +1048,7 @@ function Taxonomy({ data }) {
             <div className="featured" id="featuredContainer">
 
                 <div className="featuredItem">
-                    <Button style={{ maxWidth: '1.5vw', maxHeight: '1.5vw', minWidth: '1.5vw', minHeight: '1.5vw', marginRight: "2%" }} variant="outlined" onClick={() => {
+                    <Button style={{ maxWidth: 20, maxHeight: 27, minWidth: 20, minHeight: 27, marginRight: "2%" }} variant="outlined" onClick={() => {
                         navigator.clipboard.writeText(avLink)
                         setOpenSnackbar(true);
                     }}>
