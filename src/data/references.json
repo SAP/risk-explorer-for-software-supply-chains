@@ -5694,5 +5694,21 @@
             "contents": ["attack"],
             "year": 2022
          }
-    }        
+    },
+    {
+        "title": "241 npm and PyPI packages caught dropping Linux cryptominers" ,
+        "link":"https://www.bleepingcomputer.com/news/security/241-npm-and-pypi-packages-caught-dropping-linux-cryptominers/",
+        "vectors": [
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript","Python"],
+            "packages": ["iohttp","aiohtp","...","soupseive"],
+            "contents": ["attack"],
+            "year": 2022
+         }
+     }        
 ]
