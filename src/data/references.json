@@ -5696,8 +5696,8 @@
          }
     },
     {
-        "title": "https://blog.sonatype.com/more-than-200-cryptominers-flood-npm-and-pypi-registry" ,
-        "link":"https://www.bleepingcomputer.com/news/security/241-npm-and-pypi-packages-caught-dropping-linux-cryptominers/",
+        "title": "More Than 200 Cryptomining Packages Flood npm and PyPI Registry" ,
+        "link":"https://blog.sonatype.com/more-than-200-cryptominers-flood-npm-and-pypi-registry",
         "vectors": [
             {
                 "avId": "AV-200",
@@ -5706,7 +5706,7 @@
         ],
         "tags": {
             "ecosystems": ["JavaScript"],
-            "packages": ["r2act", "qtt"],
+            "packages": ["r2act", "...", "qtt"],
             "contents": ["attack"],
             "year": 2022
          }
