@@ -5742,5 +5742,22 @@
             "contents": ["attack"],
             "year": 2022
          }
+     },
+     {
+        "title": "Phishing attack against PyPI",
+        "link":"https://twitter.com/pypi/status/1562442188285308929",
+        "vectors": [
+            {
+                "avId": "AV-606",
+                "avName": "Social Engineering to Obtain Credentials",
+                "scopeAvId": "AV-504",
+                "scopeAvName": "Distribute as Package Maintainer"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "contents": ["attack"],
+            "year": 2022
+         }
      }
 ]
