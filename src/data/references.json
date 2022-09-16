@@ -5696,6 +5696,54 @@
          }
     },
     {
+        "title": "More Than 200 Cryptomining Packages Flood npm and PyPI Registry" ,
+        "link":"https://blog.sonatype.com/more-than-200-cryptominers-flood-npm-and-pypi-registry",
+        "vectors": [
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["r2act", "...", "qtt"],
+            "contents": ["attack"],
+            "year": 2022
+         }
+     },
+     {
+        "title": "And yet another #python #pypi typosquatter: Uploaded at least 33 projects within 3 hours." ,
+        "link":"https://twitter.com/streamlin3d/status/1560020448515080198",
+        "vectors": [
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "packages": ["python-dateuitl", "python-dateut", "pytho-dateuti", "charset-noramlizer", "charset-normaliz", "hcarset-normalize", "azure-mgmt-containrregistry", "azure-mgmt-containerregistr", "zure-mgmt-containerregistry", "python-json-logge", "ython-json-logger", "great-expectation", "azure-mgmt-authroization", "azure-mgmt-authorizatio", "zure-mgmt-authorization", "dataclasses-jso", "ataclasses-json", "dataclass-json", "knac", "semve", "argpars", "arpgrase", "jupyter-cor", "juupyter-core", "upyter-core", "soupsiev", "oupsieve", "soupseive", "bbeautifulsoup4", "beautfiulsoup4", "aiohtp", "iohttp", "pycparse", "jnija2", "cachetoosl", "cacheools", "oogle-auth", "googl-auth", "portobuf", "prtobuf", "rotobuf", "oautlhib", "oauthlbi", "aouthlib", "oatuhlib", "colormaa", "coloraam", "coloraama", "coolorama", "pyprasing", "pyparisng", "pyparsign", "cryptogarphy", "ryptography", "python-dateutils"],
+            "contents": ["attack"],
+            "year": 2022
+         }
+     },
+     {
+        "title": "Malicious PyPi packages aim DDoS attacks at Counter-Strike servers" ,
+        "link":"https://www.bleepingcomputer.com/news/security/malicious-pypi-packages-aim-ddos-attacks-at-counter-strike-servers/",
+        "vectors": [
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "packages": ["Gesnim", "Kears", "TensorFolw", "Seabron", "tqmd", "lxlm", "mokc", "ipaddres", "ipadress", "falsk", "douctils", "inda"],
+            "contents": ["attack"],
+            "year": 2022
+         }
+     },
+     {
         "title": "Phishing attack against PyPI",
         "link":"https://twitter.com/pypi/status/1562442188285308929",
         "vectors": [
@@ -5711,5 +5759,5 @@
             "contents": ["attack"],
             "year": 2022
          }
-    }
+     }
 ]
