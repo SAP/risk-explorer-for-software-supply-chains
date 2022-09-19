@@ -5759,5 +5759,69 @@
             "contents": ["attack"],
             "year": 2022
          }
+     },
+     {
+        "title": "CloudGuard Spectral detects several malicious packages on PyPI",
+        "link": "https://research.checkpoint.com/2022/cloudguard-spectral-detects-several-malicious-packages-on-pypi-the-official-software-repository-for-python-developers/",
+        "vectors": [
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package",
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "packages": ["ascii2text","zlibsrc"],
+            "contents": ["attack"],
+            "year": 2022
+         }
+     },
+     {
+        "title": "CloudGuard Spectral detects several malicious packages on PyPI",
+        "link": "https://research.checkpoint.com/2022/cloudguard-spectral-detects-several-malicious-packages-on-pypi-the-official-software-repository-for-python-developers/",
+        "vectors": [
+            {
+                "avId": "AV-100",
+                "avName": "Develop and Advertise Distinct Malicious Package from Scratch",
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "packages": ["Pyg-utils", "Pymocks", "PyProto2", "Test-async", "Free-net-vpn", "Free-net-vpn2", "Browserdiv", "WINRPCexploit"],
+            "contents": ["attack"],
+            "year": 2022
+         }
+     },
+     {
+        "title": "PyPi python packages caught sending stolen AWS keys to unsecured sites",
+        "link":"https://blog.sonatype.com/python-packages-upload-your-aws-keys-env-vars-secrets-to-web",
+        "vectors": [
+            {
+                "avId": "AV-100",
+                "avName": "Develop and Advertise Distinct Malicious Package from Scratch",
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "packages": ["pygrata", "pygrata-utils", "hkg-sol-utils"],
+            "contents": ["attack"],
+            "year": 2022
+         }
+     },
+     {
+        "title": "PyPi python packages caught sending stolen AWS keys to unsecured sites",
+        "link":"https://blog.sonatype.com/python-packages-upload-your-aws-keys-env-vars-secrets-to-web",
+        "vectors": [
+            {
+                "avId": "AV-200",
+                "avName": "Create Name Confusion with Legitimate Package",
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "packages": ["loglib-modules", "pyg-modules"],
+            "contents": ["attack"],
+            "year": 2022
+         }
      }
 ]
