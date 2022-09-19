@@ -467,6 +467,14 @@
         "Mapped Safeguard": []
     }]
 }, {
+    "avId": "AV-609",
+    "avName": "Change Ethos",
+    "info": [{
+        "Description": "Project maintainers may change their behavior from benign and ethical to malicious and unethical. Possible intrinsic motivations for such changes are to express political beliefs or dissatifaction about stakeholder behavior, e.g., harassment or lack of user support/contributions. In such cases, a formerly benign maintainer turns into the attacker.",
+        "Impact": "Benign maintainer turns into attacker",
+        "Mapped Safeguard": []
+    }]
+}, {
     "avId": "AV-700",
     "avName": "Compromise  System",
     "info": [{

@@ -1304,8 +1304,10 @@
         "title": "Open source developer corrupts widely-used libraries, affecting tons of projects",
         "link": "https://www.theverge.com/2022/1/9/22874949/developer-corrupts-open-source-libraries-projects-affected",
         "vectors": [{
-            "avId": "AV-100",
-            "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
+            "avId": "AV-609",
+            "avName": "Change Ethos",
+            "scopeAvId": "AV-302",
+            "scopeAvName": "Contribute as Maintainer"
         }],
         "tags": {
             "ecosystems": ["JavaScript"],
@@ -5445,8 +5447,10 @@
         "title": "Alert: peacenotwar module sabotages npm developers in the node-ipc package to protest the invasion of Ukraine",
         "link": "https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/",
         "vectors": [{
-            "avId": "AV-100",
-            "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
+            "avId": "AV-609",
+            "avName": "Change Ethos",
+            "scopeAvId": "AV-302",
+            "scopeAvName": "Contribute as Maintainer"
         }],
         "tags": {
             "ecosystems": ["JavaScript"],
