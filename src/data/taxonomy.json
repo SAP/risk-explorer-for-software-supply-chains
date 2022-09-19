@@ -87,6 +87,10 @@
                                     "avId": "AV-601"
                                 },
                                 {
+                                    "avName": "Change Ethos",                                    
+                                    "avId": "AV-609"
+                                },
+                                {
                                     "avName": "Take-over Legitimate Account",
                                     "avId": "AV-602",
                                     "children": [{
@@ -147,6 +151,10 @@
                                     "children": [{
                                             "avName": "Bribe or Blackmail Legitimate User",                                           
                                             "avId": "AV-601"
+                                        },
+                                        {
+                                            "avName": "Change Ethos",                                    
+                                            "avId": "AV-609"
                                         },
                                         {
                                             "avName": "Take-over Legitimate Account",                                           
@@ -215,6 +223,10 @@
                                     "avId": "AV-601"
                                 },
                                 {
+                                    "avName": "Change Ethos",                                    
+                                    "avId": "AV-609"
+                                },
+                                {
                                     "avName": "Take-over Legitimate Account",
                                     "avId": "AV-602",
                                     "children": [{
@@ -273,11 +285,13 @@
                             "children": [{
                                     "avName": "Compromise User (Project Maintainer/Administrator)",
                                     "avId": "AV-600",
-                                    
-                                   
                                     "children": [{
                                             "avName": "Bribe or Blackmail Legitimate User",
                                             "avId": "AV-601"
+                                        },
+                                        {
+                                            "avName": "Change Ethos",                                    
+                                            "avId": "AV-609"
                                         },
                                         {
                                             "avName": "Take-over Legitimate Account",
@@ -374,6 +388,10 @@
                                     "avId": "AV-601"
                                 },
                                 {
+                                    "avName": "Change Ethos",                                    
+                                    "avId": "AV-609"
+                                },
+                                {
                                     "avName": "Take-over Legitimate Account",                                   
                                     "avId": "AV-602",
                                     
@@ -443,11 +461,13 @@
                             "children": [{
                                     "avName": "Compromise User (Project Maintainer/Administrator)",
                                     "avId": "AV-600",
-                                    
-                                   
                                     "children": [{
                                             "avName": "Bribe or Blackmail Legitimate User",                                       
                                             "avId": "AV-601"
+                                        },
+                                        {
+                                            "avName": "Change Ethos",                                    
+                                            "avId": "AV-609"
                                         },
                                         {
                                             "avName": "Take-over Legitimate Account",                                            
