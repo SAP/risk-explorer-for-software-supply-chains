@@ -5766,7 +5766,7 @@
         "vectors": [
             {
                 "avId": "AV-200",
-                "avName": "Create Name Confusion with Legitimate Package",
+                "avName": "Create Name Confusion with Legitimate Package"
             }
         ],
         "tags": {
@@ -5782,7 +5782,7 @@
         "vectors": [
             {
                 "avId": "AV-100",
-                "avName": "Develop and Advertise Distinct Malicious Package from Scratch",
+                "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
             }
         ],
         "tags": {
@@ -5798,7 +5798,7 @@
         "vectors": [
             {
                 "avId": "AV-100",
-                "avName": "Develop and Advertise Distinct Malicious Package from Scratch",
+                "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
             }
         ],
         "tags": {
@@ -5814,7 +5814,7 @@
         "vectors": [
             {
                 "avId": "AV-200",
-                "avName": "Create Name Confusion with Legitimate Package",
+                "avName": "Create Name Confusion with Legitimate Package"
             }
         ],
         "tags": {
@@ -5824,5 +5824,5 @@
             "year": 2022
          }
      }
- }
+ 
 ]
