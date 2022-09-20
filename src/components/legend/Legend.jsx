@@ -74,7 +74,7 @@ const rows = [
             <circle cx="50" cy="10" class="node" r="10"/>
 
         </g>
-    </svg>, "Attack vectors related to social-engineering attack on project maintainer"),
+    </svg>, "Attack vectors related to social-engineering attack on project maintainer or the change of ethos of the maintainer him/herself"),
 
 createData("Social Engineering",
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20">
