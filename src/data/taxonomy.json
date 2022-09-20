@@ -86,10 +86,6 @@
                                     "avId": "AV-601"
                                 },
                                 {
-                                    "avName": "Change Ethos",                                    
-                                    "avId": "AV-609"
-                                },
-                                {
                                     "avName": "Take-over Legitimate Account",
                                     "avId": "AV-602",
                                     "children": [{
@@ -121,6 +117,10 @@
                                 {
                                     "avName": "Become a Maintainer",                                    
                                     "avId": "AV-800"
+                                },
+                                {
+                                    "avName": "Change Ethos",                                    
+                                    "avId": "AV-801"
                                 },
                                 {
                                     "avName": "Compromise Maintainer System",                      
@@ -218,10 +218,6 @@
                                     "avId": "AV-601"
                                 },
                                 {
-                                    "avName": "Change Ethos",                                    
-                                    "avId": "AV-609"
-                                },
-                                {
                                     "avName": "Take-over Legitimate Account",
                                     "avId": "AV-602",
                                     "children": [{
@@ -254,6 +250,10 @@
                                 {
                                     "avName": "Become a Maintainer",
                                     "avId": "AV-800"
+                                },
+                                {
+                                    "avName": "Change Ethos",                                    
+                                    "avId": "AV-801"
                                 },
                                 {
                                     "avName": "Compromise Maintainer System",
@@ -377,10 +377,6 @@
                                     "avId": "AV-601"
                                 },
                                 {
-                                    "avName": "Change Ethos",                                    
-                                    "avId": "AV-609"
-                                },
-                                {
                                     "avName": "Take-over Legitimate Account",                                   
                                     "avId": "AV-602",
                                     
@@ -421,6 +417,10 @@
                                     "avName": "Become a Maintainer",
                                     "avId": "AV-800"
                                    
+                                },
+                                {
+                                    "avName": "Change Ethos",                                    
+                                    "avId": "AV-801"
                                 },
                                 {
                                     "avName": "Compromise Maintainer System",
