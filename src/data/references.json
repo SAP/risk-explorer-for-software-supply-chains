@@ -5714,8 +5714,8 @@
             "contents": ["attack"],
             "year": 2022
          }
-     },
-     {
+    },
+    {
         "title": "And yet another #python #pypi typosquatter: Uploaded at least 33 projects within 3 hours." ,
         "link":"https://twitter.com/streamlin3d/status/1560020448515080198",
         "vectors": [
@@ -5730,8 +5730,8 @@
             "contents": ["attack"],
             "year": 2022
          }
-     },
-     {
+    },
+    {
         "title": "Malicious PyPi packages aim DDoS attacks at Counter-Strike servers" ,
         "link":"https://www.bleepingcomputer.com/news/security/malicious-pypi-packages-aim-ddos-attacks-at-counter-strike-servers/",
         "vectors": [
@@ -5745,9 +5745,9 @@
             "packages": ["Gesnim", "Kears", "TensorFolw", "Seabron", "tqmd", "lxlm", "mokc", "ipaddres", "ipadress", "falsk", "douctils", "inda"],
             "contents": ["attack"],
             "year": 2022
-         }
-     },
-     {
+        }
+    },
+    {
         "title": "Phishing attack against PyPI",
         "link":"https://twitter.com/pypi/status/1562442188285308929",
         "vectors": [
@@ -5762,9 +5762,9 @@
             "ecosystems": ["Python"],
             "contents": ["attack"],
             "year": 2022
-         }
-     },
-     {
+        }
+    },
+    {
         "title": "CloudGuard Spectral detects several malicious packages on PyPI",
         "link": "https://research.checkpoint.com/2022/cloudguard-spectral-detects-several-malicious-packages-on-pypi-the-official-software-repository-for-python-developers/",
         "vectors": [
@@ -5778,9 +5778,9 @@
             "packages": ["ascii2text","zlibsrc"],
             "contents": ["attack"],
             "year": 2022
-         }
-     },
-     {
+        }
+    },
+    {
         "title": "CloudGuard Spectral detects several malicious packages on PyPI",
         "link": "https://research.checkpoint.com/2022/cloudguard-spectral-detects-several-malicious-packages-on-pypi-the-official-software-repository-for-python-developers/",
         "vectors": [
@@ -5794,9 +5794,9 @@
             "packages": ["Pyg-utils", "Pymocks", "PyProto2", "Test-async", "Free-net-vpn", "Free-net-vpn2", "Browserdiv", "WINRPCexploit"],
             "contents": ["attack"],
             "year": 2022
-         }
-     },
-     {
+        }
+    },
+    {
         "title": "PyPi python packages caught sending stolen AWS keys to unsecured sites",
         "link":"https://blog.sonatype.com/python-packages-upload-your-aws-keys-env-vars-secrets-to-web",
         "vectors": [
@@ -5810,9 +5810,9 @@
             "packages": ["pygrata", "pygrata-utils", "hkg-sol-utils"],
             "contents": ["attack"],
             "year": 2022
-         }
-     },
-     {
+        }
+    },
+    {
         "title": "PyPi python packages caught sending stolen AWS keys to unsecured sites",
         "link":"https://blog.sonatype.com/python-packages-upload-your-aws-keys-env-vars-secrets-to-web",
         "vectors": [
@@ -5826,7 +5826,24 @@
             "packages": ["loglib-modules", "pyg-modules"],
             "contents": ["attack"],
             "year": 2022
-         }
-     }
- 
+        }
+    },
+    {
+        "title": "New Protestware Found Lurking in Highly Popular NPM Package",
+        "link":"https://checkmarx.com/blog/new-protestware-found-lurking-in-highly-popular-npm-package/",
+        "vectors": [
+            {
+                "avId": "AV-609",
+                "avName": "Change Ethos",
+                "scopeAvId": "AV-304",
+                "scopeAvName": "Contribute as Maintainer"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["styled-components", "es5-ext"],
+            "contents": ["attack"],
+            "year": 2022
+        }
+    }
 ]
