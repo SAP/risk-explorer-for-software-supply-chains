@@ -5,6 +5,7 @@
 ## About this project
 
 This project offers a tool to explore a taxonomy of attack vectors targeting open-source software supply chains. This information has been compiled on the basis of numerous real-world incidents, i.e. actual attacks and vulnerabilities, as well as plausible proof-of-concepts and scientific literature.
+You can find more about this work in our [paper](https://arxiv.org/abs/2204.04008).
 
 The project can be used as learning material for awareness campaigns or trainings, but also for purposes such as threat modeling, risk-assessments or pentest scoping.
 
