@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import spartaLogo from '../../images/sparta-logo.png'
 import sapLogo from '../../images/SAP_R_grad_scrn.png'
+import assuremossLogo from '../../images/assuremoss_logo.png'
 import {ReactComponent as  AttacktreeImage} from '../../images/attackgraph.svg'
 
 const boxStyle = {
@@ -140,6 +141,13 @@ class Home extends Component {
                                                 Explore the Attack Tree
                                             </Button>
                                         </Link>
+
+                                        <a style={{ color: 'white', marginLeft:"5%", textDecoration: 'inherit' }} href="https://arxiv.org/abs/2204.04008" target='_blank' rel="noreferrer">
+                                            <Button variant="outlined" startIcon={<ArticleIcon />} size='large' color='info'>
+
+                                                Read the paper
+                                            </Button>
+                                        </a>
                                     </p>
 
                                     </Grow>
@@ -212,6 +220,7 @@ class Home extends Component {
                                                                     </Link>
 
                                                                     <p>Explore the Attack Tree</p>
+                                                                    
                                                                 </Grid>
                                                                 <Grid item xs={6}>
                                                                     <Link style={{ color: 'white', textDecoration: 'inherit' }} to="/documentation#oss-supp-model">
@@ -278,15 +287,24 @@ class Home extends Component {
                                 <Grid item xs={8}>
                                 <a className="logo"  href="https://www.sap.com/" target="_blank" rel="noreferrer"><img style={{width:"5%", left:"0", marginLeft:"1%", marginTop:'.3%'}} src={sapLogo} alt="SAP Logo" /></a>
                                 </Grid>
-                                <Grid item xs={4}>
-
-                                <a className="logo"  href="https://www.sparta.eu/" target="_blank" rel="noreferrer"><img style={{width:"9%", marginLeft:"87%", marginTop:'.3%'}} src={spartaLogo} alt="SPARTA Logo" /></a>
-                                </Grid>
-                                <Grid item xs={10}>
-                                <p style={{color:"white",fontSize:"12px",fontWeight:"light",marginLeft:"1%"}}> Copyright (c) 2022 SAP SE or an SAP affiliate company and Risk Explorer for Software Supply Chains contributors</p>
-                                </Grid>
                                 <Grid item xs={2}>
-                                <p style={{color:"white",fontSize:"12px", fontWeight:"light", textAlign:"right", marginRight:"4%"}}> This project is partially funded by the EU Horizon 2020 project SPARTA (Grant Agreement No. 830892)</p>
+
+                                <a className="logo"  href="https://www.sparta.eu/" target="_blank" rel="noreferrer"><img style={{width:"20%", marginLeft:"130%", marginTop:'.3%'}} src={spartaLogo} alt="SPARTA Logo" /></a>
+                                </Grid>
+                                
+                                <Grid item xs={2}>
+
+                                <a className="logo"  href="https://assuremoss.eu/" target="_blank" rel="noreferrer"><img style={{width:"25%", marginLeft:"60%", marginTop:'.2%'}} src={assuremossLogo} alt="AssureMOSS Logo" /></a>
+                                </Grid>
+                                
+
+                                
+                              
+                                <Grid item xs={9}>
+                                <p style={{color:"white",fontSize:"12px",fontWeight:"light",marginLeft:"1%", marginBottom:".4%"}}> Copyright (c) 2022 SAP SE or an SAP affiliate company and Risk Explorer for Software Supply Chains contributors</p>
+                                </Grid>
+                                <Grid item xs={3}>
+                                <p style={{color:"white",fontSize:"12px", fontWeight:"light", textAlign:"right", marginRight:"4%", marginBottom:".4%"}}> This project is partially funded by the EU Horizon 2020 projects SPARTA (Grant Agreement No. 830892) and AssureMOSS (Grant Agreement No. 952647)</p>
 
                                 </Grid>
                             </Grid>
