@@ -5845,5 +5845,21 @@
             "contents": ["attack"],
             "year": 2022
         }
+    },
+    {
+        "title": "Securing Developer Tools: A New Supply Chain Attack on PHP",
+        "link": "https://blog.sonarsource.com/securing-developer-tools-a-new-supply-chain-attack-on-php",
+        "vectors": [{
+            "avId": "AV-702",
+            "avName": "Exploit Vulnerabilities",
+            "scopeAvId": "AV-505",
+            "scopeAvName": "Inject into Hosting System"
+        }],
+        "tags": {
+            "ecosystems": ["PHP"],
+            "packages": [],
+            "contents": ["vulnerability"],
+            "year": 2022
+        }
     }
 ]
