@@ -5861,5 +5861,19 @@
             "contents": ["vulnerability"],
             "year": 2022
         }
+    },
+    {
+        "title": "Playing with fire: millions of .git folders exposed to public",
+        "link": "https://cybernews.com/security/millions-git-folders-exposed/",
+        "vectors": [{
+            "avId": "AV-602",
+            "avName": "Take-over Legitimate Account",
+            "scopeAvId": "AV-302",
+            "scopeAvName": "Contribute as Maintainer"
+        }],
+        "tags": {
+            "contents": ["vulnerability"],
+            "year": 2022
+        }
     }
 ]
