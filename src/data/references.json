@@ -5875,5 +5875,17 @@
             "contents": ["vulnerability"],
             "year": 2022
         }
+    },
+    {
+        "title": "Attacking the Software Supply Chain with a Simple Rename",
+        "link": "https://checkmarx.com/blog/attacking-the-software-supply-chain-with-a-simple-rename/",
+        "vectors": [{
+            "avId": "AV-501",
+            "avName": "Dangling Reference"
+        }],
+        "tags": {
+            "contents": ["vulnerability"],
+            "year": 2022
+        }
     }
 ]
