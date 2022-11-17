@@ -5877,6 +5877,19 @@
         }
     },
     {
+
+        "title": "Attacking the Software Supply Chain with a Simple Rename",
+        "link": "https://checkmarx.com/blog/attacking-the-software-supply-chain-with-a-simple-rename/",
+        "vectors": [{
+            "avId": "AV-501",
+            "avName": "Dangling Reference"
+        }],
+        "tags": {
+            "contents": ["vulnerability"],
+            "year": 2022
+        }
+     },
+     {
         "title": "WASP Attack on Python - Polymorphic Malware Shipping WASP Stealer; Infecting Hundreds Of Victims",
         "link": "https://medium.com/checkmarx-security/wasp-attack-on-python-polymorphic-malware-shipping-wasp-stealer-infecting-hundreds-of-victims-10e92439d192",
         "vectors": [{
@@ -5887,6 +5900,7 @@
             "contents": ["attack"],
             "year": 2022,
             "packages": ["apicolor", "apicolors", "ascii2art", "blockcypher-lib", "colorapi", "colorps", "colorsapi", "crypto-payments", "discord-api-wrapper"]
+
         }
     }
 ]
