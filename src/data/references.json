@@ -5902,5 +5902,21 @@
             "packages": ["apicolor", "apicolors", "ascii2art", "blockcypher-lib", "colorapi", "colorps", "colorsapi", "crypto-payments", "discord-api-wrapper"]
 
         }
+    },
+    {
+         "title" : "npm packages used by crypto exchanges compromised",
+         "link" : "https://www.bleepingcomputer.com/news/security/npm-packages-used-by-crypto-exchanges-compromised/",
+         "vectors": [{
+                "avId": "AV-602",
+                "avName": "Take-over Legitimate Account",
+                "scopeAvId": "AV-302",
+                "scopeAvName": "Contribute as Maintainer"
+         }],
+         "tags": {
+               "ecosystems": ["JavaScript"],
+               "contents": ["attack"],
+               "year": 2022,
+                 
+         }
     }
 ]
