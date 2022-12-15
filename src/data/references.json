@@ -5902,5 +5902,21 @@
             "packages": ["apicolor", "apicolors", "ascii2art", "blockcypher-lib", "colorapi", "colorps", "colorsapi", "crypto-payments", "discord-api-wrapper"]
 
         }
+    },
+    {
+        "title": "What happens when a Chrome extension with 2m+ users changes hands, raises red flags, doesn't document updates? Let's find out",
+        "link": "https://www.theregister.com/2021/01/07/great_suspender_malware/",
+        "vectors": [{
+            "avId": "AV-800",
+            "avName": "Become Maintainer",
+            "scopeAvId": "AV-302",
+            "scopeAvName": "Contribute as Maintainer"
+        }],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "contents": ["attack"],
+            "packages": ["The Great Suspender"],
+            "year": 2021
+        }
     }
 ]
