@@ -5918,5 +5918,20 @@
                "year": 2022,
                  
          }
+    },
+    {
+        "title": "Compromised PyTorch-nightly dependency chain between December 25th and December 30th, 2022",
+        "link": "https://pytorch.org/blog/compromised-nightly-dependency/",
+        "vectors": [{
+            "avId": "AV-509",
+            "avName": "Abuse Dependency Resolution Mechanism"
+        }],
+        "tags": {
+            "ecosystems": ["Python"],
+            "contents": ["attack"],
+            "year": 2022,
+            "packages": ["torchtriton"]
+
+        }
     }
 ]
