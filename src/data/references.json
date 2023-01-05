@@ -5904,6 +5904,22 @@
         }
     },
     {
+         "title" : "npm packages used by crypto exchanges compromised",
+         "link" : "https://www.bleepingcomputer.com/news/security/npm-packages-used-by-crypto-exchanges-compromised/",
+         "vectors": [{
+                "avId": "AV-602",
+                "avName": "Take-over Legitimate Account",
+                "scopeAvId": "AV-302",
+                "scopeAvName": "Contribute as Maintainer"
+         }],
+         "tags": {
+               "ecosystems": ["JavaScript"],
+               "contents": ["attack"],
+               "year": 2022,
+                 
+         }
+    },
+    {
         "title": "Compromised PyTorch-nightly dependency chain between December 25th and December 30th, 2022",
         "link": "https://pytorch.org/blog/compromised-nightly-dependency/",
         "vectors": [{
