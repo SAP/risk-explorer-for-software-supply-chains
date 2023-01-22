@@ -4553,8 +4553,6 @@
         }, {
             "avId": "AV-301",
             "avName": "Introduce Malicious Code through Hypocrite Merge Request"
-        }, {
-
         }],
         "safeguards": [{
             "sgId": "SG-016",
@@ -4579,13 +4577,13 @@
         "vectors": [{
             "avId": "AV-000",
             "avName": "Conduct Open-Source Supply Chain Attack"
-        }, {
-            "sgId": "SG-003",
-            "sgName": "Software Composition Analysis (SCA)"
         }],
         "safeguards": [{
             "sgId": "SG-014",
             "sgName": "Code Isolation and Sandboxing"
+        }, {
+            "sgId": "SG-003",
+            "sgName": "Software Composition Analysis (SCA)"
         }, {
             "sgId": "SG-001",
             "sgName": "Software Bill of Materials (SBOM)"
