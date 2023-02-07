@@ -5208,7 +5208,7 @@
         }],
         "tags": {
             "ecosystems": ["JavaScript"],
-            "contents": ["peer-reviewed", "thesis", "vulnerability", "attack", "proof-of-concept", "presentation", "standard"],
+            "contents": ["peer-reviewed"],
             "year": 2010
         }
     },
