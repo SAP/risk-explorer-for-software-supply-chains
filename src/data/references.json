@@ -5603,7 +5603,9 @@
         "vectors": [
             {
                 "avId": "AV-608",
-                "avName": "Resurrect Expired Domain Associated With Legitimate Account"
+                "avName": "Resurrect Expired Domain Associated With Legitimate Account",
+                "scopeAvId": "AV-504",
+                "scopeAvName": "Distribute as Package Maintainer"
             }
         ],
         "tags": {
