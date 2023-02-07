@@ -5484,7 +5484,7 @@
         "tags": {
             "ecosystems": ["JavaScript"],
             "packages": [],
-            "contents": ["peer-reviewed","attack"],
+            "contents": ["peer-reviewed"],
             "year": 2022
         }
     },
