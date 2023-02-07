@@ -5931,5 +5931,22 @@
             "packages": ["torchtriton"]
 
         }
+    },
+    {
+        "title": "5 Ways Attackers Fool Victims with Fake GitHub Profiles",
+        "link": "https://medium.com/checkmarx-security/5-easy-ways-attackers-fool-victims-with-fake-github-profiles-8e8f4199598a",
+        "vectors": [
+            {
+                "avId": "AV-100",
+                "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
+              
+            }
+        ],
+        "tags": {
+            "ecosystems": ["GitHub"],
+            "packages": [], 
+            "contents": [ "proof-of-concept"],
+            "year": null
+        }
     }
 ]
