@@ -5946,7 +5946,26 @@
             "ecosystems": ["GitHub"],
             "packages": [], 
             "contents": [ "proof-of-concept"],
-            "year": null
+            "year": 2023
+        }
+    },
+    {
+        "title": "Git Users Urged to Update Software to Prevent Remote Code Execution Attacks",
+        "link": "https://thehackernews.com/2023/01/git-users-urged-to-update-software-to.html",
+        "vectors": [
+            {
+                "avId": "AV-702",
+                "avName": "Exploit Vulnerabilities",
+                "scopeAvId": "AV-303",
+                "scopeAvName": "Tamper with Version Control System"
+            }
+        ],
+        "tags": {
+            "ecosystems": [],
+            "packages": [], 
+            "contents": ["vulnerability"],
+            "year": 2023
         }
     }
+
 ]
