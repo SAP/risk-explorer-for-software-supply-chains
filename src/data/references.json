@@ -3268,7 +3268,7 @@
             "ecosystems": ["JavaScript"],
             "packages": [],
             "contents": ["peer-reviewed"],
-            "year": null
+            "year": 2019
         }
     },
     {
@@ -4519,10 +4519,6 @@
         }, {
             "avId": "AV-500",
             "avName": "Distribute Malicious Version of Legitimate Package"
-        }],
-        "safeguards": [{
-            "sgId": "",
-            "sgName": ""
         }],
         "tags": {
             "ecosystems": [],

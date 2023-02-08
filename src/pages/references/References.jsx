@@ -28,7 +28,10 @@ function generateVectorList(row) {
             } else {
                 vectorString = <div> [{x.avId}] {x.avName}</div>
             }
-            vectList.push(vectorString)
+            if(vectList.indexOf(vectorString) === -1){
+                vectList.push(vectorString)
+            }
+            
 
         })
         return vectList
@@ -95,46 +98,80 @@ function generateAffectedPackagesList(row) {
 }
 
 function descendingComparator(a, b, orderBy) {
-    // Sorting function modified starting from https://mui.com/components/tables/#sorting-amp-selecting
-    if (orderBy === 'year' || orderBy === 'ecosystems') {
-        if (b['tags'] && a['tags']) {
 
-            if (!b['tags'][orderBy]) {
-                return -1
+    if(orderBy === 'tags'){
+        orderBy = 'contents'
+    }
+
+    if(orderBy === 'vector'){
+        orderBy = 'vectors'
+    }
+    var orderByInTags = ['year','ecosystems','contents']
+    if(orderByInTags.includes(orderBy)){
+        if(orderBy === 'year'){
+
+            if(!(orderBy in b['tags']) || b['tags'][orderBy] === null ){
+                b['tags'][orderBy] = 0
+    
             }
-            if (!a['tags'][orderBy]) {
-                return 1
+            if(!(orderBy in a['tags']) || a['tags'][orderBy] === null){
+                a['tags'][orderBy] = 0
             }
+    
+            return parseInt(b['tags'][orderBy]) - parseInt(a['tags'][orderBy])
+    
+        }else {
+            if(!(orderBy in b['tags']) || b['tags'][orderBy] === null ){
+                b['tags'][orderBy] = ''
+    
+            }
+            if(!(orderBy in a['tags']) || a['tags'][orderBy] === null){
+                a['tags'][orderBy] = ''
+            }
+    
             if (b['tags'][orderBy] < a['tags'][orderBy]) {
-
-                return -1;
+                    return -1;
             }
             if (b['tags'][orderBy] > a['tags'][orderBy]) {
-                return 1;
+                    return 1;
             }
             return 0;
+            
+        }
 
-        } else {
-            return 0;
+    }else{
+
+        if( b[orderBy] === (null||undefined)  ){
+            b[orderBy] = ''
+
         }
-    } else {
-        if (b[orderBy] < a[orderBy]) {
-            return -1;
+        if(a[orderBy] === (null||undefined)){
+            a[orderBy] = ''
         }
-        if (b[orderBy] > a[orderBy]) {
-            return 1;
+
+
+        if (b[orderBy].toString().toLowerCase() < a[orderBy].toString().toLowerCase()) {
+                return -1;
+        }
+        if (b[orderBy].toString().toLowerCase() > a[orderBy].toString().toLowerCase()) {
+                return 1;
         }
         return 0;
+
     }
+    
+      
+
 
 
 }
 
 function getComparator(order, orderBy) {
-    return order === 'desc'
-        ? (a, b) => descendingComparator(a, b, orderBy)
-        : (a, b) => -descendingComparator(a, b, orderBy);
+  return order === 'asc'
+    ? (a, b) => descendingComparator(a, b, orderBy)
+    : (a, b) => -descendingComparator(a, b, orderBy);
 }
+
 
 
 function Row(props) {
@@ -177,8 +214,8 @@ class References extends Component {
         super(props);
         this.state = {
             sidebarOpen: false,
-            order: 'asc',
-            orderBy: 'title',
+            //order: 'asc',
+            //orderBy: 'title',
             visuallyHidden: false,
             data: referencestable,
             headCellsSortable: [
@@ -193,9 +230,7 @@ class References extends Component {
                 {
                     id: "ecosystems",
                     label: "Ecosystem(s)"
-                }
-            ],
-            headCellsNotSortable: [
+                },
                 {
                     id: "vector",
                     label: "Related Attack Vector(s)"
@@ -207,7 +242,21 @@ class References extends Component {
                 {
                     id: "tags",
                     label: "Tags"
-                },
+                }
+            ],
+            headCellsNotSortable: [
+                // {
+                //     id: "vector",
+                //     label: "Related Attack Vector(s)"
+                // },
+                // {
+                //     id: "safeguards",
+                //     label: "Related Safeguard(s)"
+                // },
+                // {
+                //     id: "tags",
+                //     label: "Tags"
+                // },
                 {
                     id: "package",
                     label: "Affected Package(s)"
@@ -235,11 +284,14 @@ class References extends Component {
 
     // Handler for sorting the rows 
     handleRequestSort = (event, property) => {
-
-        const isAsc = this.state.orderBy === property && this.state.order === 'asc';
-        isAsc ? this.setState({ order: "desc" }) : this.setState({ order: "asc" });
+        
+        
+        const isAsc = this.state.order && this.state.order === 'asc';
+        this.setState({order: isAsc ? 'desc' : 'asc'})
+        //isAsc ? this.setState({ order: "desc" }) : this.setState({ order: "asc" });
         this.setState({ orderBy: property })
-        this.setState({ data: this.state.data.sort(getComparator(this.state.order, this.state.orderBy)) })
+        this.setState({ data: this.state.data.sort(getComparator(this.state.order, property)) })
+
 
     };
 
@@ -277,6 +329,7 @@ class References extends Component {
                                                     <TableSortLabel
                                                         active={this.state.orderBy === headCell.id}
                                                         direction={this.state.orderBy === headCell.id ? this.state.order : 'desc'}
+                                                        
                                                         onClick={(event) => this.handleRequestSort(event, headCell.id)}
                                                     >
                                                         {headCell.label}
@@ -293,7 +346,7 @@ class References extends Component {
                                         {
 
                                             this.state.data.map((row) => (
-                                                <Row key={row["link"]} row={row} />
+                                                <Row key={row["link"]+Math.random()} row={row} />
                                             ))
 
                                         }
