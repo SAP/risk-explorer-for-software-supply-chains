@@ -5546,9 +5546,7 @@
             }
         ],
         "tags": {
-            "ecosystems": [],
-            "packages": [], 
-            "contents": [],
+      
             "year": 2022
         }
     },
@@ -5964,6 +5962,88 @@
             "contents": ["vulnerability"],
             "year": 2023
         }
+    },
+    {
+        "title": "Automatic Security Assessment of GitHub Actions Workflows (SCORED)",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3560835.3564554",
+        "vectors": [
+            {
+                "avId": "AV-701",
+                "avName": "Exploit Weak Configuration",
+                "scopeAvId": "AV-403",
+                "scopeAvName": "Tamper with Exposed Build System"
+            },
+            {
+                "avId": "AV-702",
+                "avName": "Exploit Vulnerabilities",
+                "scopeAvId": "AV-403",
+                "scopeAvName": "Tamper with Exposed Build System"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["GitHub"],
+            "contents": ["peer-reviewed", "vulnerability"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "SoK: Combating threats in the digital supply chain (ARES)",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3538969.3544421",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+               
+            }
+        ],
+        "tags": {
+            "contents": ["peer-reviewed"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "8th Annual State of the Software Supply Chain",
+        "link": "https://www.sonatype.com/state-of-the-software-supply-chain/introduction",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+               
+            }
+        ],
+        "tags": {
+            "year": 2022
+        }
+    },
+    {
+        "title": "Towards Understanding and Securing the OSS Supply Chain",
+        "link": "https://iris.unitn.it/bitstream/11572/333508/1/vu-thesis-final.pdf",
+        "vectors": [{
+            "avId": "AV-500",
+            "avName": "Distribute Malicious Version of Legitimate Package"
+        }],
+        "tags": {
+            "ecosystems": ["Python"],
+            "packages": [],
+            "contents": ["thesis"],
+            "year": 2021
+        }
+    },
+    {
+        "title": "OSS Supply-chain Security: What Will It Take?",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3570923",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "tags": {
+      
+            "year": 2022
+        }
     }
 
 ]
+
+
