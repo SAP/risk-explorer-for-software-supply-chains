@@ -142,7 +142,7 @@ class Home extends Component {
                                             </Button>
                                         </Link>
 
-                                        <a style={{ color: 'white', marginLeft:"5%", textDecoration: 'inherit' }} href="https://arxiv.org/abs/2204.04008" target='_blank' rel="noreferrer">
+                                        <a style={{ color: 'white', marginLeft:"5%", textDecoration: 'inherit' }} href="https://www.computer.org/csdl/proceedings-article/sp/2023/933600a167/1He7XSTyRKE" target='_blank' rel="noreferrer">
                                             <Button variant="outlined" startIcon={<ArticleIcon />} size='large' color='info'>
 
                                                 Read the paper
