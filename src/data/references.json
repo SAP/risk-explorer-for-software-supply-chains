@@ -562,8 +562,8 @@
         }
     },
     {
-        "title": "What are Weak Links in the npm Supply Chain?",
-        "link": "https://arxiv.org/abs/2112.10165",
+        "title": "What are Weak Links in the npm Supply Chain? (ICSE-SEIP)",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3510457.3513044",
         "vectors": [{
             "avId": "AV-608",
             "avName": "Resurrect Expired Domain Associated With Legitimate Account"
@@ -573,7 +573,7 @@
                 "JavaScript"
             ],
             "contents": [],
-            "year": 2021
+            "year": 2022
         }
     },
     {
@@ -5454,8 +5454,8 @@
         }
     },
     {
-        "title": "Practical Automated Detection of Malicious npm Packages",
-        "link": "https://arxiv.org/abs/2202.13953",
+        "title": "Practical Automated Detection of Malicious npm Packages (ICSE)",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3510003.3510104",
         "vectors": [{
                 "avId": "AV-100",
                 "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
@@ -5479,7 +5479,6 @@
     ],
         "tags": {
             "ecosystems": ["JavaScript"],
-            "packages": [],
             "contents": ["peer-reviewed"],
             "year": 2022
         }
@@ -6117,10 +6116,229 @@
             "year": 2022
         }
     },
+    {
+        "title": "SoK: Analysis of Software Supply Chain Security by Establishing Secure Design Properties (SCORED)",
+        "link": "https://dl.acm.org/doi/10.1145/3560835.3564556",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "safeguards": [
+            {
+                "sgId": "SG-001",
+                "sgName": "Software Bill of Materials (SBOM)"
+            },
+            {
+                "sgId": "SG-003",
+                "sgName": "Software Composition Analysis (SCA)"
+            },
+            {
+                "sgId": "SG-017",
+                "sgName": "Multi-Factor Authentication"
+            },
+            {
+                "sgId": "SG-019",
+                "sgName": "Login Protection Mechanism"
+            },
+            {
+                "sgId": "SG-028",
+                "sgName": "Scoped Packages"
+            },
+            {
+                "sgId": "SG-029",
+                "sgName": "Version Pinning"
+            },
+            {
+                "sgId": "SG-023",
+                "sgName": "Audit"
+            }, {
+                "sgId": "SG-007",
+                "sgName": "Code Signing"
+            }, {
+                "sgId": "SG-043",
+                "sgName": "Integrity check of dependencies through cryptographic hashes"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Java", "JavaScript", "Linux", "Python", "C#", "C/C++", "PHP"],
+            "packages": [], 
+            "contents": ["peer-reviewed"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "xVDB: A High-Coverage Approach for Constructing a Vulnerability Database",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9853545",
+        "safeguards": [
+            {
+                "sgId": "SG-002",
+                "sgName": "Patch Management"
+            },
+            {
+                "sgId": "SG-025",
+                "sgName": "Vulnerability Assessment"
+            }
+        ],
+        "tags": {
+            "ecosystems": [],
+            "packages": [],
+            "contents": ["peer-reviewed"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "Towards the Detection of Malicious Java Packages (SCORED)",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3560835.3564548",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+               
+            }
+        ],
+        "safeguards": [
+            {
+                "sgId": "SG-005",
+                "sgName": "Application Security Testing (AST)"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Java"],
+            "packages": [], 
+            "contents": ["peer-reviewed"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "Building a Secure Software Supply Chain with GNU Guix",
+        "link": "https://doi.org/10.22152/programming-journal.org/2023/7/1",
+        "safeguards": [
+            {
+                "sgId": "SG-037",
+                "sgName": "Reproducible builds"
+            },
+            {
+                "sgId": "SG-002",
+                "sgName": "Patch Management"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["C/C++"],
+            "contents": ["peer-reviewed"],
+            "year": 2022
+        }
+    },
+    {
+        "title": "Automatic Diversity in the Software Supply Chain",
+        "link": "https://arxiv.org/abs/2111.03154",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "safeguards": [
+            {
+                "sgId": "SG-002",
+                "sgName": "Patch Management"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Java"],
+            "packages": [], 
+            "contents": ["proof-of-concept"],
+            "year": 2021
+        }
+    },
+    {
+        "title": "An Empirical Study on Software Bill of Materials: Where We Stand and the Road Ahead",
+        "link": "https://arxiv.org/abs/2301.05362",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "safeguards": [
+            {
+                "sgId": "SG-001",
+                "sgName": "Software Bill of Materials (SBOM)"
+            },
+            {
+                "sgId": "SG-003",
+                "sgName": "Software Composition Analysis (SCA)"
+            }
+        ],
+        "tags": {
+       
+            "year": 2023
+        }
+    },
+    {
+        "title": "What is Software Supply Chain Security?",
+        "link": "https://arxiv.org/abs/2209.04006",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "tags": {
+       
+            "year": 2022
+        }
+    },
+    {
+        "title": "Malicious Source Code Detection Using Transformer",
+        "link": "https://arxiv.org/abs/2209.07957",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "safeguards": [
+            {
+                "sgId": "SG-005",
+                "sgName": "Application Security Testing (AST)"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "year": 2022
+        }
+       
+    },
+    {
+        "title": "Alice in (Software Supply) Chains: Risk Identification and Evaluation",
+        "link": "https://link.springer.com/chapter/10.1007/978-3-031-14179-9_19",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "safeguards": [
+            {
+                "sgId": "SG-023",
+                "sgName": "Audit"
+            },
+            {
 
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Java", "JavaScript", "Linux", "Python", "C#", "C/C++", "PHP"],
+            "packages": ["event-stream", "..."], 
+            "contents": ["peer-reviewed"],
+            "year": 2022
+        }
+    }
+  
     
 
 ]
-
 
 
