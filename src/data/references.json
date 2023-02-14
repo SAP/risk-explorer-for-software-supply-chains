@@ -4027,12 +4027,7 @@
     {
         "title": "Secure DevOps",
         "link": "https://apps.dtic.mil/sti/pdfs/AD1087865.pdf",
-        "vectors": [{
-            "avId": "",
-            "avName": "",
-            "scopeAvId": "",
-            "scopeAvName": ""
-        }],
+
         "safeguards": [{
             "sgId": "SG-003",
             "sgName": "Software Composition Analysis (SCA)"
@@ -4050,12 +4045,7 @@
     {
         "title": "BCFinder: A Lightweight and Platform-Independent Tool to Find Third-Party Components in Binaries (APSEC)",
         "link": "https://ieeexplore.ieee.org/abstract/document/8719473",
-        "vectors": [{
-            "avId": "",
-            "avName": "",
-            "scopeAvId": "",
-            "scopeAvName": ""
-        }],
+        
         "safeguards": [{
             "sgId": "SG-003",
             "sgName": "Software Composition Analysis (SCA)"
@@ -5211,12 +5201,7 @@
     {
         "title": "Minimizing Risks in the Software Supply Chain",
         "link": "https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf",
-        "vectors": [{
-            "avId": "",
-            "avName": "",
-            "scopeAvId": "",
-            "scopeAvName": ""
-        }],
+    
         "safeguards": [{
             "sgId": "SG-005",
             "sgName": "Application Security Testing (AST)"
