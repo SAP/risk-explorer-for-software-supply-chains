@@ -6042,8 +6042,85 @@
       
             "year": 2022
         }
-    }
+    },
+    {
+        "title": "451 PyPI packages install Chrome extensions to steal crypto",
+        "link": "https://www.bleepingcomputer.com/news/security/451-pypi-packages-install-chrome-extensions-to-steal-crypto/",
+        "vectors": [
+            {
+                "avId": "AV-204",
+                "avName": "Typosquatting"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["Python"],
+            "packages": [],
+            "contents": ["attack"],
+            "year": 2023
+        }
+    },
+    {
+        "title": "Yandex Data Leak Triggers Malicious Package Publication",
+        "link": "https://www.mend.io/resources/blog/yandex-data-leak-triggers-malicious-package-publication/",
+        "vectors": [
+            {
+                "avId": "AV-204",
+                "avName": "Typosquatting"
+            }
+        ],
+        "tags": {
+            "ecosystems": ["JavaScript"],
+            "packages": ["yandex-logger-std","yandex-cfg-env","yandex-logger-sentry","yandex-logger-qloud","yabox","@yandex-travel/ts-config","@yandex-travel/eslint-config","@yandex-travel/ci","@yandex-travel/ui","@yandex-travel/eslint-kit","yasap-lodash","yandex-sendlinksms","yt-test-reporter","ymaps-api-response","eslint-plugin-yandex-morda-views" ,"..."],
+            "contents": ["attack"],
+            "year": 2023
+        }
+    },
+    {
+        "title": "Threat Alert: Private npm Packages Disclosed via Timing Attacks",
+        "link": "https://blog.aquasec.com/private-packages-disclosed-via-timing-attack-on-npm",
+        "vectors": [
+            {
+                "avId": "AV-509",
+                "avName": "Abuse Dependency Resolution Mechanism"
+            }
+        ],
+        "tags": {
+            "contents": [
+                "proof-of-concept",
+                "vulnerability"
+            ],
+            "year": 2023
+        }
+    },
+    {
+        "title": "How we Abused Repository Webhooks to Access Internal CI Systems at Scale",
+        "link": "https://www.cidersecurity.io/blog/research/how-we-abused-repository-webhooks-to-access-internal-ci-systems-at-scale/",
+        "vectors": [
+            {
+                "avId": "AV-602",
+                "avName": "Take-over Legitimate Account",
+                "scopeAvId": "AV-402",
+                "scopeAvName": "Tamper Build Job as Maintainer"
+            },
+            {
+                "avId": "AV-702",
+                "avName": "Exploit Vulnerabilities",
+                "scopeAvId": "AV-403",
+                "scopeAvName": "Tamper with Exposed Build System"
+            }
+        ],
+        "tags": {
+            "contents": [
+                "proof-of-concept",
+                "vulnerability"
+            ],
+            "year": 2022
+        }
+    },
+
+    
 
 ]
+
 
 
