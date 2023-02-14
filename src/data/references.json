@@ -6335,6 +6335,38 @@
             "contents": ["peer-reviewed"],
             "year": 2022
         }
+    },
+    {
+        "title": "Policy Transparency: Authorization Logic Meets General Transparency to Prove Software Supply Chain Integrity (SCORED)",
+        "link": "https://research.google/pubs/pub51673/",
+        "vectors": [
+            {
+                "avId": "AV-000",
+                "avName": "Conduct Open-Source Supply Chain Attack"
+            }
+        ],
+        "safeguards": [
+            {
+                "sgId": "SG-001",
+                "sgName": "Software Bill of Materials (SBOM)"
+            },
+            {
+                "sgId": "SG-003",
+                "sgName": "Software Composition Analysis (SCA)"
+            },
+            {
+                "sgId": "SG-037",
+                "sgName": "Reproducible builds"
+            },
+            {
+                "sgId": "SG-023",
+                "sgName": "Audit"
+            }
+        ],
+        "tags": {
+            "contents": ["peer-reviewed"],
+            "year": 2022
+        }
     }
   
     
