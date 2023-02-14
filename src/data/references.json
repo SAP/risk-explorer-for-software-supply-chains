@@ -6001,7 +6001,7 @@
     },
     {
         "title": "Towards Understanding and Securing the OSS Supply Chain",
-        "link": "https://dl.acm.org/doi/abs/10.1145/3468264.3468592",
+        "link": "https://iris.unitn.it/bitstream/11572/333508/1/vu-thesis-final.pdf",
         "vectors": [{
             "avId": "AV-500",
             "avName": "Distribute Malicious Version of Legitimate Package"
