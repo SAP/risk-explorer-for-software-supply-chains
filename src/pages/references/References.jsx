@@ -24,9 +24,9 @@ function generateVectorList(row) {
         row.vectors.forEach(x => {
 
             if (x.scopeAvId) {
-                vectorString = <div> [{x.avId}] {x.avName} in the scope of [{x.scopeAvId}] {x.scopeAvName}</div>
+                vectorString = <div> <a href={"https://sap.github.io/risk-explorer-for-software-supply-chains/#/attacktree?av="+x.avId} target="_blank" rel="noreferrer">[{x.avId}] {x.avName}</a> in the scope of <a href={"https://sap.github.io/risk-explorer-for-software-supply-chains/#/attacktree?av="+x.scopeAvId} target="_blank" rel="noreferrer">[{x.scopeAvId}] {x.scopeAvName}</a></div>
             } else {
-                vectorString = <div> [{x.avId}] {x.avName}</div>
+                vectorString = <div> <a href={"https://sap.github.io/risk-explorer-for-software-supply-chains/#/attacktree?av="+x.avId} target="_blank" rel="noreferrer">[{x.avId}] {x.avName}</a></div>
             }
             if(vectList.indexOf(vectorString) === -1){
                 vectList.push(vectorString)
