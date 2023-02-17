@@ -6352,7 +6352,22 @@
             "contents": ["peer-reviewed"],
             "year": 2022
         }
-    }
+    },
+     {
+        "title": "Malicious ‘Lolip0p’ PyPi packages install info-stealing malware",
+        "link": "https://www.bleepingcomputer.com/news/security/malicious-lolip0p-pypi-packages-install-info-stealing-malware/",
+        "vectors": [{
+            "avId": "AV-100",
+            "avName": "Develop and Advertise Distinct Malicious Package from Scratch"
+        }],
+        "tags": {
+            "ecosystems": ["Python"],
+            "contents": ["attack"],
+            "year": 2023,
+            "packages": ["colorslib","httpslib","libhttps"]
+
+        }
+    },
   
     
 
