@@ -123,6 +123,14 @@
         "Mapped Safeguard": []
     }]
 }, {
+    "avId": "AV-209",
+    "avName": "AI Package Hallucination",
+    "info": [{
+        "Description": "Generative AI platforms, such as ChatGPT, have the capability to generate responses and recommendations based on the patterns and information learned during training. While these platforms provide valuable assistance, it's important to note that the responses generated may not always align with reality and can include elements that do not exist. <br>In the context of coding tasks, developers may seek recommendations for packages that can solve their specific needs. However, the generative AI model might suggest packages that are not actually present in legitimate package repositories like NPM or PyPI. This creates an opportunity for attackers to exploit the platform by crafting questions that prompt the AI to generate non-existent package names. <br>The intention of such an attack would be to deceive developers who rely on the generative AI's recommendations. The attackers could then publish malicious packages under these fabricated names, leading unsuspecting developers into using them. ",
+        "Impact": "Create name confusion, resulting in the installation of a malicious package",
+        "Mapped Safeguard": []
+    }]
+}, {
     "avId": "AV-001",
     "avName": "Subvert Legitimate Package",
     "info": [{

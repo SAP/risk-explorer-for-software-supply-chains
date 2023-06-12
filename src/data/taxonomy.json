@@ -33,12 +33,16 @@
                     "avId": "AV-206"
                 },
                 {
+                    "avName": "Similarity Attack",               
+                    "avId": "AV-207"
+                },
+                {
                     "avName": "Omitting Scope or Namespace",               
                     "avId": "AV-208"
                 },
                 {
-                    "avName": "Similarity Attack",               
-                    "avId": "AV-207"
+                    "avName": "AI Package Hallucination",               
+                    "avId": "AV-209"
                 }
             ]
         },
