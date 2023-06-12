@@ -6367,6 +6367,19 @@
             "packages": ["colorslib","httpslib","libhttps"]
 
         }
+    },
+    {
+        "title": "Can you trust ChatGPT’s package recommendations?",
+        "link": "https://vulcan.io/blog/ai-hallucinations-package-risk",
+        "vectors": [{
+            "avId": "AV-209",
+            "avName": "AI Package Hallucination"
+        }],
+        "tags": {
+            "contents": ["attack"],
+            "year": 2023
+
+        }
     }
   
     
