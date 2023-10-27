@@ -156,7 +156,7 @@
     "avId": "AV-301",
     "avName": "Introduce Malicious Code through Hypocrite Merge Request",
     "info": [{
-        "Description": "Attackers can pretend to make a useful, seemingly benign contribution to a project while in fact submitting malicious code. For example, the contribution can pretend to introduce new functionality, test cases, CI/CD automation or documentation. Contributions for some of those topics may be reviewed with less scrutiny by legitimate project maintainers, which may be exploited by attackers. The malicious code itself can expose malicious behavior (e.g. a dropper) or be a deliberate vulnerability, which can be exploited at later stages. It can be included in project code or hidden in newly introduced dependencies.",
+        "Description": "Attackers can pretend to make a useful, seemingly benign contribution to a project while in fact submitting malicious code. For example, the contribution can pretend to introduce new functionality, test cases, CI/CD automation or documentation. Contributions for some of those topics may be reviewed with less scrutiny by legitimate project maintainers, which may be exploited by attackers. The malicious code itself can expose malicious behavior (e.g., a dropper) or be a deliberate vulnerability, which can be exploited at later stages. It can be included in project code or hidden in newly introduced dependencies.",
         "Impact": "Acceptance of malicious code from package maintainer",
         "Mapped Safeguard": [{
             "sgId": "SG-015"
