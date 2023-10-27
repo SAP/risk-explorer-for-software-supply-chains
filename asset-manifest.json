@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/risk-explorer-for-software-supply-chains/static/css/main.27c9d672.css",
-    "main.js": "/risk-explorer-for-software-supply-chains/static/js/main.8c22de21.js",
+    "main.js": "/risk-explorer-for-software-supply-chains/static/js/main.91b017c5.js",
     "static/media/OSS-SuppChainModel-FMC-modified.png": "/risk-explorer-for-software-supply-chains/static/media/OSS-SuppChainModel-FMC-modified.6551243ac3324cc3bbca.png",
     "static/media/sparta-logo.png": "/risk-explorer-for-software-supply-chains/static/media/sparta-logo.b167577dad7491ef922b.png",
     "static/media/AttackTreeExample-modified.png": "/risk-explorer-for-software-supply-chains/static/media/AttackTreeExample-modified.49a06b3e87de2ffc83c3.png",
@@ -10,10 +10,10 @@
     "static/media/SAP_R_grad_scrn.png": "/risk-explorer-for-software-supply-chains/static/media/SAP_R_grad_scrn.4fb92db1677fe86b2d5a.png",
     "index.html": "/risk-explorer-for-software-supply-chains/index.html",
     "main.27c9d672.css.map": "/risk-explorer-for-software-supply-chains/static/css/main.27c9d672.css.map",
-    "main.8c22de21.js.map": "/risk-explorer-for-software-supply-chains/static/js/main.8c22de21.js.map"
+    "main.91b017c5.js.map": "/risk-explorer-for-software-supply-chains/static/js/main.91b017c5.js.map"
   },
   "entrypoints": [
     "static/css/main.27c9d672.css",
-    "static/js/main.8c22de21.js"
+    "static/js/main.91b017c5.js"
   ]
 }
