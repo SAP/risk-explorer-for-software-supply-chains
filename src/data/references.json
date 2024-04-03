@@ -6406,5 +6406,29 @@
             "contents": ["attack"],
             "year": 2023
         }
+    },
+    {
+        "title": "Backdoor in upstream xz/liblzma leading to ssh server compromise (CVE-2024-3094)",
+        "link": "https://www.openwall.com/lists/oss-security/2024/03/29/4",
+        "vectors": [{
+            "avId": "AV-800",
+            "avName": "Become Maintainer"
+        }],
+        "tags": {
+            "contents": ["attack"],
+            "year": 2024
+        }
+    },
+    {
+        "title": "Over 100,000 Infected Repos Found on GitHub",
+        "link": "https://apiiro.com/blog/malicious-code-campaign-github-repo-confusion-attack/",
+        "vectors": [{
+            "avId": "AV-208",
+            "avName": "Namespace Omission or Change"
+        }],
+        "tags": {
+            "contents": ["attack"],
+            "year": 2024
+        }
     }
 ]
