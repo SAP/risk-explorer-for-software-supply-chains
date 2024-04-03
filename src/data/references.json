@@ -6412,7 +6412,9 @@
         "link": "https://www.openwall.com/lists/oss-security/2024/03/29/4",
         "vectors": [{
             "avId": "AV-800",
-            "avName": "Become Maintainer"
+            "avName": "Become Maintainer",
+            "scopeAvId": "AV-302",
+            "scopeAvName": "Contribute as Maintainer"
         }],
         "tags": {
             "contents": ["attack"],
