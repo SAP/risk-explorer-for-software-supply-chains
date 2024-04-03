@@ -521,7 +521,7 @@
     "avId": "AV-800",
     "avName": "Become Maintainer",
     "info": [{
-        "Description": "An attacker convinces or tricks a legitimate Project Maintainer (using social engineering techniques) to provide him or her aditional permissions, thus, to promote the attacker to a maintainer or even project owner. As a result, the attacker receives (higher) privileges for project-related resources, e.g., the source code repository or the build system. Many open-source projects are anyways short on resources (cf. https://www.codeshelter.co/ or https://jazzband.co), and sometimes the original maintainers simply cannot or do not want to continue project maintenance anymore, which makes such projects prone for such social-engineering attacks.",
+        "Description": "An attacker convinces or tricks a legitimate Project Maintainer (using social engineering techniques) to provide him or her aditional permissions, thus, to promote the attacker to a maintainer or even project owner. As a result, the attacker receives (higher) privileges for project-related resources, e.g., the source code repository or the build system. Many open-source projects are anyways short on resources (cf. https://www.codeshelter.co/ or https://jazzband.co), and sometimes the original maintainers simply cannot or do not want to continue project maintenance anymore, which makes such projects prone for these social-engineering attacks.",
         "Impact": "Gain of privileges",
         "Mapped Safeguard": []
     }]
