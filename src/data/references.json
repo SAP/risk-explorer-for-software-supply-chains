@@ -6432,5 +6432,34 @@
             "contents": ["attack"],
             "year": 2024
         }
+    },
+    {
+        "title": "Over 170K Users Affected by Attack Using Fake Python Infrastructure",
+        "link": "https://zero.checkmarx.com/over-170k-users-affected-by-attack-using-fake-python-infrastructure-05a04b7e058a",
+        "vectors": [{
+            "avId": "AV-607",
+            "avName": "Reuse of Existing Session",
+            "scopeAvId": "AV-302",
+            "scopeAvName": "Contribute as Maintainer"
+        }],
+        "tags": {
+            "ecosystems": ["Python"],
+            "contents": ["attack"],
+            "year": 2024
+        }
+    },
+    {
+        "title": "Vulnerabilities in CocoaPods Open the Door to Supply Chain Attacks Against Thousands of iOS and MacOS Applications",
+        "link": "https://www.evasec.io/blog/eva-discovered-supply-chain-vulnerabities-in-cocoapods?trk=feed-detail_main-feed-card_feed-article-content",
+        "vectors": [{
+            "avId": "AV-501",
+            "avName": "Dangling Reference"
+        }],
+        "tags": {
+            "ecosystems": ["CocoaPods"],
+            "contents": ["vulnerability"],
+            "packages": [],
+            "year": 2024
+        }
     }
 ]
