@@ -153,7 +153,7 @@ class Documentation extends Component {
                                     At the <b>root</b> of an attack tree the attacker's top-level goal is represented. Such goal is iteratively refined by its children into sub-goals.
                                     Depending on the degree of the refinement, nodes may correspond to more or less actionable tasks.
                                     <br></br><br></br>
-                                    Nodes in an attack tree can be 'AND nodes' or 'OR nodes'. In the frist case, they represent different steps in achieving the parent's goal, while in the
+                                    Nodes in an attack tree can be 'AND nodes' or 'OR nodes'. In the first case, they represent different steps in achieving the parent's goal, while in the
                                     second case they represent alternatives. In our specific case, since we used the semantics of attack trees to outline a taxonomy, all
                                     the nodes have to be considered of 'OR' type.
                                 </Typography>
